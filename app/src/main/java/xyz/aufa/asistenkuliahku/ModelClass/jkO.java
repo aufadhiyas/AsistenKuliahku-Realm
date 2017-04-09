@@ -24,6 +24,7 @@ public class jkO extends RealmObject{
     private String makul_jk;
     private String dosen_jk;
     private String kelas_jk, created_at, updated_at;
+    private String Author;
     private int noonline_j;
 
     public int getNo_jk() {
@@ -96,6 +97,14 @@ public class jkO extends RealmObject{
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public String getAuthor() {
+        return Author;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
     }
 
     public int getNoonline_j() {

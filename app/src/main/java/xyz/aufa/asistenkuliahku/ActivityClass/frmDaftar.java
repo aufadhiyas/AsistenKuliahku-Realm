@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import xyz.aufa.asistenkuliahku.R;
+import xyz.aufa.asistenkuliahku.SessionManager.AppController;
 import xyz.aufa.asistenkuliahku.SessionManager.SessionManager;
 import xyz.aufa.asistenkuliahku.Webservice.Webservice_Controller;
 
@@ -40,12 +41,12 @@ public class frmDaftar extends AppCompatActivity {
     private static final String Key_nama = "nama";
     private static final String Key_email = "email";
     private static final String Key_password = "password";
-    private static  final String url = "Webservice_Controller.URL_DAFTAR";
+    private static final String url = "Webservice_Controller.URL_DAFTAR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frm_daftar);
+        setContentView(R.layout.frmdaftar);
         btnDaftar = (Button) findViewById(R.id.btnDaftar1);
         btnKembali = (Button) findViewById(R.id.btnKembali);
         email = (EditText) findViewById(R.id.txtEmailDaftar);
@@ -65,7 +66,7 @@ public class frmDaftar extends AppCompatActivity {
                         String passwords = pass.getText().toString().trim();
                         String namas = nama.getText().toString().trim();
                         if (!namas.isEmpty() && !emails.isEmpty() && !passwords.isEmpty()) {
-                            registerUser(namas, emails, passwords);
+
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Please enter your details!", Toast.LENGTH_LONG)
@@ -90,14 +91,14 @@ public class frmDaftar extends AppCompatActivity {
 
     }
 
-        private void initCustomAlertDialog(String EmailView) {
-            View v = getLayoutInflater().inflate(R.layout.dialogverivikasi, null);
-            TextView txtEmail = (TextView) findViewById(R.id.lblemailDaftar);
-            //txtEmail.setText(EmailView);
-            alertDialog = new AlertDialog.Builder(this).create();
-            alertDialog.setView(v);
-            alertDialog.setTitle("Verifikasi Email");
-        }
+    private void initCustomAlertDialog(String EmailView) {
+        View v = getLayoutInflater().inflate(R.layout.dialogverivikasi, null);
+        TextView txtEmail = (TextView) findViewById(R.id.lblemailDaftar);
+        //txtEmail.setText(EmailView);
+        alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setView(v);
+        alertDialog.setTitle("Verifikasi Email");
+    }
     private void registerUser(final String namas, final String emails,
                               final String passwords) {
         // Tag used to cancel the request
@@ -188,5 +189,4 @@ public class frmDaftar extends AppCompatActivity {
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
-
 }

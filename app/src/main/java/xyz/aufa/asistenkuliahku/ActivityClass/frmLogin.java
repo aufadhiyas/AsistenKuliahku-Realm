@@ -4,11 +4,14 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -22,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import xyz.aufa.asistenkuliahku.R;
-import xyz.aufa.asistenkuliahku.SQLite_Controller.SQLiteHandler;
+import xyz.aufa.asistenkuliahku.SessionManager.AppController;
 import xyz.aufa.asistenkuliahku.SessionManager.SessionManager;
 import xyz.aufa.asistenkuliahku.Webservice.Webservice_Controller;
 
@@ -30,23 +33,25 @@ public class frmLogin extends AppCompatActivity {
     private  static final String TAG = frmDaftar.class.getSimpleName();
     Button btnLogin, btnRegister;
     private SessionManager session;
-    private SQLiteHandler db;
     private EditText txtEmail, txtPassword;
     private ProgressDialog pDialog;
+    private TextView lupa;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frm_login);
+        setContentView(R.layout.frmlogin);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = (Button) findViewById(R.id.btnDaftar);
         txtEmail = (EditText) findViewById(R.id.txtEmail);
         txtPassword = (EditText) findViewById(R.id.txtPassword);
+        lupa = (TextView)findViewById(R.id.lblLupaPassword);
+        lupa.setMovementMethod(LinkMovementMethod.getInstance());
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
-        db=new SQLiteHandler(getApplicationContext());
+
         session = new SessionManager(getApplicationContext());
 
         if(session.isLoggedIn()){

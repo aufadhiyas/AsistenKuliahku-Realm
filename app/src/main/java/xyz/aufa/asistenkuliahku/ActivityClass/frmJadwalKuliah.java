@@ -1,11 +1,8 @@
 package xyz.aufa.asistenkuliahku.ActivityClass;
 
 import android.app.TimePickerDialog;
-import android.content.Intent;
 
-import java.text.DateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,11 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import xyz.aufa.asistenkuliahku.ModelClass.jkO;
 import xyz.aufa.asistenkuliahku.R;
-import xyz.aufa.asistenkuliahku.SQLite_Controller.ControllerDAO.jkRepo;
 
 public class frmJadwalKuliah extends AppCompatActivity {
 
@@ -32,7 +27,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frm_jadwal_kuliah);
+        setContentView(R.layout.frmjk);
         sp = (Spinner) findViewById(R.id.spinnerHari);
         Ruang = (EditText) findViewById(R.id.txtRuangan);
         makul = (EditText) findViewById(R.id.txtMakul);
@@ -67,19 +62,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
             public void onClick(View v){
                 String hari = sp.getSelectedItem().toString();
                 jkO jk=new jkO();
-                jkRepo jkRepo = new jkRepo();
-                currentDateTime = DateFormat.getDateTimeInstance().format(new Date());
-                //jk.setNo_jk();
-                jk.setHari_jk(hari);
-                jk.setMakul_jk(makul.getText().toString().trim());
-                jk.setDosen_jk(dosen.getText().toString().trim());
-                jk.setRuangan_jk(Ruang.getText().toString().trim());
-                jk.setDosen_jk(dosen.getText().toString().trim());
-                jk.setWaktu_jk(Jam.getText().toString().trim());
-                jk.setKelas_jk(kelas.getText().toString().trim());
-                jk.setCreated_at(currentDateTime);
-                jk.setUpdated_at(currentDateTime);
-                jkRepo.insert(jk);
+
 
 
 
