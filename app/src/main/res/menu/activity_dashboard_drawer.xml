@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnMenuJadwalKuliah"
+            android:title="Jadwal Kuliah" />
+        <item
+            android:id="@+id/btnMenuJadwalLain"
+            android:title="Jadwal Lain" />
+        <item
+            android:id="@+id/btnmenuCatatan"
+            android:title="Catatan" />
+        <item
+            android:id="@+id/btnMenuTugas"
+            android:title="Tugas" />
+    </group>
+
+    <item android:title="Aplikasi">
+        <menu>
+            <item
+                android:id="@+id/btnMenuTentang"
+                android:title="Tentang" />
+            <item
+                android:id="@+id/btnMenuLogout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

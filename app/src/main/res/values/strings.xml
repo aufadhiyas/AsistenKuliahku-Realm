@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">MyCollege Assistant</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="titleEditJK">Edit Jadwal Kuliah</string>
+    <string name="titleTambahJK">Tambah Jadwal Kuliah</string>
+
+
+
+
+    <string-array name="hari">
+        <item>Pilih Hari</item>
+        <item>Senin</item>
+        <item>Selasa</item>
+        <item>Rabu</item>
+        <item>Kamis</item>
+        <item>Jumat</item>
+        <item>Sabtu</item>
+        <item>Minggu</item>
+    </string-array>
+
+    <string name="DB_NAME">AsistenKuliahku</string>
+    <string name="DB_VERSION">1</string>
+
+    <!--Daftar Nama Tabel-->
+    <string name="TB_User">user</string>
+    <string name="TB_JK">jadwalkuliah</string>
+    <string name="TB_JL">jadwallain</string>
+    <string name="TB_C">catatan</string>
+    <string name="TB_T">tugas</string>
+    <string name="TB_Setting">setting</string>
+
+
+    <!--Kolom Tabel User-->
+    <string name="KEY_uNo">no</string>
+    <string name="KEY_uUID">uid</string>
+    <string name="KEY_uNama">nama</string>
+    <string name="KEY_uEmail">email</string>
+    <string name="KEY_uPassword">password</string>
+    <string name="KEY_uUniv">universitas</string>
+    <string name="KEY_uJurusan">jurusan</string>
+    <string name="KEY_uKelas">kelas</string>
+    <string name="KEY_uTglLhr">tgllahir</string>
+    <string name="KEY_uKodeVer">kodeverifikasi</string>
+    <string name="KEY_uLokasi">lokasi</string>
+    <string name="KEY_uTglDibuat">tgldibuat</string>
+    <string name="KEY_uTrkhrUpdate">terakhir_update</string>
+    <string name="KEY_uTrkhrDataUpdate">terakhir_data_update</string>
+    <string name="KEY_uNoOnline">noonline_u</string>
+
+    <!--Kolom Tabel JK-->
+    <string name="KEY_jkNo">no_jk</string>
+    <string name="KEY_jkHari">hari_jk</string>
+    <string name="KEY_jkWaktu">waktu_jk</string>
+    <string name="KEY_jkRuangan">ruangan_jk</string>
+    <string name="KEY_jkMakul">makul_jk</string>
+    <string name="KEY_jkDosen">dosen_jk</string>
+    <string name="KEY_jkKelas">kelas_jk</string>
+    <string name="KEY_jkTerakhirUpdate">updateTime_jk</string>
+    <string name="KEY_jkOnlineNo">noonline_jk</string>
+
+    <!--Kolom Tabel JL-->
+    <string name="KEY_jlNo">no_jl</string>
+    <string name="KEY_jlNama">nama_jl</string>
+    <string name="KEY_jlWaktuS">waktus_jl</string>
+    <string name="KEY_jlWaktuF">waktuf_jl</string>
+    <string name="KEY_jlTempat">tempat_jl</string>
+    <string name="KEY_jlDeskrip">deskripsi_jl</string>
+    <string name="KEY_jlAkumulasi">akumulasi_jl</string>
+    <string name="KEY_jlTerakhirUpdate">updateTime_jl</string>
+    <string name="KEY_jlOnlineNo">noonline_jl</string>
+
+    <!--Kolom Tabel Tugas-->
+    <string name="KEY_tNo">no_t</string>
+    <string name="KEY_tNoJK">no_jk</string>
+    <string name="KEY_tNama">waktu_t</string>
+    <string name="KEY_tDeskripsi">deskripsi_t</string>
+    <string name="KEY_tAttLink">attlink_t</string>
+    <string name="KEY_tWaktu">waktu_t</string>
+    <string name="KEY_tDosen">dosen_t</string>
+    <string name="KEY_tStatus">status_t</string>
+    <string name="KEY_ttrkhrupdate">updateTime_t</string>
+    <string name="KEY_tOnlineNo">noonline_t</string>
+
+    <!--Kolom Tabel Catatan-->
+    <string name="KEY_cNo">no_c</string>
+    <string name="KEY_cNama">nama_c</string>
+    <string name="KEY_cDeskrip">deskripsi_c</string>
+    <string name="KEY_cWaktuF">waktu_c</string>
+    <string name="KEY_cAttLink">attlink_c</string>
+    <string name="KEY_cWaktu">waktu_c</string>
+    <string name="KEY_cTerakhirUpdate">updateTime_c</string>
+    <string name="KEY_cOnlineNo">noonline_c</string>
+
+    <!--Kolom Tabel LOG-->
+    <string name="KEY_LOGNO">no_log</string>
+    <string name="KEY_LOGNAMA">nama_log</string>
+    <string name="KEY_LOGWAKTU">waktu_log</string>
+    <string name="KEY_LOGNOLOCAL">no_local</string>
+    <string name="KEY_LOGNOONLINE">no_online</string>
+
+    <!--Kolom Tabel Setting-->
+    <string name="KEY_stCuaca">statuscuaca</string>
+    <string name="KEY_stLoc">location</string>
+    <string name="KEY_stTimer">statustimer</string>
+    <string name="KEY_stDurat">statusDuration</string>
+    <string name="KEY_stAutoSink">autoSink</string>
+
+    <!--Kolom Tabel Session-->
+    <string name="KEY_sLogin">stat_login</string>
+    <string name="KEY_sDateLogin">terakhir_login</string>
+    <string name="KEY_sVerif">stat_verifikasi</string>
+    <string name="KEY_sSinkron">terakhir_sinkron</string>
+
+
+
+</resources>
