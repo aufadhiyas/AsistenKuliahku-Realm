@@ -13,6 +13,7 @@ public class jlO {
     private String deskripsi_jl;
     private String akumulasi_jl;
     private String status_jl;
+    private String Author;
     private String created_at;
     private String updated_at;
     private String noonline_jl;

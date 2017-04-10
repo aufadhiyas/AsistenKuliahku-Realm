@@ -7,6 +7,7 @@ package xyz.aufa.asistenkuliahku.ModelClass;
 public class cO {
 
     private String no_c;
+    private String uid;
     private String nama_c;
     private String deskripsi_c;
     private String attlink_c;
@@ -15,8 +16,9 @@ public class cO {
     private String updated_at;
     private String noonline_c;
 
-    public cO(String no_c, String nama_c, String deskripsi_c, String attlink_c, String waktu_c, String created_at, String updated_at, String noonline_c) {
+    public cO(String no_c, String uid, String nama_c, String deskripsi_c, String attlink_c, String waktu_c, String created_at, String updated_at, String noonline_c) {
         this.no_c = no_c;
+        this.uid = uid;
         this.nama_c = nama_c;
         this.deskripsi_c = deskripsi_c;
         this.attlink_c = attlink_c;
@@ -32,6 +34,14 @@ public class cO {
 
     public void setNo_c(String no_c) {
         this.no_c = no_c;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getNama_c() {

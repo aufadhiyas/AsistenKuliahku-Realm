@@ -14,9 +14,10 @@ public class tO {
     private String status_t;
     private String created_at;
     private String updated_at;
+    private String author;
     private String noonline_t;
 
-    public tO(String no_t, String no_jk, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, String status_t, String created_at, String updated_at, String noonline_t) {
+    public tO(String no_t, String no_jk, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, String status_t, String created_at, String updated_at, String author, String noonline_t) {
         this.no_t = no_t;
         this.no_jk = no_jk;
         this.deskripsi_t = deskripsi_t;
@@ -26,6 +27,7 @@ public class tO {
         this.status_t = status_t;
         this.created_at = created_at;
         this.updated_at = updated_at;
+        this.author = author;
         this.noonline_t = noonline_t;
     }
 
@@ -99,6 +101,14 @@ public class tO {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getNoonline_t() {
