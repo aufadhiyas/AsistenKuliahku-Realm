@@ -2,7 +2,9 @@ package xyz.aufa.asistenkuliahku.ActivityClass;
 
 import android.app.TimePickerDialog;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +14,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
+import io.realm.Realm;
 import xyz.aufa.asistenkuliahku.ModelClass.jkO;
 import xyz.aufa.asistenkuliahku.R;
+import xyz.aufa.asistenkuliahku.opRealm.jkOP;
 
 public class frmJadwalKuliah extends AppCompatActivity {
 
@@ -23,6 +27,9 @@ public class frmJadwalKuliah extends AppCompatActivity {
     private int mHour, mMinute;
     private jkO jk;
     private String currentDateTime;
+    private Realm realm;
+    jkOP opJK;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,8 @@ public class frmJadwalKuliah extends AppCompatActivity {
         Jam = (EditText) findViewById(R.id.txtJam);
         simpan = (Button) findViewById(R.id.btnSimpan);
         batal = (Button) findViewById(R.id.btnBatal);
+        opJK = new jkOP();
+        getCurrentTimeStamp();
 
 
         Jam.setOnClickListener(new View.OnClickListener() {
@@ -60,24 +69,32 @@ public class frmJadwalKuliah extends AppCompatActivity {
         });
         simpan.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                String hari = sp.getSelectedItem().toString();
-                jkO jk=new jkO();
-
-
-
-
-                //Toast.makeText(getApplicationContext(),
-                 //       currentDateTime, Toast.LENGTH_SHORT).show();
+                final int no = opJK.getNextId();
+                final String hari = sp.getSelectedItem().toString();
+                final String jam = Jam.getText().toString().trim();
+                final String Makul= makul.getText().toString().trim();
+                final String Ruangan = Ruang.getText().toString().trim();
+                final String Dosen = dosen.getText().toString().trim();
+                final String Kelas = kelas.getText().toString().trim();
+                final String updated_at = getCurrentTimeStamp();
+                final String created_at = getCurrentTimeStamp();
+                final String Author = "User";
+                final int No_Online = 0;
+                jk = new jkO(no, hari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, Author,No_Online);
+                opJK.tambahJadwalKuliah(jk);
 
             }
 
         });
     }
 
-    public int getNo(int no){
-
-       return no;
+    public static String getCurrentTimeStamp() {
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+        Date now = new Date();
+        String strDate = sdfDate.format(now);
+        return strDate;
     }
+
     /*public void onClick(View v) {
         if (v == simpan) {
             String hari = sp.getSelectedItem().toString();

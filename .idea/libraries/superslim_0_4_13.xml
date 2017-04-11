@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="superslim-0.4.13">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/684fc87d71976633bd9c384fc16d7aed89317fa2/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/684fc87d71976633bd9c384fc16d7aed89317fa2/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tonicartos/superslim/0.4.13/aabc6e22c6a664d8b45ad9632542871a57a3e7f2/superslim-0.4.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

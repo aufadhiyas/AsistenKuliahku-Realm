@@ -20,12 +20,30 @@ public class jkO extends RealmObject{
 
     private String hari_jk;
     private String waktu_jk;
-    private String ruangan_jk;
     private String makul_jk;
+    private String ruangan_jk;
     private String dosen_jk;
     private String kelas_jk, created_at, updated_at;
     private String Author;
     private int noonline_j;
+    final static public String jkSort ="";
+
+    public jkO() {
+    }
+
+    public jkO(int no_jk, String hari_jk, String waktu_jk, String makul_jk, String ruangan_jk, String dosen_jk, String kelas_jk, String created_at, String updated_at, String author, int noonline_j) {
+        this.no_jk = no_jk;
+        this.hari_jk = hari_jk;
+        this.waktu_jk = waktu_jk;
+        this.ruangan_jk = ruangan_jk;
+        this.makul_jk = makul_jk;
+        this.dosen_jk = dosen_jk;
+        this.kelas_jk = kelas_jk;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
+        this.Author = author;
+        this.noonline_j = noonline_j;
+    }
 
     public int getNo_jk() {
         return no_jk;

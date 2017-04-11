@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="realm-recyclerview-0.9.25">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/a4e6a6e3227c888b6e47cd7d7fa832e295dbb2ea/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/a4e6a6e3227c888b6e47cd7d7fa832e295dbb2ea/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

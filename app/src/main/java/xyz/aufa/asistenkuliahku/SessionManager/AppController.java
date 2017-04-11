@@ -8,6 +8,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 /**
  * Created by SENSODYNE on 09/04/2017.
@@ -17,8 +18,18 @@ public class AppController extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Realm.init(this);
         mInstance = this;
+        //initRealm();
+        Realm.init(this);
+    }
+    private void initRealm() {
+        Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder()
+                .name(".realm")
+                .schemaVersion(1)
+                .deleteRealmIfMigrationNeeded()
+                .build();
+        Realm.setDefaultConfiguration(config);
     }
     public static final String TAG = AppController.class.getSimpleName();
 

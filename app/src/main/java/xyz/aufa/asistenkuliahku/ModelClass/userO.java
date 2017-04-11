@@ -1,10 +1,12 @@
 package xyz.aufa.asistenkuliahku.ModelClass;
 
+import io.realm.RealmObject;
+
 /**
  * Created by SENSODYNE on 28/03/2017.
  */
 
-public class userO {
+public class userO extends RealmObject{
     public static final String TAG = userO.class.getSimpleName();
     public static final String TABLE_USER= "user";
 
@@ -27,7 +29,10 @@ public class userO {
     private String sync_at;
     private String no_online;
 
-    public userO(String id, String uid, String nama, String email, String password, String kode_verifikasi,String status_verifikasi, String universitas, String jurusan, String kelas, String lokasi, String tanggal_lahir, String created_at, String updated_at, String sync_at, String no_online) {
+    public userO() {
+    }
+
+    public userO(String id, String uid, String nama, String email, String password, String kode_verifikasi, String status_verifikasi, String universitas, String jurusan, String kelas, String lokasi, String tanggal_lahir, String created_at, String updated_at, String sync_at, String no_online) {
         this.id = id;
         this.uid = uid;
         this.nama = nama;
