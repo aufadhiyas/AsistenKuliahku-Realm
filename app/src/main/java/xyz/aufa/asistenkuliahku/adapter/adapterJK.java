@@ -1,31 +1,26 @@
 package xyz.aufa.asistenkuliahku.adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
-
 import io.realm.OrderedRealmCollection;
-import io.realm.Realm;
-import io.realm.RealmQuery;
 import io.realm.RealmRecyclerViewAdapter;
 import io.realm.RealmResults;
-import xyz.aufa.asistenkuliahku.ModelClass.jkO;
+import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import xyz.aufa.asistenkuliahku.R;
 
 /**
  * Created by SENSODYNE on 12/04/2017.
  */
 
-public class adapterJK extends RealmRecyclerViewAdapter<jkO, adapterJK.MyViewHolder> {
+public class adapterJK extends RealmRecyclerViewAdapter<JadwalKuliahModel, adapterJK.MyViewHolder> {
 
-    private RealmResults<jkO> JadwalKuliah;
+    private RealmResults<JadwalKuliahModel> JadwalKuliah;
 
-    public adapterJK(OrderedRealmCollection<jkO> JadwalKuliah){
+    public adapterJK(OrderedRealmCollection<JadwalKuliahModel> JadwalKuliah){
         super(JadwalKuliah, true);
         setHasStableIds(true);
     }
@@ -42,7 +37,7 @@ public class adapterJK extends RealmRecyclerViewAdapter<jkO, adapterJK.MyViewHol
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position){
-        jkO jk = JadwalKuliah.get(position);
+        JadwalKuliahModel jk = JadwalKuliah.get(position);
         holder.JadwalKuliah= jk;
         holder.txtHari.setText(jk.getHari_jk());
         holder.txtMakul.setText(jk.getMakul_jk());
@@ -51,6 +46,7 @@ public class adapterJK extends RealmRecyclerViewAdapter<jkO, adapterJK.MyViewHol
         holder.txtRuangan.setText(jk.getRuangan_jk());
         holder.txtKelas.setText(jk.getKelas_jk());
     }
+
     @Override
     public int getItemCount(){
         return JadwalKuliah.size();
@@ -60,7 +56,7 @@ public class adapterJK extends RealmRecyclerViewAdapter<jkO, adapterJK.MyViewHol
     class MyViewHolder extends RecyclerView.ViewHolder{
 
         private TextView txtHari,txtMakul,txtJam,txtDosen,txtRuangan,txtKelas;
-        public jkO JadwalKuliah;
+        public JadwalKuliahModel JadwalKuliah;
 
         public MyViewHolder(View view){
             super(view);
@@ -73,5 +69,4 @@ public class adapterJK extends RealmRecyclerViewAdapter<jkO, adapterJK.MyViewHol
 
         }
     }
-
 }

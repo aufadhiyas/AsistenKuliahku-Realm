@@ -15,9 +15,9 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import io.realm.Realm;
-import xyz.aufa.asistenkuliahku.ModelClass.jkO;
+import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import xyz.aufa.asistenkuliahku.R;
-import xyz.aufa.asistenkuliahku.opRealm.jkOP;
+import xyz.aufa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 
 public class frmJadwalKuliah extends AppCompatActivity {
 
@@ -25,10 +25,10 @@ public class frmJadwalKuliah extends AppCompatActivity {
     EditText Ruang, makul, dosen, kelas, Jam;
     Button simpan, batal;
     private int mHour, mMinute;
-    private jkO jk;
+    private JadwalKuliahModel jk;
     private String currentDateTime;
     private Realm realm;
-    jkOP opJK;
+    JadwalKuliahOperation opJK;
 
 
     @Override
@@ -43,7 +43,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
         Jam = (EditText) findViewById(R.id.txtJam);
         simpan = (Button) findViewById(R.id.btnSimpan);
         batal = (Button) findViewById(R.id.btnBatal);
-        opJK = new jkOP();
+        opJK = new JadwalKuliahOperation();
         getCurrentTimeStamp();
 
 
@@ -80,7 +80,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
                 final String created_at = getCurrentTimeStamp();
                 final String Author = "User";
                 final int No_Online = 0;
-                jk = new jkO(no, hari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, Author,No_Online);
+                jk = new JadwalKuliahModel(no, hari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, Author,No_Online);
                 opJK.tambahJadwalKuliah(jk);
 
             }

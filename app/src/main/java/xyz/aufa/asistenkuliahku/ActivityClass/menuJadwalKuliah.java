@@ -2,28 +2,22 @@ package xyz.aufa.asistenkuliahku.ActivityClass;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
-import xyz.aufa.asistenkuliahku.ModelClass.jkO;
+import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import xyz.aufa.asistenkuliahku.R;
 import xyz.aufa.asistenkuliahku.adapter.adapterJK;
-import xyz.aufa.asistenkuliahku.opRealm.RealmBaseActivity;
+import xyz.aufa.asistenkuliahku.OperationRealm.RealmBaseActivity;
+import xyz.aufa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 
 public class menuJadwalKuliah extends AppCompatActivity {
 
@@ -36,7 +30,8 @@ public class menuJadwalKuliah extends AppCompatActivity {
     private RecyclerView recyclerView;
     private adapterJK adapterJK;
     private RealmBaseActivity rba;
-    //private List<jkO> jadwalKuliah = new ArrayList<>();
+    private JadwalKuliahOperation jkk;
+    //private List<JadwalKuliahModel> jadwalKuliah = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +39,9 @@ public class menuJadwalKuliah extends AppCompatActivity {
         setContentView(R.layout.menujk);
         Tambah = (FloatingActionButton) findViewById(R.id.addjk);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
-        //Realm.setDefaultConfiguration(rba.getRealmConfiguration());
-        realm = Realm.getDefaultInstance();
+        //realm.getDefaultInstance();
+        setupRecycler();
 
-
-
-       // setupRecycler();
         Tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,23 +60,16 @@ public class menuJadwalKuliah extends AppCompatActivity {
 
 
     private void setupRecycler() {
-        RealmResults<jkO> jk = realm.where(jkO.class).findAll();
+
+        //realm.getConfiguration();
+        RealmResults<JadwalKuliahModel> jk = realm.where(JadwalKuliahModel.class).findAll();
         adapterJK = new adapterJK(jk);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapterJK);
         recyclerView.setHasFixedSize(true);
-        //recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
 
-        /*TouchHelperCallback touchHelperCallback = new TouchHelperCallback();
-        ItemTouchHelper touchHelper = new ItemTouchHelper(touchHelperCallback);
-        touchHelper.attachToRecyclerView(recyclerView);*/
     }
-    private RealmConfiguration getRealmConfig() {
-        return new RealmConfiguration
-                .Builder()
-                .modules(Realm.getDefaultModule(), new jkO())
-                .build();
-    }
+
     protected void onDestroy() {
         super.onDestroy();
         recyclerView.setAdapter(null);

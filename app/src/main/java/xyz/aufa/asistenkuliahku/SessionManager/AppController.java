@@ -19,10 +19,9 @@ public class AppController extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
-        //initRealm();
-        Realm.init(this);
-    }
-    private void initRealm() {
+
+        //Realm.init(this);
+
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder()
                 .name(".realm")
@@ -31,6 +30,9 @@ public class AppController extends Application {
                 .build();
         Realm.setDefaultConfiguration(config);
     }
+
+
+
     public static final String TAG = AppController.class.getSimpleName();
 
     private RequestQueue mRequestQueue;
