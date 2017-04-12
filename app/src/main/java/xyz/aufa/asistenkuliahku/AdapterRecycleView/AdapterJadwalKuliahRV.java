@@ -4,11 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import io.realm.OrderedRealmCollection;
 import io.realm.RealmRecyclerViewAdapter;
 import io.realm.RealmResults;
+import io.realm.RealmViewHolder;
 import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import xyz.aufa.asistenkuliahku.R;
 
@@ -18,10 +20,10 @@ import xyz.aufa.asistenkuliahku.R;
 
 public class AdapterJadwalKuliahRV extends RealmRecyclerViewAdapter<JadwalKuliahModel, AdapterJadwalKuliahRV.MyViewHolder> {
 
-    private RealmResults<JadwalKuliahModel> JadwalKuliah;
 
-    public AdapterJadwalKuliahRV(OrderedRealmCollection<JadwalKuliahModel> JadwalKuliah){
-        super(JadwalKuliah, true);
+
+    public AdapterJadwalKuliahRV(OrderedRealmCollection<JadwalKuliahModel> data){
+        super(data, true);
         setHasStableIds(true);
     }
 
@@ -37,8 +39,8 @@ public class AdapterJadwalKuliahRV extends RealmRecyclerViewAdapter<JadwalKuliah
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position){
-        JadwalKuliahModel jk = JadwalKuliah.get(position);
-        holder.JadwalKuliah= jk;
+        final JadwalKuliahModel jk = getItem(position);
+        holder.data= jk;
         holder.txtHari.setText(jk.getHari_jk());
         holder.txtMakul.setText(jk.getMakul_jk());
         holder.txtJam.setText(jk.getWaktu_jk());
@@ -47,25 +49,23 @@ public class AdapterJadwalKuliahRV extends RealmRecyclerViewAdapter<JadwalKuliah
         holder.txtKelas.setText(jk.getKelas_jk());
     }
 
-    @Override
-    public int getItemCount(){
-        return JadwalKuliah.size();
-    }
+    //@Override
+   // public int getItemCount(){ return data.size(); }
 
 
-    class MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RealmViewHolder {
 
         private TextView txtHari,txtMakul,txtJam,txtDosen,txtRuangan,txtKelas;
-        public JadwalKuliahModel JadwalKuliah;
+        private JadwalKuliahModel data;
 
-        public MyViewHolder(View view){
-            super(view);
-            txtHari = (TextView) view.findViewById(R.id.rowhariJK);
-            txtJam = (TextView) view.findViewById(R.id.rowJamjk);
-            txtMakul = (TextView) view.findViewById(R.id.rowMakul);
-            txtDosen = (TextView) view.findViewById(R.id.rowDosen);
-            txtRuangan = (TextView) view.findViewById(R.id.rowRuanganjk);
-            txtKelas = (TextView) view.findViewById(R.id.rowKelasJK);
+        private MyViewHolder(View container){
+            super(container);
+            txtHari = (TextView) container.findViewById(R.id.rowhariJK);
+            txtJam = (TextView) container.findViewById(R.id.rowJamjk);
+            txtMakul = (TextView) container.findViewById(R.id.rowMakul);
+            txtDosen = (TextView) container.findViewById(R.id.rowDosen);
+            txtRuangan = (TextView) container.findViewById(R.id.rowRuanganjk);
+            txtKelas = (TextView) container.findViewById(R.id.rowKelasJK);
 
         }
     }

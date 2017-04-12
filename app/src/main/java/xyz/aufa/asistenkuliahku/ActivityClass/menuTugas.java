@@ -10,6 +10,6 @@ public class menuTugas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menut);
+        setContentView(R.layout.menu_tugas);
     }
 }

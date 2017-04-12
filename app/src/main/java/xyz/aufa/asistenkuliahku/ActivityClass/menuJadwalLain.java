@@ -10,6 +10,6 @@ public class menuJadwalLain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menujl);
+        setContentView(R.layout.menu_jadwallain);
     }
 }

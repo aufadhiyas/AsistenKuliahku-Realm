@@ -34,7 +34,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frmjk);
+        setContentView(R.layout.frm_jadwalkuliah);
         sp = (Spinner) findViewById(R.id.spinnerHari);
         Ruang = (EditText) findViewById(R.id.txtRuangan);
         makul = (EditText) findViewById(R.id.txtMakul);

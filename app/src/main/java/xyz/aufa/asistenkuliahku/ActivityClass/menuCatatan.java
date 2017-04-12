@@ -10,6 +10,6 @@ public class menuCatatan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menuc);
+        setContentView(R.layout.menu_catatan);
     }
 }

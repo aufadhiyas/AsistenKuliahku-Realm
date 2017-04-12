@@ -1,5 +1,6 @@
 package xyz.aufa.asistenkuliahku.ActivityClass;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
@@ -12,8 +13,8 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import io.realm.Realm;
-import io.realm.RealmResults;
 import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
+import xyz.aufa.asistenkuliahku.OperationRealm.RealmController;
 import xyz.aufa.asistenkuliahku.R;
 import xyz.aufa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahRV;
 import xyz.aufa.asistenkuliahku.OperationRealm.RealmBaseActivity;
@@ -28,20 +29,23 @@ public class menuJadwalKuliah extends AppCompatActivity {
     private ListView listJK;
     private String EmailView;
     private RecyclerView recyclerView;
-    private AdapterJadwalKuliahRV AdapterJadwalKuliahRV;
+    private AdapterJadwalKuliahRV adapter;
     private RealmBaseActivity rba;
     private JadwalKuliahOperation jkk;
+    private Context context;
     //private List<JadwalKuliahModel> jadwalKuliah = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menujk);
+        setContentView(R.layout.menu_jadwalkuliah);
         Tambah = (FloatingActionButton) findViewById(R.id.addjk);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
-        //realm.getDefaultInstance();
-        setupRecycler();
 
+        this.realm = RealmController.with(this).getRealm();
+
+        realm.getDefaultInstance();
+        setupRecycler();
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
         Tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,12 +64,11 @@ public class menuJadwalKuliah extends AppCompatActivity {
 
 
     private void setupRecycler() {
-
-        //realm.getConfiguration();
-        RealmResults<JadwalKuliahModel> jk = realm.where(JadwalKuliahModel.class).findAll();
-        AdapterJadwalKuliahRV = new AdapterJadwalKuliahRV(jk);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(AdapterJadwalKuliahRV);
+        adapter = new AdapterJadwalKuliahRV(realm.where(JadwalKuliahModel.class).findAll());
+        final LinearLayoutManager layout = new LinearLayoutManager(context);
+        layout.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layout);
+        recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
 
     }
