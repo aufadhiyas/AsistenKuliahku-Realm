@@ -15,7 +15,7 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import xyz.aufa.asistenkuliahku.R;
-import xyz.aufa.asistenkuliahku.adapter.adapterJK;
+import xyz.aufa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahRV;
 import xyz.aufa.asistenkuliahku.OperationRealm.RealmBaseActivity;
 import xyz.aufa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 
@@ -28,7 +28,7 @@ public class menuJadwalKuliah extends AppCompatActivity {
     private ListView listJK;
     private String EmailView;
     private RecyclerView recyclerView;
-    private adapterJK adapterJK;
+    private AdapterJadwalKuliahRV AdapterJadwalKuliahRV;
     private RealmBaseActivity rba;
     private JadwalKuliahOperation jkk;
     //private List<JadwalKuliahModel> jadwalKuliah = new ArrayList<>();
@@ -63,9 +63,9 @@ public class menuJadwalKuliah extends AppCompatActivity {
 
         //realm.getConfiguration();
         RealmResults<JadwalKuliahModel> jk = realm.where(JadwalKuliahModel.class).findAll();
-        adapterJK = new adapterJK(jk);
+        AdapterJadwalKuliahRV = new AdapterJadwalKuliahRV(jk);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterJK);
+        recyclerView.setAdapter(AdapterJadwalKuliahRV);
         recyclerView.setHasFixedSize(true);
 
     }
