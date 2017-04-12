@@ -10,6 +10,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import io.realm.Realm;
+import io.realm.RealmQuery;
+import io.realm.RealmResults;
 import xyz.aufa.asistenkuliahku.ModelClass.jkO;
 import xyz.aufa.asistenkuliahku.R;
 
@@ -47,7 +49,8 @@ public class adapterJK extends RecyclerView.Adapter<adapterJK.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
         realm.getDefaultInstance();
-        realm.beginTransaction();
+        RealmQuery<jkO> query = realm.where(jkO.class);
+        RealmResults<jkO> JadwalKuliah = query.findAll();
         final jkO jk = JadwalKuliah.get(position);
         holder.txtHari.setText(jk.getHari_jk());
         holder.txtMakul.setText(jk.getMakul_jk());
@@ -55,7 +58,6 @@ public class adapterJK extends RecyclerView.Adapter<adapterJK.ViewHolder> {
         holder.txtDosen.setText(jk.getDosen_jk());
         holder.txtRuangan.setText(jk.getRuangan_jk());
         holder.txtKelas.setText(jk.getKelas_jk());
-        realm.commitTransaction();
     }
     @Override
     public int getItemCount(){
