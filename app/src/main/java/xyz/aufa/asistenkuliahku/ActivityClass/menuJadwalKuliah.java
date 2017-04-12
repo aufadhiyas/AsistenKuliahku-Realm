@@ -24,7 +24,7 @@ public class menuJadwalKuliah extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menujk);
         Tambah = (FloatingActionButton) findViewById(R.id.addjk);
-        listJK = (ListView) findViewById(R.id.listJadwalKuliah);
+        //listJK = (ListView) findViewById(R.id.listJadwalKuliah);
         //Edit = (Button) findViewById(R.id.btnEditJK);
 
         Tambah.setOnClickListener(new View.OnClickListener() {
