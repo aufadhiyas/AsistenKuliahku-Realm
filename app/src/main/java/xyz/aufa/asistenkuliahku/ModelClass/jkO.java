@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import io.realm.Realm;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -13,7 +14,10 @@ import io.realm.annotations.PrimaryKey;
  */
 
 public class jkO extends RealmObject{
-    private static final AtomicInteger count = new AtomicInteger(0);
+    public static final String FIELD_COUNT = "count";
+
+    private static AtomicInteger INTEGER_COUNTER = new AtomicInteger(0);
+
 
     @PrimaryKey
     private int no_jk;
@@ -44,6 +48,7 @@ public class jkO extends RealmObject{
         this.Author = author;
         this.noonline_j = noonline_j;
     }
+
 
     public int getNo_jk() {
         return no_jk;

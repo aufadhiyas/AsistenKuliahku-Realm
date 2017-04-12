@@ -3,6 +3,24 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\SENSODYNE\.android\build-cache\f27c1e78a9ec12730670ba4a32ffac008913cd58\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_5b1026dffadfa0dc72c9cd09d5812d92cfe0f443.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SENSODYNE\.android\build-cache\a0724c6338b58caaad903ee7060ee6fe716d6b2d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_09537d946427cf242630db1459b31379eacc2d49.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\io.realm\realm-annotations\2.2.1\3095c5145d7966e555c113c6a3fc33a107badc80\realm-annotations-2.2.1.jar"
         jumboMode="false"
         optimize="true"
@@ -36,6 +54,15 @@
         revision="25.0.0"
         sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_05671cf185997054ac596497eea5dd283c326483.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SENSODYNE\.android\build-cache\f8aac0fe58559818c2064cd8730345dbb5b63b88\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_61109b0793ccdd9076260b000c7b32fea8b157a8.jar" />
     </item>
     <item
         is-multidex="false"
@@ -83,6 +110,15 @@
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_801acefcf43b7d451a20fc87a3504a0f365daffb.jar" />
     </item>
     <item
+        is-multidex="true"
+        jar="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_c3a1259d0c3237936211f7208c2e0b89609bbffc\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\SENSODYNE\.android\build-cache\f27c1e78a9ec12730670ba4a32ffac008913cd58\output\jars\classes.jar"
         jumboMode="false"
@@ -99,6 +135,15 @@
         revision="25.0.0"
         sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_acd4cffe20a8609a7c723e1de9aba92f40c4ffa1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SENSODYNE\.android\build-cache\ac4a5b00f244112f5ab9490d243bd9a6fd3cf9fe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_5a41a11ee6248cd57dcd5b67df3c3b2c5a91de8e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,66 +183,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\SENSODYNE\.android\build-cache\684fc87d71976633bd9c384fc16d7aed89317fa2\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8adfd82229a5f0a129469305587557199017219e">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_2e386baa0f0682fb29c8003c19306b7b57220e74.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SENSODYNE\.android\build-cache\bc931d5ffa0df1eb7b47853226d570efadb48470\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_61c1eb8a0d1e6f07420beef347aacea249e7ec02.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SENSODYNE\.android\build-cache\f27c1e78a9ec12730670ba4a32ffac008913cd58\output\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_5b1026dffadfa0dc72c9cd09d5812d92cfe0f443.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SENSODYNE\.android\build-cache\a0724c6338b58caaad903ee7060ee6fe716d6b2d\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_09537d946427cf242630db1459b31379eacc2d49.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SENSODYNE\.android\build-cache\f8aac0fe58559818c2064cd8730345dbb5b63b88\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_61109b0793ccdd9076260b000c7b32fea8b157a8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\SENSODYNE\.android\build-cache\ac4a5b00f244112f5ab9490d243bd9a6fd3cf9fe\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_5a41a11ee6248cd57dcd5b67df3c3b2c5a91de8e.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\SENSODYNE\.android\build-cache\ca35a30af1dd621e7fdb0f5d24f5d3deeb0f5726\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_28b57abe87c7625b208771016f9697070561ed1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SENSODYNE\.android\build-cache\684fc87d71976633bd9c384fc16d7aed89317fa2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8adfd82229a5f0a129469305587557199017219e">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_2e386baa0f0682fb29c8003c19306b7b57220e74.jar" />
     </item>
     <item
         is-multidex="false"
@@ -216,6 +216,24 @@
         revision="25.0.0"
         sha1="b64dd5f01bc37de289f90fd59299b0c76d119611">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_2d3ce3c0b7ec5f80e246c5ca2337b665152c637f.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="54d86fbf2771f51510d2a09cf67a02ab611de8f4">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_11c5464844fb9907cd561f6f1f4ea8a3bbe15509\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\SENSODYNE\.android\build-cache\bc931d5ffa0df1eb7b47853226d570efadb48470\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_61c1eb8a0d1e6f07420beef347aacea249e7ec02.jar" />
     </item>
     <item
         is-multidex="false"

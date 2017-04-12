@@ -9,8 +9,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
 import io.realm.RealmQuery;
+import io.realm.RealmRecyclerViewAdapter;
 import io.realm.RealmResults;
 import xyz.aufa.asistenkuliahku.ModelClass.jkO;
 import xyz.aufa.asistenkuliahku.R;
@@ -19,39 +21,29 @@ import xyz.aufa.asistenkuliahku.R;
  * Created by SENSODYNE on 12/04/2017.
  */
 
-public class adapterJK extends RecyclerView.Adapter<adapterJK.ViewHolder> {
+public class adapterJK extends RealmRecyclerViewAdapter<jkO, adapterJK.MyViewHolder> {
 
-    private List<jkO> JadwalKuliah;
-    protected LayoutInflater inflater;
-    private RecyclerView mAttachedRecyclerView;
-    private int mClickedPosition = -1;
-    private Context mContext;
-    private Realm realm;
+    private RealmResults<jkO> JadwalKuliah;
 
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
-
-        private TextView txtHari,txtMakul,txtJam,txtDosen,txtRuangan,txtKelas;
-
-        public ViewHolder(View view){
-            super(view);
-            txtHari = (TextView) view.findViewById(R.id.rowhariJK);
-            txtJam = (TextView) view.findViewById(R.id.rowJamjk);
-            txtMakul = (TextView) view.findViewById(R.id.rowMakul);
-            txtDosen = (TextView) view.findViewById(R.id.rowDosen);
-            txtRuangan = (TextView) view.findViewById(R.id.rowRuanganjk);
-            txtKelas = (TextView) view.findViewById(R.id.rowKelasJK);
-        }
+    public adapterJK(OrderedRealmCollection<jkO> JadwalKuliah){
+        super(JadwalKuliah, true);
+        setHasStableIds(true);
     }
-    public adapterJK(List<jkO> JadwalKuliah){
-        this.JadwalKuliah = JadwalKuliah;
-    }
+
+
+
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position){
-        realm.getDefaultInstance();
-        RealmQuery<jkO> query = realm.where(jkO.class);
-        RealmResults<jkO> JadwalKuliah = query.findAll();
-        final jkO jk = JadwalKuliah.get(position);
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.row_jk, parent, false);
+        return new MyViewHolder(itemView);
+    }
+
+
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, int position){
+        jkO jk = JadwalKuliah.get(position);
+        holder.JadwalKuliah= jk;
         holder.txtHari.setText(jk.getHari_jk());
         holder.txtMakul.setText(jk.getMakul_jk());
         holder.txtJam.setText(jk.getWaktu_jk());
@@ -63,11 +55,23 @@ public class adapterJK extends RecyclerView.Adapter<adapterJK.ViewHolder> {
     public int getItemCount(){
         return JadwalKuliah.size();
     }
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_jk, parent, false);
-        return new ViewHolder(v);
-    }
 
+
+    class MyViewHolder extends RecyclerView.ViewHolder{
+
+        private TextView txtHari,txtMakul,txtJam,txtDosen,txtRuangan,txtKelas;
+        public jkO JadwalKuliah;
+
+        public MyViewHolder(View view){
+            super(view);
+            txtHari = (TextView) view.findViewById(R.id.rowhariJK);
+            txtJam = (TextView) view.findViewById(R.id.rowJamjk);
+            txtMakul = (TextView) view.findViewById(R.id.rowMakul);
+            txtDosen = (TextView) view.findViewById(R.id.rowDosen);
+            txtRuangan = (TextView) view.findViewById(R.id.rowRuanganjk);
+            txtKelas = (TextView) view.findViewById(R.id.rowKelasJK);
+
+        }
+    }
 
 }

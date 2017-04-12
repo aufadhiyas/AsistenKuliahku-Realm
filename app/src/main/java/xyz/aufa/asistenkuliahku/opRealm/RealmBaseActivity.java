@@ -11,7 +11,7 @@ import io.realm.RealmConfiguration;
 
 public class RealmBaseActivity extends AppCompatActivity{
     private RealmConfiguration realmConfiguration;
-    protected RealmConfiguration getRealmConfiguration(){
+    public RealmConfiguration getRealmConfiguration(){
         if (realmConfiguration == null){
             realmConfiguration = new RealmConfiguration
                     .Builder().deleteRealmIfMigrationNeeded().build();

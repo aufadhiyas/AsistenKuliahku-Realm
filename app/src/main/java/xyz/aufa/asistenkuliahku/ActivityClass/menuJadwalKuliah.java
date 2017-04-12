@@ -12,32 +12,44 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmResults;
 import xyz.aufa.asistenkuliahku.ModelClass.jkO;
 import xyz.aufa.asistenkuliahku.R;
 import xyz.aufa.asistenkuliahku.adapter.adapterJK;
+import xyz.aufa.asistenkuliahku.opRealm.RealmBaseActivity;
 
 public class menuJadwalKuliah extends AppCompatActivity {
 
     private FloatingActionButton Tambah;
+    private Realm realm;
     private Button Edit;
     private AlertDialog alertDialog;
     private ListView listJK;
     private String EmailView;
-    private RecyclerView recycler;
+    private RecyclerView recyclerView;
     private adapterJK adapterJK;
-    private List<jkO> jadwalKuliah = new ArrayList<>();
+    private RealmBaseActivity rba;
+    //private List<jkO> jadwalKuliah = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menujk);
         Tambah = (FloatingActionButton) findViewById(R.id.addjk);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
+        //Realm.setDefaultConfiguration(rba.getRealmConfiguration());
+        realm = Realm.getDefaultInstance();
 
-        setupRecycler();
+
+
+       // setupRecycler();
         Tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,30 +66,29 @@ public class menuJadwalKuliah extends AppCompatActivity {
 
     }
 
+
     private void setupRecycler() {
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        RecyclerView rv = (RecyclerView) findViewById(R.id.recyclerjk);
-        // rv.addItemDecoration(new DividerItemDecoration(ContextCompat.getDrawable(getApplicationContext(), R.drawable.item_decorator)));
+        RealmResults<jkO> jk = realm.where(jkO.class).findAll();
+        adapterJK = new adapterJK(jk);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapterJK);
+        recyclerView.setHasFixedSize(true);
+        //recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
 
-        rv.setHasFixedSize(true);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        rv.setLayoutManager(llm);
-        // createList();
-        adapterJK ca = new adapterJK(jadwalKuliah);
-        rv.setAdapter(ca);
-
-        /*rv.addOnItemTouchListener(new RecyclerItemListener(getApplicationContext(), rv,
-                new RecyclerItemListener.RecyclerTouchListener() {
-                    public void onClickItem(View v, int position) {
-                        System.out.println("On Click Item interface");
-                    }
-
-                    public void onLongClickItem(View v, int position) {
-                        System.out.println("On Long Click Item interface");
-                    }
-                }))
-                */
+        /*TouchHelperCallback touchHelperCallback = new TouchHelperCallback();
+        ItemTouchHelper touchHelper = new ItemTouchHelper(touchHelperCallback);
+        touchHelper.attachToRecyclerView(recyclerView);*/
     }
+    private RealmConfiguration getRealmConfig() {
+        return new RealmConfiguration
+                .Builder()
+                .modules(Realm.getDefaultModule(), new jkO())
+                .build();
+    }
+    protected void onDestroy() {
+        super.onDestroy();
+        recyclerView.setAdapter(null);
+        realm.close();
+    }
+
 }

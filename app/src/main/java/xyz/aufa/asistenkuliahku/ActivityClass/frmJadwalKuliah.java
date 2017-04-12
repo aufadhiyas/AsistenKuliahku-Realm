@@ -95,13 +95,5 @@ public class frmJadwalKuliah extends AppCompatActivity {
         return strDate;
     }
 
-    /*public void onClick(View v) {
-        if (v == simpan) {
-            String hari = sp.getSelectedItem().toString();
-            Toast.makeText(getApplicationContext(),
-                    hari, Toast.LENGTH_SHORT).show();
-        }
 
-
-    }*/
 }
