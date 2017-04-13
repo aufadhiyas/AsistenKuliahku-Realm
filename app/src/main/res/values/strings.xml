@@ -11,8 +11,6 @@
     <string name="titleTambahJK">Tambah Jadwal Kuliah</string>
 
 
-
-
     <string-array name="hari">
         <item>Pilih Hari</item>
         <item>Senin</item>
@@ -116,7 +114,6 @@
     <string name="KEY_sDateLogin">terakhir_login</string>
     <string name="KEY_sVerif">stat_verifikasi</string>
     <string name="KEY_sSinkron">terakhir_sinkron</string>
-
 
 
 </resources>

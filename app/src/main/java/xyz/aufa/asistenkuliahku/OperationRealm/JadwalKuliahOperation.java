@@ -3,6 +3,7 @@ package xyz.aufa.asistenkuliahku.OperationRealm;
 import android.util.Log;
 
 import io.realm.Realm;
+import io.realm.RealmAsyncTask;
 import io.realm.RealmResults;
 import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 
@@ -16,22 +17,21 @@ public class JadwalKuliahOperation {
     Realm realm;
     JadwalKuliahModel jk;
 
-    public void tambahJadwalKuliah(final JadwalKuliahModel JadwalKuliahModel){
+    public void tambahJadwalKuliah(final JadwalKuliahModel obj){
         realm = Realm.getDefaultInstance();
-        realm.getConfiguration();
-        realm.beginTransaction();
+
         realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-
-                realm.createObject(JadwalKuliahModel.class, getNextId());
+                realm.copyToRealmOrUpdate(obj);
             }
-        }, new Realm.Transaction.OnSuccess(){
-            public void onSuccess(){
+        }, new Realm.Transaction.OnSuccess() {
+            public void onSuccess() {
                 Log.d(TAG, "Berhasil Menyimpan Data Di Realm");
-                Log.d(TAG,"Path : "+realm.getPath());
+                Log.d(TAG, "Path : " + realm.getPath());
             }
         });
+        realm.beginTransaction();
         realm.commitTransaction();
     }
     public int getNextId() {
