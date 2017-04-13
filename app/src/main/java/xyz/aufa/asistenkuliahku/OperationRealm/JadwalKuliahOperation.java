@@ -29,6 +29,7 @@ public class JadwalKuliahOperation {
         }, new Realm.Transaction.OnSuccess(){
             public void onSuccess(){
                 Log.d(TAG, "Berhasil Menyimpan Data Di Realm");
+                Log.d(TAG,"Path : "+realm.getPath());
             }
         });
         realm.commitTransaction();

@@ -40,12 +40,12 @@ public class menuJadwalKuliah extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_jadwalkuliah);
         Tambah = (FloatingActionButton) findViewById(R.id.addjk);
-
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
         this.realm = RealmController.with(this).getRealm();
 
         realm.getDefaultInstance();
         setupRecycler();
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
+
         Tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

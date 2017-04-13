@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import io.realm.Realm;
 import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
@@ -80,12 +83,42 @@ public class frmJadwalKuliah extends AppCompatActivity {
                 final String created_at = getCurrentTimeStamp();
                 final String Author = "User";
                 final int No_Online = 0;
+                //Toast.makeText(frmJadwalKuliah.this, "SIMPAN : "+hari+", " +Makul, Toast.LENGTH_SHORT).show();
+
+                //memasukkan variable ke constructor
                 jk = new JadwalKuliahModel(no, hari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, Author,No_Online);
-                opJK.tambahJadwalKuliah(jk);
 
+
+                if (hari.equals("Pilih Hari")){
+                    Toast.makeText(frmJadwalKuliah.this, "Pilih Hari Dengan Benar", Toast.LENGTH_SHORT).show();
+                }else if(hari.equals("Minggu")){
+                    AlertHariMinggu();
+                }else{
+                    insert();
+                }
             }
-
         });
+    }
+
+    private void insert(){
+        opJK.tambahJadwalKuliah(jk);
+    }
+
+    private void AlertHariMinggu(){
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(frmJadwalKuliah.this);
+        alertDialog.setMessage("Apakah Anda Yakin Ada Kuliah Pada Hari Minggu?");
+        alertDialog.setPositiveButton("YA", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which){
+                insert();
+            }
+        });
+        alertDialog.setNegativeButton("TIDAK",new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which){
+                Toast.makeText(frmJadwalKuliah.this, "Silahkan Pilih Hari Anda!", Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+            }
+        });
+        alertDialog.show();
     }
 
     public static String getCurrentTimeStamp() {
