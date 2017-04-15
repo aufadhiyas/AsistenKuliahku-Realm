@@ -25,11 +25,23 @@ public class SessionManager {
     private static final String PREF_NAME = "myCollegeLogin";
 
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
+    private static final String KEY_IS_VERIFY = "isVerified";
+    private static final String KEY_UID = "UID_USER";
 
     public SessionManager(Context context) {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
+    }
+
+
+    public void setVerifyStat(boolean isVerifyStat){
+        editor.putBoolean(KEY_IS_VERIFY, isVerifyStat);
+        editor.commit();
+        Log.d(TAG, "User Verify Status Modified");
+    }
+    public boolean isVerifyStat(){
+        return pref.getBoolean(KEY_IS_VERIFY, false);
     }
 
     public void setLogin(boolean isLoggedIn) {
@@ -46,4 +58,9 @@ public class SessionManager {
         return pref.getBoolean(KEY_IS_LOGGEDIN, false);
     }
 
+    public void setUIDUSER(String uiduser){
+        editor.putString(KEY_UID, uiduser);
+        editor.commit();
+        Log.d(TAG, "UID FOR USER HAS BEEN SET");
+    }
 }

@@ -29,9 +29,10 @@ public class frmJadwalKuliah extends AppCompatActivity {
     Button simpan, batal;
     private int mHour, mMinute;
     private JadwalKuliahModel jk;
-    private String currentDateTime;
+    private String currentDateTime, hari;
     private Realm realm;
     JadwalKuliahOperation opJK;
+    int no;
 
 
     @Override
@@ -73,7 +74,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 final int no = opJK.getNextId();
-                final String hari = sp.getSelectedItem().toString();
+                hari = sp.getSelectedItem().toString();
                 final String jam = Jam.getText().toString().trim();
                 final String Makul= makul.getText().toString().trim();
                 final String Ruangan = Ruang.getText().toString().trim();
@@ -83,10 +84,14 @@ public class frmJadwalKuliah extends AppCompatActivity {
                 final String created_at = getCurrentTimeStamp();
                 final String Author = "User";
                 final int No_Online = 0;
+                final String uid = "";
+                final boolean status = true;
+                final String Type = "Jadwal";
+                final int nohari= noHariMen();
                 //Toast.makeText(frmJadwalKuliah.this, "SIMPAN : "+hari+", " +Makul, Toast.LENGTH_SHORT).show();
 
                 //memasukkan variable ke constructor
-                jk = new JadwalKuliahModel(no, hari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, Author,No_Online);
+                jk = new JadwalKuliahModel(no, uid, hari, nohari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, status, Author,Type,No_Online);
 
 
                 if (hari.equals("Pilih Hari")){
@@ -127,6 +132,26 @@ public class frmJadwalKuliah extends AppCompatActivity {
         String strDate = sdfDate.format(now);
         return strDate;
     }
-
+    public int noHariMen(){
+        int no = 0;
+        if (hari.equals("Senin")){
+            no = 1;
+        }else if (hari.equals("Selasa")){
+           no = 2;
+        }else if (hari.equals("Rabu")){
+            no = 3;
+        }else if (hari.equals("Kamis")){
+            no = 4;
+        }else if (hari.equals("Jumat")){
+            no = 5;
+        }else if (hari.equals("Sabtu")){
+            no = 6;
+        }else if (hari.equals("Minggu")){
+            no = 7;
+        }else{
+            no = 0;
+        }
+       return no;
+    }
 
 }

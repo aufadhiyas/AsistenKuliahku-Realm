@@ -6,14 +6,14 @@
             android:id="@+id/btnMenuJadwalKuliah"
             android:title="Jadwal Kuliah" />
         <item
+            android:id="@+id/btnMenuUjian"
+            android:title="Jadwal Ujian" />
+        <item
             android:id="@+id/btnMenuJadwalLain"
             android:title="Jadwal Lain" />
         <item
             android:id="@+id/btnmenuCatatan"
             android:title="Catatan" />
-        <item
-            android:id="@+id/btnMenuTugas"
-            android:title="Tugas" />
     </group>
 
     <item android:title="Aplikasi">

@@ -90,11 +90,11 @@ public class Dashboard extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.btnMenuJadwalKuliah) {
-            startActivity(new Intent(Dashboard.this, menuJadwalKuliah.class));
+            startActivity(new Intent(Dashboard.this, menuJadwalKuliahTab.class));
         } else if (id == R.id.btnMenuJadwalLain) {
 
-        } else if (id == R.id.btnMenuTugas) {
-
+        } else if (id == R.id.btnMenuUjian) {
+            startActivity(new Intent(Dashboard.this, menuJadwalUjian.class));
         } else if (id == R.id.btnmenuCatatan) {
 
         } else if (id == R.id.btnMenuTentang) {

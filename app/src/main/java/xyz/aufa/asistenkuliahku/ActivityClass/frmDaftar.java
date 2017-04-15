@@ -20,6 +20,10 @@ import com.android.volley.toolbox.StringRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -67,6 +71,9 @@ public class frmDaftar extends AppCompatActivity {
                         String namas = nama.getText().toString().trim();
                         if (!namas.isEmpty() && !emails.isEmpty() && !passwords.isEmpty()) {
 
+                            String uuid = md5(emails+""+getCurrentTimeStamp());
+                            registerUser(uuid,namas,emails,passwords);
+
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Please enter your details!", Toast.LENGTH_LONG)
@@ -91,15 +98,17 @@ public class frmDaftar extends AppCompatActivity {
 
     }
 
+
+
     private void initCustomAlertDialog(String EmailView) {
-        View v = getLayoutInflater().inflate(R.layout.dialogverivikasi, null);
-        TextView txtEmail = (TextView) findViewById(R.id.lblemailDaftar);
+        //View v = getLayoutInflater().inflate(R.layout.dialogverivikasi, null);
+        //TextView txtEmail = (TextView) findViewById(R.id.lblemailDaftar);
         //txtEmail.setText(EmailView);
-        alertDialog = new AlertDialog.Builder(this).create();
-        alertDialog.setView(v);
-        alertDialog.setTitle("Verifikasi Email");
+        //alertDialog = new AlertDialog.Builder(this).create();
+       // alertDialog.setView(v);
+        //alertDialog.setTitle("Verifikasi Email");
     }
-    private void registerUser(final String namas, final String emails,
+    private void registerUser(final String uid, final String namas, final String emails,
                               final String passwords) {
         // Tag used to cancel the request
         String tag_string_req = "req_register";
@@ -121,13 +130,11 @@ public class frmDaftar extends AppCompatActivity {
                     if (!error) {
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
-                        String uid = jObj.getString("uid");
+                        String uid = jObj.getString("unique_id");
 
-                        JSONObject user = jObj.getJSONObject("user");
-                        String name = user.getString("name");
-                        String email = user.getString("email");
-                        String created_at = user
-                                .getString("created_at");
+                        String name = jObj.getString("name");
+                        String email = jObj.getString("email");
+                        String created_at = jObj.getString("created_at");
 
                         // Inserting row in users table
                         //db.addUser(name, email, uid, created_at);
@@ -168,6 +175,7 @@ public class frmDaftar extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
+                params.put("unique_id", uid);
                 params.put("nama", namas);
                 params.put("email", emails);
                 params.put("password", passwords);
@@ -188,5 +196,29 @@ public class frmDaftar extends AppCompatActivity {
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
+    }
+    public String md5(String s) {
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+            digest.update(s.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuffer hexString = new StringBuffer();
+            for (int i=0; i<messageDigest.length; i++)
+                hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+    public static String getCurrentTimeStamp() {
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
+        Date now = new Date();
+        String strDate = sdfDate.format(now);
+        return strDate;
     }
 }

@@ -26,8 +26,10 @@ import java.util.Map;
 
 import xyz.aufa.asistenkuliahku.R;
 import xyz.aufa.asistenkuliahku.SessionManager.AppController;
+import xyz.aufa.asistenkuliahku.SessionManager.ReadInstallation;
 import xyz.aufa.asistenkuliahku.SessionManager.SessionManager;
 import xyz.aufa.asistenkuliahku.Webservice.Webservice_Controller;
+import xyz.aufa.asistenkuliahku.frmVerifikasi;
 
 public class frmLogin extends AppCompatActivity {
     private  static final String TAG = frmDaftar.class.getSimpleName();
@@ -65,8 +67,10 @@ public class frmLogin extends AppCompatActivity {
             public void onClick(View v) {
                 String email = txtEmail.getText().toString().trim();
                 String pass = txtPassword.getText().toString().trim();
+                Boolean status= true;
                 if(!email.isEmpty() && !pass.isEmpty()){
-                    checkLogin(email,pass);
+
+                    checkLogin(email,pass,status);
                 }else{
                     Toast.makeText(getApplicationContext(), "Masukkan Email Dan Password Anda", Toast.LENGTH_LONG).show();
                 }
@@ -82,7 +86,7 @@ public class frmLogin extends AppCompatActivity {
         });
 
     }
-    private void checkLogin(final String email, final String password) {
+    private void checkLogin(final String email, final String password, final Boolean statusLogin) {
         // Tag used to cancel the request
         String tag_string_req = "req_login";
 
@@ -100,35 +104,30 @@ public class frmLogin extends AppCompatActivity {
                 try {
                     JSONObject jObjs = new JSONObject(response);
                     boolean error = jObjs.getBoolean("error");
-
+                    int status_verifikasi = jObjs.getInt("status_verifikasi");
+                    String email = jObjs.getString("email");
                     // Check for error node in json
                     if (!error) {
                         // user successfully logged in
                         // Create login session
-                        session.setLogin(true);
+                        if (status_verifikasi == 0){
+                            session.setVerifyStat(false);
+                            Intent intent = new Intent(frmLogin.this, frmVerifikasi.class);
+                            String Email = null;
+                            intent.putExtra(email, Email);
+                        }else{
+                            session.setLogin(true);
+                            Intent intent = new Intent(frmLogin.this,
+                                    Dashboard.class);
+                            startActivity(intent);
+                            finish();
+                            Toast.makeText(getApplicationContext(),
+                                    response, Toast.LENGTH_LONG).show();
+                        }
 
-                        // Now store the user in SQLite
-                       // String uid = jObjs.getString("uid");
-
-                      //  JSONObject user = jObjs.getJSONObject("user");
-                     //   String name = user.getString("name");
-                      //  String email = user.getString("email");
-                      //  String created_at = user
-                        //        .getString("created_at");
-
-                        // Inserting row in users table
-                       // db.addUser(name, email, uid, created_at);
-
-                        // Launch main activity
-                        Intent intent = new Intent(frmLogin.this,
-                                Dashboard.class);
-                        startActivity(intent);
-                        finish();
-                        Toast.makeText(getApplicationContext(),
-                                response, Toast.LENGTH_LONG).show();
                     } else {
                         // Error in login. Get the error message
-                        String errorMsg = jObjs.getString("error_msg");
+                        String errorMsg = jObjs.getString("message");
                         Toast.makeText(getApplicationContext(),
                                 errorMsg, Toast.LENGTH_LONG).show();
                     }

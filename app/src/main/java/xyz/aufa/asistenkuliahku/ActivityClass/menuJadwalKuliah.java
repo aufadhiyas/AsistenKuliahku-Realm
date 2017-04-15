@@ -38,7 +38,7 @@ public class menuJadwalKuliah extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_jadwalkuliah);
+        setContentView(R.layout.menu_jadwalkuliah_yang_lama);
         Tambah = (FloatingActionButton) findViewById(R.id.addjk);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerjk);
         this.realm = RealmController.with(this).getRealm();
@@ -63,8 +63,8 @@ public class menuJadwalKuliah extends AppCompatActivity {
     }
 
 
-    private void setupRecycler() {
-        adapter = new AdapterJadwalKuliahRV(realm.where(JadwalKuliahModel.class).findAll());
+    public void setupRecycler() {
+        //adapter = new AdapterJadwalKuliahRV(realm.where(JadwalKuliahModel.class).findAll());
         final LinearLayoutManager layout = new LinearLayoutManager(context);
         layout.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layout);

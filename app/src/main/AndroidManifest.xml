@@ -12,23 +12,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityClass.frmLogin">
+
+        </activity>
+        <activity android:name=".ActivityClass.frmDaftar" />
+        <activity android:name=".ActivityClass.menuJadwalKuliah" />
+        <activity android:name=".ActivityClass.menuJadwalUjian" />
+        <activity android:name=".ActivityClass.menuJadwalLain" />
+        <activity android:name=".ActivityClass.menuCatatan" />
+        <activity
+            android:name=".ActivityClass.Dashboard"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityClass.frmDaftar" />
-        <activity android:name=".ActivityClass.menuJadwalKuliah" />
-        <activity android:name=".ActivityClass.menuTugas" />
-        <activity android:name=".ActivityClass.menuJadwalLain" />
-        <activity android:name=".ActivityClass.menuCatatan" />
-        <activity
-            android:name=".ActivityClass.Dashboard"
-            android:label="@string/title_activity_dashboard"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ActivityClass.frmJadwalKuliah" />
-        <activity android:name=".ActivityClass.frmTugas"></activity>
+        <activity android:name=".ActivityClass.frmTugas" />
+        <activity
+            android:name=".ActivityClass.menuJadwalKuliahTab"
+            android:label="@string/title_activity_menu_jadwal_kuliah_tab"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
