@@ -1,10 +1,12 @@
 package xyz.aufa.asistenkuliahku.ModelClass;
 
+import io.realm.RealmObject;
+
 /**
  * Created by SENSODYNE on 08/04/2017.
  */
 
-public class JadwalLainModel {
+public class JadwalLainModel extends RealmObject {
     private String no_jl;
     private String nama_jl;
     private String waktus_jl;
@@ -18,9 +20,10 @@ public class JadwalLainModel {
     private String updated_at;
     private String noonline_jl;
 
+    public JadwalLainModel() {
+    }
 
-
-    public JadwalLainModel(String no_jl, String nama_jl, String waktus_jl, String waktuf_jl, String tempat_jl, String deskripsi_jl, String akumulasi_jl, String status_jl, String created_at, String updated_at, String noonline_jl) {
+    public JadwalLainModel(String no_jl, String nama_jl, String waktus_jl, String waktuf_jl, String tempat_jl, String deskripsi_jl, String akumulasi_jl, String status_jl, String author, String created_at, String updated_at, String noonline_jl) {
         this.no_jl = no_jl;
         this.nama_jl = nama_jl;
         this.waktus_jl = waktus_jl;
@@ -29,6 +32,7 @@ public class JadwalLainModel {
         this.deskripsi_jl = deskripsi_jl;
         this.akumulasi_jl = akumulasi_jl;
         this.status_jl = status_jl;
+        Author = author;
         this.created_at = created_at;
         this.updated_at = updated_at;
         this.noonline_jl = noonline_jl;
@@ -96,6 +100,14 @@ public class JadwalLainModel {
 
     public void setStatus_jl(String status_jl) {
         this.status_jl = status_jl;
+    }
+
+    public String getAuthor() {
+        return Author;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
     }
 
     public String getCreated_at() {

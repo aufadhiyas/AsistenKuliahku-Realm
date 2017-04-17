@@ -15,11 +15,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import xyz.aufa.asistenkuliahku.ActivityClass.Fragment.fragment_Tugas;
 import xyz.aufa.asistenkuliahku.ActivityClass.Fragment.fragment_jadwal_pengganti;
 import xyz.aufa.asistenkuliahku.ActivityClass.Fragment.fragment_jadwalkuliah;
 import xyz.aufa.asistenkuliahku.R;
+import xyz.aufa.asistenkuliahku.frmJadwalPengganti;
 
 public class menuJadwalKuliahTab extends AppCompatActivity {
 
@@ -37,6 +39,9 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private int mPosition;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,14 +59,24 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(menuJadwalKuliahTab.this, frmJadwalKuliah.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                if (mViewPager.getCurrentItem() ==0){
+                    Intent i = new Intent(getApplicationContext(),frmJadwalKuliah.class);
+                    startActivity(i);
+                }else if (mViewPager.getCurrentItem()==1){
+                    Intent i1 = new Intent(getApplicationContext(),frmJadwalPengganti.class);
+                    startActivity(i1);
+                }else{
+                    Intent i2 = new Intent(getApplicationContext(),frmTugas.class);
+                    startActivity(i2);
+                }
             }
         });
+
 
     }
 
@@ -96,6 +111,8 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
          * The fragment argument representing the section number for this
          * fragment.
          */
+
+
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
@@ -138,6 +155,8 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -147,9 +166,11 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
             switch (position){
                 case 0:
                     fragment_jadwalkuliah fragment= new fragment_jadwalkuliah();
+
                     return fragment;
                 case 1:
                     fragment_jadwal_pengganti fragment1= new fragment_jadwal_pengganti();
+
                     return fragment1;
                 case 2:
                     fragment_Tugas fragment2 = new fragment_Tugas();

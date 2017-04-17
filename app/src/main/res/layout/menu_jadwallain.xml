@@ -10,34 +10,5 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="xyz.aufa.asistenkuliahku.ActivityClass.menuJadwalLain">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/listJadwalLain" />
-
-            <Button style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:text="Tambah"
-                android:layout_gravity="right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnTambahJL"
-                />
-            <Button style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Edit"
-                android:id="@+id/btnEditJL"/>
-
-        </LinearLayout>
-    </ScrollView>
 
 </RelativeLayout>

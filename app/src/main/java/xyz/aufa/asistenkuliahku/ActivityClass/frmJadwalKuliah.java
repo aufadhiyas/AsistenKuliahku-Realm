@@ -1,5 +1,6 @@
 package xyz.aufa.asistenkuliahku.ActivityClass;
 
+import android.app.Activity;
 import android.app.TimePickerDialog;
 
 import java.text.SimpleDateFormat;
@@ -7,10 +8,13 @@ import java.util.Calendar;
 import java.util.Date;
 
 import android.content.DialogInterface;
+import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -45,14 +49,13 @@ public class frmJadwalKuliah extends AppCompatActivity {
         dosen = (EditText) findViewById(R.id.txtDosen);
         kelas = (EditText) findViewById(R.id.txtKelas);
         Jam = (EditText) findViewById(R.id.txtJam);
+        disableSoftInputFromAppearing(Jam);
         simpan = (Button) findViewById(R.id.btnSimpan);
         batal = (Button) findViewById(R.id.btnBatal);
         opJK = new JadwalKuliahOperation();
-        getCurrentTimeStamp();
 
 
         Jam.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -75,7 +78,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
             public void onClick(View v){
                 final int no = opJK.getNextId();
                 hari = sp.getSelectedItem().toString();
-                final String jam = Jam.getText().toString().trim();
+                final String jam = Jam.getText().toString();
                 final String Makul= makul.getText().toString().trim();
                 final String Ruangan = Ruang.getText().toString().trim();
                 final String Dosen = dosen.getText().toString().trim();
@@ -93,7 +96,8 @@ public class frmJadwalKuliah extends AppCompatActivity {
                 //memasukkan variable ke constructor
                 jk = new JadwalKuliahModel(no, uid, hari, nohari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, status, Author,Type,No_Online);
 
-
+                kosongField();
+                Toast.makeText(frmJadwalKuliah.this, "Jadwal Kuliahmu Tersimpan !", Toast.LENGTH_SHORT).show();
                 if (hari.equals("Pilih Hari")){
                     Toast.makeText(frmJadwalKuliah.this, "Pilih Hari Dengan Benar", Toast.LENGTH_SHORT).show();
                 }else if(hari.equals("Minggu")){
@@ -152,6 +156,24 @@ public class frmJadwalKuliah extends AppCompatActivity {
             no = 0;
         }
        return no;
+    }
+    public void kosongField(){
+        sp.setSelection(0);
+        Ruang.setText("");
+        makul.setText("");
+        dosen.setText("");
+        kelas.setText("");
+        Jam.setText("");
+    }
+
+    public static void disableSoftInputFromAppearing(EditText editText) {
+        if (Build.VERSION.SDK_INT >= 11) {
+            editText.setRawInputType(InputType.TYPE_CLASS_TEXT);
+            editText.setTextIsSelectable(true);
+        } else {
+            editText.setRawInputType(InputType.TYPE_NULL);
+            editText.setFocusable(true);
+        }
     }
 
 }

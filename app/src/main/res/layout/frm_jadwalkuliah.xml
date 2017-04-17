@@ -31,13 +31,13 @@
             android:layout_height="match_parent">
 
             <EditText
+                android:id="@+id/txtMakul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mata Kuliah"
-                android:id="@+id/txtMakul"
                 android:inputType="text|textAutoComplete"
-                android:textSize="14sp"
-                android:minWidth="200sp"/>
+                android:minWidth="200sp"
+                android:textSize="14sp" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -46,12 +46,13 @@
             android:layout_height="match_parent">
 
             <EditText
+                android:id="@+id/txtRuangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Ruangan"
-                android:textSize="14sp"
                 android:inputType="text|textAutoComplete"
-                android:id="@+id/txtRuangan" />
+                android:maxLines="1"
+                android:textSize="14sp" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -67,11 +68,8 @@
                    android:id="@+id/txtJam"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:autoText="false"
-                   android:hint="Waktu"
-                   android:inputType="time"
-                   android:minWidth="170dp"
-                   android:onClick="onClick"
+                   android:hint="Jam"
+                   android:minWidth="80dp"
                    android:textSize="14sp"
                    tools:clickable="true" />
 
@@ -81,10 +79,10 @@
                android:layout_height="match_parent">
 
                <EditText
+                   android:id="@+id/txtKelas"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:hint="Kelas"
-                   android:id="@+id/txtKelas"
                    android:inputType="text|textAutoComplete"
                    android:textSize="14sp" />
 
@@ -98,11 +96,12 @@
             android:layout_height="match_parent">
 
             <EditText
+                android:id="@+id/txtDosen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Dosen"
-                android:id="@+id/txtDosen"
                 android:inputType="text|textAutoComplete"
+                android:singleLine="true"
                 android:textSize="14sp" />
 
         </android.support.design.widget.TextInputLayout>

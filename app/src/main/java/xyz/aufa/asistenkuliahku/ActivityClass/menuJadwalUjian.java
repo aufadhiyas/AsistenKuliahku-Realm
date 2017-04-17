@@ -1,30 +1,47 @@
 package xyz.aufa.asistenkuliahku.ActivityClass;
 
+import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import xyz.aufa.asistenkuliahku.R;
 import xyz.aufa.asistenkuliahku.fragment_jadwal_ujian_form;
-import xyz.aufa.asistenkuliahku.fragment_jadwal_ujian_menu;
 
-public class menuJadwalUjian extends FragmentActivity{
-    private FloatingActionButton fab;
+public class menuJadwalUjian extends AppCompatActivity{
+    FloatingActionButton fab;
+    private Context mContex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_jadwal_ujian);
         fab = (FloatingActionButton) findViewById(R.id.fabAddJadwalUjian);
-
-       getSupportFragmentManager().beginTransaction().replace(R.id.content_activity_menu_jk, new fragment_jadwal_ujian_menu()).addToBackStack(null).commit();
-
-
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeFragment();
+                fab.hide();
+            }
+        });
 
     }
+
+    private void changeFragment(){
+        getFragmentManager().beginTransaction().replace(R.id.activity_menu_ujian, new fragment_jadwal_ujian_form()).addToBackStack(null).commit();
+    }
+    public void onStart(){
+        super.onStart();
+        //fab.show();
+
+    }
+    public void onResume(){
+        super.onResume();
+        fab.show();
+    }
+
     public void onClick(View v){
 
     }

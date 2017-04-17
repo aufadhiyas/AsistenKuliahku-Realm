@@ -13,9 +13,18 @@ import xyz.aufa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 public class Jadwal implements Serializable,RealmModel{
     ArrayList<JadwalKuliahModel> jk;
     String Tittle;
+    int noJK;
 
     public Jadwal(){
         jk = new ArrayList<>();
+    }
+
+    public int getNoJK() {
+        return noJK;
+    }
+
+    public void setNoJK(int noJK) {
+        this.noJK = noJK;
     }
 
     public ArrayList<JadwalKuliahModel> getJk() {

@@ -28,9 +28,9 @@ public class Dashboard extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         session = new SessionManager(getApplicationContext());
-        if (!session.isLoggedIn()){
-            logoutUser();
-        }
+        //if (!session.isLoggedIn()){
+        //    logoutUser();
+       // }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -92,11 +92,11 @@ public class Dashboard extends AppCompatActivity
         if (id == R.id.btnMenuJadwalKuliah) {
             startActivity(new Intent(Dashboard.this, menuJadwalKuliahTab.class));
         } else if (id == R.id.btnMenuJadwalLain) {
-
+            startActivity(new Intent(Dashboard.this, menuJadwalLain.class));
         } else if (id == R.id.btnMenuUjian) {
             startActivity(new Intent(Dashboard.this, menuJadwalUjian.class));
         } else if (id == R.id.btnmenuCatatan) {
-
+            startActivity(new Intent(Dashboard.this, menuCatatan.class));
         } else if (id == R.id.btnMenuTentang) {
 
         } else if (id == R.id.btnMenuLogout) {

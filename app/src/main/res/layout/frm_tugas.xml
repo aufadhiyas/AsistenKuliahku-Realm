@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context="xyz.aufa.asistenkuliahku.ActivityClass.frmTugas">
 
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="FORM TUGAS LEK"
+    android:textSize="100dp"/>
 
 
 </RelativeLayout>

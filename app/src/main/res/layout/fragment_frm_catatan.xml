@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.aufa.asistenkuliahku.ActivityClass.Fragment.fragment_frm_catatan">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCatatanNama"
+        android:hint="Nama Catatan"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCatatanNama"
+                android:id="@+id/btnCatatanAttach"
+                android:text="Browse File"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnCatatanAttach"
+                android:id="@+id/lblCatatanFileName"/>
+
+        </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDeskripsiCatatan"
+        android:elegantTextHeight="true"
+        android:layout_below="@id/btnCatatanAttach"
+        android:lines="5"
+        android:hint="Deskripsi"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCatatanSimpan"
+            android:layout_gravity="end"
+            android:text="Simpan"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

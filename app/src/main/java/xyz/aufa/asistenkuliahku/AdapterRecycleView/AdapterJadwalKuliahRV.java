@@ -7,9 +7,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -49,6 +51,7 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
             if(this.data.get(i).getTittle().equals(jadwalKuliahModel.getHari_jk())){
                 Jadwal jd = data.get(i);
                 jd.addData(jadwalKuliahModel);
+                jd.setNoJK(jadwalKuliahModel.getNo_jk());
                 removeData(jadwalKuliahModel.getHari_jk());
                 this.data.add(jd);
                 Log.d(TAG,"Input Data");
@@ -57,7 +60,7 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
         }
         Jadwal jk = new Jadwal();
         jk.setTittle(jadwalKuliahModel.getHari_jk());
-        jk.addData(jadwalKuliahModel);
+        jk.setNoJK(jadwalKuliahModel.getNo_jk());
         this.data.add(jk);
         Log.d(TAG, "TAG : Input Data");
     }
@@ -95,6 +98,15 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
         params.height = pixels;
         holder.listView.setLayoutParams(params);
         holder.listView.requestLayout();
+        holder.listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1,int positions, long arg3)
+            {
+                positions = jk.getNoJK();
+                Toast.makeText(context, "position :" + positions, Toast.LENGTH_SHORT).show();
+            }
+        });
         holder.listView.setAdapter(customListAdapter);
     }
 
@@ -116,6 +128,7 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
             super(container);
             txtHari = (TextView) container.findViewById(R.id.harijklist);
             listView = (ListView) container.findViewById(R.id.listJk);
+
 
         }
 
