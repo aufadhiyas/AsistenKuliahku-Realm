@@ -2,15 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_jadwal_ujian_form">
+    tools:context=".ActivityClass.Fragment.fragment_form_ujian">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
-    <android.support.design.widget.TextInputLayout
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spJenisUjian"
+            android:entries="@array/JenisUjian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
 
         <EditText
@@ -50,7 +59,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtRuangan"
+                android:id="@+id/txtRuanganJU"
                 android:hint="Ruangan" />
         </android.support.design.widget.TextInputLayout>
         <Button

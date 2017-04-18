@@ -31,6 +31,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/txt1jl"
         android:orientation="vertical">
 
 
@@ -92,6 +93,13 @@
                 android:layout_height="wrap_content"
                 android:hint="Deskripsi Aktivitas" />
         </android.support.design.widget.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:id="@+id/btnSimpanJl"
+            android:layout_gravity="end"/>
+
     </LinearLayout>
 
 

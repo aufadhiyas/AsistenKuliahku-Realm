@@ -1,7 +1,5 @@
 package xyz.aufa.asistenkuliahku.ModelClass;
 
-import java.util.Date;
-
 import io.realm.RealmObject;
 
 /**
@@ -12,19 +10,21 @@ public class JadwalUjianModel extends RealmObject{
 
     private int no_ju;
     private String nama_makul;
-    private Date waktu;
+    private String waktu;
+    private String jenis;
     private String deskripsi;
     private String ruangan;
     private int status_ju;
     private String Author;
-    private Date created_at;
-    private Date updated_at;
+    private String created_at;
+    private String updated_at;
 
     public JadwalUjianModel() {
     }
 
-    public JadwalUjianModel(int no_ju, String nama_makul, Date waktu, String deskripsi, String ruangan, int status_ju, String author, Date created_at, Date updated_at) {
+    public JadwalUjianModel(int no_ju, String Jenis, String nama_makul, String waktu, String deskripsi, String ruangan, int status_ju, String author, String created_at, String updated_at) {
         this.no_ju = no_ju;
+        this.jenis = Jenis;
         this.nama_makul = nama_makul;
         this.waktu = waktu;
         this.deskripsi = deskripsi;
@@ -33,6 +33,14 @@ public class JadwalUjianModel extends RealmObject{
         Author = author;
         this.created_at = created_at;
         this.updated_at = updated_at;
+    }
+
+    public String getJenis() {
+        return jenis;
+    }
+
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
     }
 
     public int getNo_ju() {
@@ -51,11 +59,11 @@ public class JadwalUjianModel extends RealmObject{
         this.nama_makul = nama_makul;
     }
 
-    public Date getWaktu() {
+    public String getWaktu() {
         return waktu;
     }
 
-    public void setWaktu(Date waktu) {
+    public void setWaktu(String waktu) {
         this.waktu = waktu;
     }
 
@@ -91,19 +99,19 @@ public class JadwalUjianModel extends RealmObject{
         Author = author;
     }
 
-    public Date getCreated_at() {
+    public String getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(Date created_at) {
+    public void setCreated_at(String created_at) {
         this.created_at = created_at;
     }
 
-    public Date getUpdated_at() {
+    public String getUpdated_at() {
         return updated_at;
     }
 
-    public void setUpdated_at(Date updated_at) {
+    public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
     }
 }

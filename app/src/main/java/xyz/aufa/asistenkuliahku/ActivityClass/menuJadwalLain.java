@@ -7,7 +7,6 @@ import android.view.View;
 
 import xyz.aufa.asistenkuliahku.ActivityClass.Fragment.fragment_frmJadwalLain;
 import xyz.aufa.asistenkuliahku.R;
-import xyz.aufa.asistenkuliahku.fragment_jadwal_ujian_form;
 
 public class menuJadwalLain extends AppCompatActivity {
     private FloatingActionButton fab;

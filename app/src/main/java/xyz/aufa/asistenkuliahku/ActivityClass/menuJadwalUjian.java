@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import xyz.aufa.asistenkuliahku.R;
-import xyz.aufa.asistenkuliahku.fragment_jadwal_ujian_form;
+import xyz.aufa.asistenkuliahku.ActivityClass.Fragment.fragment_form_ujian;
 
 public class menuJadwalUjian extends AppCompatActivity{
     FloatingActionButton fab;
@@ -30,7 +30,7 @@ public class menuJadwalUjian extends AppCompatActivity{
     }
 
     private void changeFragment(){
-        getFragmentManager().beginTransaction().replace(R.id.activity_menu_ujian, new fragment_jadwal_ujian_form()).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().replace(R.id.activity_menu_ujian, new fragment_form_ujian()).addToBackStack(null).commit();
     }
     public void onStart(){
         super.onStart();

@@ -21,6 +21,12 @@
         <item>Sabtu</item>
         <item>Minggu</item>
     </string-array>
+    <string-array name="JenisUjian">
+        <item>PRETEST</item>
+        <item>PASTEST</item>
+        <item>UTS</item>
+        <item>UAS</item>
+    </string-array>
 
     <string name="DB_NAME">AsistenKuliahku</string>
     <string name="DB_VERSION">1</string>
