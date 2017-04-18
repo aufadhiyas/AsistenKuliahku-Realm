@@ -8,8 +8,10 @@ import io.realm.annotations.PrimaryKey;
  */
 
 public class JadwalLainModel extends RealmObject {
+
     @PrimaryKey
     private int no_jl;
+
     private String nama_jl;
     private String waktus_jl;
     private String waktuf_jl;

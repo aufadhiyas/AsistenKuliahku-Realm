@@ -33,7 +33,14 @@ public class fragment_frmJadwalLain extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        JUO = new JadwalLainOperation();
         initView(view);
+        btnSimpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SimpanData();
+            }
+        });
     }
     private void initView(View view){
         txtNama = (EditText)view.findViewById(R.id.txtNamaJl);

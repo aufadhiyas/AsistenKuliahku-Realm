@@ -1,6 +1,7 @@
 package xyz.aufa.asistenkuliahku.ModelClass;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by SENSODYNE on 15/04/2017.
@@ -8,7 +9,9 @@ import io.realm.RealmObject;
 
 public class JadwalUjianModel extends RealmObject{
 
+    @PrimaryKey
     private int no_ju;
+
     private String nama_makul;
     private String waktu;
     private String jenis;

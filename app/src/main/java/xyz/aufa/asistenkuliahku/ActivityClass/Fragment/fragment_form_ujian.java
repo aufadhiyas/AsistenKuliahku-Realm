@@ -42,6 +42,7 @@ public class fragment_form_ujian extends Fragment{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        JUO = new JadwalUjianOperation();
         initView(view);
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +83,8 @@ public class fragment_form_ujian extends Fragment{
         }
         return id;
     }
+
+
     public static String getCurrentTimeStamp() {
         SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
         Date now = new Date();
