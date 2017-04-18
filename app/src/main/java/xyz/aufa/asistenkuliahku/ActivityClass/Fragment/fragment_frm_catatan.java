@@ -19,7 +19,7 @@ import xyz.aufa.asistenkuliahku.R;
 public class fragment_frm_catatan extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_jadwal_ujian_form, container, false);
+        return inflater.inflate(R.layout.fragment_frm_catatan, container, false);
     }
 
     @Override

@@ -5,12 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="xyz.aufa.asistenkuliahku.ActivityClass.frmTugas">
-
-<TextView
-    android:layout_width="wrap_content"
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="FORM TUGAS LEK"
-    android:textSize="100dp"/>
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Mata Kuliah"
+        android:id="@+id/lblMakulTugas"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Waktu"
+        android:id="@+id/lblWaktuMakulTugas"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi Tugas"
+        android:id="@+id/txtDeskripsiTugas"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File"
+        android:id="@+id/btnBrowseFileTugas"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:id="@+id/lblFileTugas"
+        android:text="Nama File"/>
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switchWaktuKumpulTugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Pengumpulan Saat Masuk Kelas"
+        android:textOn="Pengumpulan Lain Waktu"
+        android:layout_weight="1"
+        android:text="Waktu Pengumpulan"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtWaktuKumpulTugas"
+        android:hint="Waktu Pengumpulan"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Simpan"
+        android:id="@+id/btnSimpanTugas"/>
+
+
+
+</LinearLayout>
 
 </RelativeLayout>
