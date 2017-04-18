@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="12sp"
     android:fitsSystemWindows="true"
-    tools:context="xyz.aufa.asistenkuliahku.ActivityClass.menuJadwalKuliah">
+    tools:context="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalKuliah">
 
 
 

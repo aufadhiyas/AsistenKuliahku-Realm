@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="xyz.aufa.asistenkuliahku.frmVerifikasi">
+    tools:context="me.citrafa.asistenkuliahku.frmVerifikasi">
 
     <TextView
         android:id="@+id/lblEmailForVerify"

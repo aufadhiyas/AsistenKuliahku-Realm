@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/jk_todayIcon"
         app:srcCompat="@drawable/ic_today_white_18px"/>
-    <xyz.aufa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
+    <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
         android:layout_marginBottom="10dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

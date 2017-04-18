@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="xyz.aufa.asistenkuliahku.ActivityClass.frmJadwalKuliah">
+    tools:context="me.citrafa.asistenkuliahku.ActivityClass.frmJadwalKuliah">
 
     <LinearLayout
         android:orientation="vertical"
@@ -49,7 +49,7 @@
                 android:id="@+id/txtRuangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ruangan"
+                android:hint="Ruangan Kuliah"
                 android:inputType="text|textAutoComplete"
                 android:maxLines="1"
                 android:textSize="14sp" />
@@ -69,9 +69,13 @@
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:hint="Jam"
+                   android:windowSoftInputMode="stateAlwaysHidden"
+                   android:focusable="false"
+                   android:cursorVisible="false"
+                   android:clickable="false"
+                   android:focusableInTouchMode="false"
                    android:minWidth="80dp"
-                   android:textSize="14sp"
-                   tools:clickable="true" />
+                   android:textSize="14sp" />
 
            </android.support.design.widget.TextInputLayout>
            <android.support.design.widget.TextInputLayout
@@ -111,7 +115,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:id="@+id/btnSimpan"
@@ -120,7 +124,7 @@
                 android:text="Simpan"
                 android:textSize="14sp"/>
             <Button style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_gravity="center"
+                android:layout_gravity="end"
                 android:id="@+id/btnBatal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

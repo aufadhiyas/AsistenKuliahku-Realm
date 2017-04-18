@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "660378603068",
+    "firebase_url": "https://asisten-kuliahku.firebaseio.com",
+    "project_id": "asisten-kuliahku",
+    "storage_bucket": "asisten-kuliahku.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660378603068:android:79da9bf766d6cae3",
+        "android_client_info": {
+          "package_name": "me.citrafa.asistenkuliahku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660378603068-n62oik65g4i68ks95h7rjd84k9ffbacq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.citrafa.asistenkuliahku",
+            "certificate_hash": "5349330f717b270461ee5b28af1aa521e45eb08f"
+          }
+        },
+        {
+          "client_id": "660378603068-qq98vf2j4prb8m48o1vadmpn9dangdh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5ANa58SNNxxxTHDJT0e2lVakY8ZsOCNQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660378603068-qq98vf2j4prb8m48o1vadmpn9dangdh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

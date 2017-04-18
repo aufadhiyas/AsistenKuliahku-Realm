@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="xyz.aufa.asistenkuliahku.ActivityClass.menuJadwalLain">
+    tools:context="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalLain">
 
 <RelativeLayout
     android:layout_width="match_parent"

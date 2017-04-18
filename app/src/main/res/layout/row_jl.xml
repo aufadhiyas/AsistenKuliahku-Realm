@@ -13,26 +13,26 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_date_range_black_18px"
             android:id="@+id/ic_jl_daterange"/>
-        <xyz.aufa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/ic_jl_daterange"
             android:text="Tanggal"
             android:textSize="18sp"
             android:id="@+id/lbl_jl_tanggal"/>
-        <xyz.aufa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_below="@id/lbl_jl_tanggal"
             android:layout_height="wrap_content"
             android:text="Nama Jadwal"
             android:id="@+id/lbl_jl_nama"/>
-        <xyz.aufa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/lbl_jl_nama"
             android:text="Lokasi"
             android:id="@+id/lbl_jl_lokasi"/>
-        <xyz.aufa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/lbl_jl_lokasi"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="xyz.aufa.asistenkuliahku.frmJadwalPengganti">
+    tools:context="me.citrafa.asistenkuliahku.frmJadwalPengganti">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:layout_gravity="end"
         android:text="Simpan"
         android:id="@+id/btnSimpanPengganti"/>
-    <xyz.aufa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
+    <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Note : "/>
