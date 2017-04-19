@@ -15,6 +15,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,6 +41,7 @@ public class frmDaftar extends AppCompatActivity {
 
     private String EmailView;
     private ProgressDialog pDialog;
+    private FirebaseAuth auth;
 
     private static final String Key_nama = "nama";
     private static final String Key_email = "email";
@@ -50,6 +52,7 @@ public class frmDaftar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frmdaftar);
+        auth = FirebaseAuth.getInstance();
         btnDaftar = (Button) findViewById(R.id.btnDaftar1);
         btnKembali = (Button) findViewById(R.id.btnKembali);
         email = (EditText) findViewById(R.id.txtEmailDaftar);

@@ -182,15 +182,6 @@
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.2.0_9abf4b353457f98a1382dd1766ac9a12a509589c\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.6.0_b562124e1d1cf9332b42d7ea4ea654457579c0d1\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="C:\Users\SENSODYNE\.android\build-cache\f27c1e78a9ec12730670ba4a32ffac008913cd58\output\jars\classes.jar"
         jumboMode="false"
@@ -468,6 +459,15 @@
         revision="25.0.0"
         sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\pre-dexed\debug\classes_61109b0793ccdd9076260b000c7b32fea8b157a8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.7.0\6edbebdd8868708db718d15c09c4b28037fd487e\okhttp-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6edbebdd8868708db718d15c09c4b28037fd487e">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.7.0_f110224048066dd7b1e9cd16d1aac4d1ce786a29\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -786,15 +786,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.11.0_485ed767d0e6758667a386365535325f9def3486\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
         jumboMode="true"
         optimize="true"
@@ -984,15 +975,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.6.0_b562124e1d1cf9332b42d7ea4ea654457579c0d1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\SENSODYNE\.android\build-cache\127fa530742cef58a9507f25a29ed2e896770795\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -1082,15 +1064,6 @@
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5d5bb5082f4bfa04e2b1f96e2d2e81ed83b355c3\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
-        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.11.0_485ed767d0e6758667a386365535325f9def3486\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="C:\Users\SENSODYNE\.android\build-cache\ca35a30af1dd621e7fdb0f5d24f5d3deeb0f5726\output\jars\classes.jar"
         jumboMode="false"
@@ -1105,8 +1078,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ac48ab52ac9e09f3221117a4bbd07b5763e4390e">
+        sha1="45757d2f9f34715eb7edb93d0d84e92dd658acfa">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_11c5464844fb9907cd561f6f1f4ea8a3bbe15509\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.12.0\3742beff8024d0a0073d284b7c5e4cbf73d99b25\okio-1.12.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3742beff8024d0a0073d284b7c5e4cbf73d99b25">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.12.0_1b2f559a5327ef9e372c50021ef11c22f8c16550\classes.dex" />
     </item>
     <item
         is-multidex="true"

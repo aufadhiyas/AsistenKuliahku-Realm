@@ -21,7 +21,6 @@ public class AppController extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
-
         Realm.init(this);
 
 
@@ -36,7 +35,8 @@ public class AppController extends Application {
                         .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
                         .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
                         .build());
-        //Realm.init(this);
+
+
     }
 
 

@@ -11,12 +11,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmLogin" />
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmDaftar" />
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalKuliah" />
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalUjian" />
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalLain" />
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuCatatan" />
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmLogin"
+            android:label="Login"/>
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmDaftar"
+            android:label="Daftar Akun"/>
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalKuliah"
+            android:label="Menu Jadwal Kuliah"/>
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalUjian"
+            android:label="Jadwal Ujianku"/>
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalLain"
+            android:label="Jadwal Lainku"/>
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuCatatan"
+            android:label="Catatanku"/>
         <activity
             android:name="me.citrafa.asistenkuliahku.ActivityClass.Dashboard"
             android:label="@string/title_activity_dashboard"
@@ -27,13 +33,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmJadwalKuliah" />
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmTugas" />
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmJadwalKuliah"
+            android:label="Jadwal Kuliahku"/>
+
+        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmTugas"
+            android:label="Tugas Kuliahku"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalKuliahTab"
-            android:label="@string/title_activity_menu_jadwal_kuliah_tab"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="me.citrafa.asistenkuliahku.frmJadwalPengganti"></activity>
+            android:label="Kuliah Ku"/>
+        <activity android:name="me.citrafa.asistenkuliahku.frmJadwalPengganti"
+            android:label="Jadwal Pengganti"></activity>
         <service
             android:name=".SessionManager.FirebaseInstanceIDService">
             <intent-filter>
