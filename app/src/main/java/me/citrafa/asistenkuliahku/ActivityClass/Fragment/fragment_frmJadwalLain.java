@@ -66,7 +66,7 @@ public class fragment_frmJadwalLain extends Fragment {
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "ID = ", Toast.LENGTH_SHORT).show();
+                SimpanData();
             }
         });
     }
@@ -144,18 +144,20 @@ public class fragment_frmJadwalLain extends Fragment {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
-                                        String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,mHour,mMinute));
+                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+                                        String formatedDate = sdf.format(new Date(dayOfMonth,monthOfYear,year,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);
+                                            SimpleDateFormat Dates = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+                                            String Jadi = Dates.format(date);
                                             DateS = date;
-                                            txtwaktuS.setText(dayOfMonth+"/"+(monthOfYear + 1)+"/"+year+" " +mHour+":"+mMinute);
+                                            txtwaktuS.setText(Jadi);
                                         } catch (ParseException e) {
 
                                         }
 
                                     }
-                                }, mHour, mMinute, false);
+                                }, mHour, mMinute, true);
                         timePickerDialog.show();
 
                     }
@@ -192,16 +194,18 @@ public class fragment_frmJadwalLain extends Fragment {
                                                           int minute) {
 
                                         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
-                                        String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,mHour,mMinute));
+                                        String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
-                                            Date date = sdf.parse(formatedDate);
-                                            DateF = date;
-                                            txtwaktuF.setText(dayOfMonth+"/"+(monthOfYear + 1)+"/"+year+" " +mHour+":"+mMinute);
+                                            Date dateF = sdf.parse(formatedDate);
+                                            SimpleDateFormat Dates = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+                                            String Jadi = Dates.format(dateF);
+                                            DateF = dateF;
+                                            txtwaktuF.setText(Jadi);
                                         } catch (ParseException e) {
 
                                         }
                                     }
-                                }, mHour, mMinute, false);
+                                }, mHour, mMinute, true);
                         timePickerDialog.show();
 
                     }

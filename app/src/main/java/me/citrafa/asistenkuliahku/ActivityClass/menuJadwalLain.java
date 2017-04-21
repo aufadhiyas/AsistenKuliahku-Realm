@@ -15,6 +15,7 @@ import co.moonmonkeylabs.realmrecyclerview.RealmRecyclerView;
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmResults;
+import io.realm.Sort;
 import me.citrafa.asistenkuliahku.ActivityClass.Fragment.fragment_frmJadwalLain;
 import me.citrafa.asistenkuliahku.ActivityClass.InterfaceFragment.FragmentCommunication;
 import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalLainRV;
@@ -39,7 +40,7 @@ public class menuJadwalLain extends AppCompatActivity {
 
 
         realm = Realm.getDefaultInstance();
-        RealmResults<JadwalLainModel> jlm = realm.where(JadwalLainModel.class).findAll();
+        RealmResults<JadwalLainModel> jlm = realm.where(JadwalLainModel.class).findAllSorted("waktus_jl", Sort.ASCENDING);
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerJL);
         adapter = new AdapterJadwalLainRV(realm.where(JadwalLainModel.class).findAll(),jlm);
         final LinearLayoutManager layout = new LinearLayoutManager(this);

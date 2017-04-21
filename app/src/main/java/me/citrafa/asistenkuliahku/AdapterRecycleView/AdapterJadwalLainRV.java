@@ -18,6 +18,9 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
 import io.realm.RealmBaseAdapter;
@@ -66,7 +69,15 @@ public class AdapterJadwalLainRV extends RealmRecyclerViewAdapter<JadwalLainMode
 
         holder.data = jl;
 
-        holder.txt1.setText(jl.getWaktus_jl()+"-"+jl.getWaktuf_jl());
+        Date dateS = jl.getWaktus_jl();
+        SimpleDateFormat Dates = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+        String JadiS = Dates.format(dateS);
+        Date dateF = jl.getWaktuf_jl();
+        SimpleDateFormat DateF = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+        String JadiF = DateF.format(dateF);
+
+        holder.txt1.setText(JadiS+" - "+JadiF);
+
         holder.txt2.setText(jl.getNama_jl());
         holder.txt3.setText(jl.getTempat_jl());
         holder.txt4.setText(jl.getDeskripsi_jl());
