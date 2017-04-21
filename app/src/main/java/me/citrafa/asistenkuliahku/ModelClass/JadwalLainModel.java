@@ -1,5 +1,7 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -13,8 +15,8 @@ public class JadwalLainModel extends RealmObject {
     private int no_jl;
 
     private String nama_jl;
-    private String waktus_jl;
-    private String waktuf_jl;
+    private Date waktus_jl;
+    private Date waktuf_jl;
     private String tempat_jl;
     private String deskripsi_jl;
     private int status_jl;
@@ -26,7 +28,7 @@ public class JadwalLainModel extends RealmObject {
     public JadwalLainModel() {
     }
 
-    public JadwalLainModel(int no_jl, String nama_jl, String waktus_jl, String waktuf_jl, String tempat_jl, String deskripsi_jl, int status_jl, String author, String created_at, String updated_at, String noonline_jl) {
+    public JadwalLainModel(int no_jl, String nama_jl, Date waktus_jl, Date waktuf_jl, String tempat_jl, String deskripsi_jl, int status_jl, String author, String created_at, String updated_at, String noonline_jl) {
         this.no_jl = no_jl;
         this.nama_jl = nama_jl;
         this.waktus_jl = waktus_jl;
@@ -56,19 +58,19 @@ public class JadwalLainModel extends RealmObject {
         this.nama_jl = nama_jl;
     }
 
-    public String getWaktus_jl() {
+    public Date getWaktus_jl() {
         return waktus_jl;
     }
 
-    public void setWaktus_jl(String waktus_jl) {
+    public void setWaktus_jl(Date waktus_jl) {
         this.waktus_jl = waktus_jl;
     }
 
-    public String getWaktuf_jl() {
+    public Date getWaktuf_jl() {
         return waktuf_jl;
     }
 
-    public void setWaktuf_jl(String waktuf_jl) {
+    public void setWaktuf_jl(Date waktuf_jl) {
         this.waktuf_jl = waktuf_jl;
     }
 

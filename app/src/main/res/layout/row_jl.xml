@@ -17,13 +17,16 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_date_range_black_18px"
             android:id="@+id/ic_jl_daterange"/>
+
         <ImageButton
+            android:id="@+id/btnOptionJL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:id="@+id/btnOptionJL"/>
-        <TextView
+            android:background="@null"
+            app:srcCompat="@drawable/ic_more_gray_24px" />
+        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/ic_jl_daterange"

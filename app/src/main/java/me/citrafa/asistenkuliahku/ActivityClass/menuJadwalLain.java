@@ -13,8 +13,10 @@ import android.view.View;
 
 import co.moonmonkeylabs.realmrecyclerview.RealmRecyclerView;
 import io.realm.Realm;
+import io.realm.RealmList;
 import io.realm.RealmResults;
 import me.citrafa.asistenkuliahku.ActivityClass.Fragment.fragment_frmJadwalLain;
+import me.citrafa.asistenkuliahku.ActivityClass.InterfaceFragment.FragmentCommunication;
 import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalLainRV;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalLainModel;
 import me.citrafa.asistenkuliahku.R;
@@ -28,14 +30,18 @@ public class menuJadwalLain extends AppCompatActivity {
     AdapterJadwalLainRV adapter;
     Context context;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_jadwallain);
 
+
         realm = Realm.getDefaultInstance();
+        RealmResults<JadwalLainModel> jlm = realm.where(JadwalLainModel.class).findAll();
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerJL);
-        adapter = new AdapterJadwalLainRV(realm.where(JadwalLainModel.class).findAll());
+        adapter = new AdapterJadwalLainRV(realm.where(JadwalLainModel.class).findAll(),jlm);
         final LinearLayoutManager layout = new LinearLayoutManager(this);
         layout.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layout);
@@ -47,14 +53,18 @@ public class menuJadwalLain extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeFragment();
+                getFragmentManager().beginTransaction().replace(R.id.activity_menu_jadwal_lain, new fragment_frmJadwalLain()).addToBackStack(null).commit();
+
                 fab.hide();
             }
         });
     }
 
 
+
     private void changeFragment(){
-        getFragmentManager().beginTransaction().replace(R.id.activity_menu_jadwal_lain, new fragment_frmJadwalLain()).addToBackStack(null).commit();
+
+
+
     }
 }

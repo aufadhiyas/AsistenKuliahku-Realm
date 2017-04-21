@@ -16,15 +16,42 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java" line="124" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="be9f39f5-308d-4948-b57d-274ed09f8b99" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_catatan" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/InterfaceFragment/FragmentCommunication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_green_16px.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_red_16px.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close_green_16px.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_more_gray_24px.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/popupmenu_jk.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_catatan.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_catatan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_jadwal_ujian_form.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_jadwal_ujian_form.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_catatan.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_catatan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_jadwal_ujian.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_jadwal_ujian.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_form_ujian.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_form_ujian.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwalkuliah.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwalkuliah.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmTugas.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmTugas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterList/CustomListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterList/CustomListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalLainRV.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalLainRV.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalKuliahModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalKuliahModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalLainModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalLainModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalUjianModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalUjianModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/TugasModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/TugasModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/UserModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/UserModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/frm_jadwalkuliah.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/frm_jadwalkuliah.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/frm_tugas.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/frm_tugas.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_jk.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_jk.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_jl.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_jl.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/fonts/Lato-Medium.ttf" afterPath="$PROJECT_DIR$/app/src/main/assets/fonts/Lato-Medium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/fonts/Lato-Regular.ttf" afterPath="$PROJECT_DIR$/app/src/main/assets/fonts/Lato-Regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_catatan" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_catatan.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian.xml" />
     </list>
     <ignored path="Asisten Kuliahku.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,131 +83,131 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="content_jadwal_ujian" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="fragment_form_ujian.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_form_ujian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="41" />
+            <state relative-caret-position="261">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JadwalUjianModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalUjianModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding>
-                <element signature="e#299#339#0" expanded="true" />
+                <element signature="e#1558#1559#0" expanded="true" />
+                <element signature="e#1586#1587#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/AppController.java">
+      <file leaf-file-name="JadwalLainModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalLainModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu_jadwal_ujian.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_jadwal_ujian.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="frmTugas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmTugas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_catatan" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_catatan">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            <state relative-caret-position="276">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
-                <element signature="e#299#339#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu_catatan.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_catatan.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="fragment_frmJadwalLain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_frm_catatan.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frm_catatan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_frm_catatan.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_catatan.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_jadwal_ujian_form.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_jadwal_ujian_form.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content_jadwal_lain.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_lain.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu_jadwallain.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_jadwallain.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state relative-caret-position="349">
+              <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
               <folding>
-                <element signature="e#981#1000#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1723#1874#0" expanded="true" />
+                <element signature="e#1873#1874#0" expanded="true" />
+                <element signature="e#1914#2065#0" expanded="true" />
+                <element signature="e#2064#2065#0" expanded="true" />
+                <element signature="e#2108#2302#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#4352#6228#0" expanded="true" />
+                <element signature="e#5133#6113#0" expanded="true" />
+                <element signature="e#6112#6113#0" expanded="true" />
+                <element signature="e#6227#6228#0" expanded="true" />
+                <element signature="e#6598#8473#0" expanded="true" />
+                <element signature="e#7378#8358#0" expanded="true" />
+                <element signature="e#8357#8358#0" expanded="true" />
+                <element signature="e#8472#8473#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuCatatan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuCatatan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_jadwalkuliah.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwalkuliah.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1392">
+              <caret line="204" column="34" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuJadwalKuliah.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalKuliah.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frmJadwalKuliah.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmJadwalKuliah.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="131" column="76" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="76" />
+              <folding>
+                <element signature="e#1824#2727#0" expanded="true" />
+                <element signature="e#2282#2573#0" expanded="true" />
+                <element signature="e#2572#2573#0" expanded="true" />
+                <element signature="e#2726#2727#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menuJadwalLain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2097#2399#0" expanded="true" />
+                <element signature="e#2398#2399#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,6 +222,7 @@
         <option value="layoutResourceFile_vertical" />
         <option value="Class" />
         <option value="resourceFile" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -2558,29 +2586,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/fragment_frmJadwalLain.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/CustomWidget/TextViewLatoFontRegular.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/CustomWidget/TextViewLatoFontMedium.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/itemjk.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/menuJadwalUjian.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/Dashboard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/menuCatatan.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/menuJadwalLain.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/menuJadwalKuliahTab.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/frm_tugas.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/frm_jadwal_pengganti.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/fragment_jadwal_ujian_form.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/fragment_form_ujian.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/OperationRealm/JadwalLainOperation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/OperationRealm/JadwalUjianOperation.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/Fragment/fragment_form_ujian.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ModelClass/JadwalLainModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ModelClass/JadwalUjianModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/ActivityClass/Fragment/fragment_frm_catatan.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/CustomWidget/EditTextTanggal.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/frm_jadwalkuliah.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/xyz/aufa/asistenkuliahku/SessionManager/ApiFirebase.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/FirebaseMessagingService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/FirebaseInstanceIDService.java" />
@@ -2595,20 +2604,39 @@
         <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmDaftar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_lain.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_jadwallain.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_jadwal_lain.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/PopupitemMenuJL" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_gray.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/row_jl.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/popupmenu_jl.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalLainRV.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_jadwal_ujian.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_catatan" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_catatan.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_catatan.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_jadwal_ujian_form.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/UserModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalKuliahModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/TugasModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/frm_jadwalkuliah.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/frm_tugas.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmTugas.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_more_gray_24px.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/row_jl.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_close_green_16px.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_green_16px.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_check_red_16px.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/row_jk.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/popupmenu_jk.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterList/CustomListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/InterfaceFragment/FragmentCommunication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalLainRV.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwalkuliah.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalUjianModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalLainModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_form_ujian.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java" />
       </list>
     </option>
   </component>
@@ -2643,6 +2671,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2653,6 +2688,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Gradle Scripts" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsistenKuliahku" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2715,6 +2768,34 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsistenKuliahku" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsistenKuliahku" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
@@ -2755,51 +2836,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SessionManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AsistenKuliahku" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asistenkuliahku" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OperationRealm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AsistenKuliahku" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="asistenkuliahku" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdapterRecycleView" />
+              <option name="myItemId" value="ModelClass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2851,22 +2888,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AsistenKuliahku" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -2909,9 +2932,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2920,7 +2940,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Compressed/iPoli-android-master" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
-    <property name="device.picker.selection" value="192.168.1.11:5555" />
+    <property name="device.picker.selection" value="192.168.1.9:5555" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlEditorPanel.WIDTH" value="170" />
     <property name="android.project.structure.last.selected" value="app" />
@@ -2928,6 +2948,11 @@
     <property name="VectorAssetImportPath" value="C:\Users\SENSODYNE\Downloads" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main\java\me\citrafa\asistenkuliahku" />
+      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main" />
+      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main\java\xyz\aufa\asistenkuliahku\opRealm" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="xyz.aufa.asistenkuliahku.ActivityClass.Fragment" />
       <recent name="xyz.aufa.asistenkuliahku.AdapterList" />
@@ -2942,10 +2967,8 @@
     <key name="android.template.parentActivityClass">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main\java\me\citrafa\asistenkuliahku" />
-      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main" />
-      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main\java\xyz\aufa\asistenkuliahku\opRealm" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\src\main\assets" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -3322,31 +3345,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.319933" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.36363637" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" x="54" y="140" width="1213" height="387" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.36363637" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" x="30" y="50" width="1250" height="501" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39865997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854864" sideWeight="0.49394855" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31323284" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125997" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2753404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2753404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32695374" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32695374" sideWeight="0.4924357" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854864" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32535884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -3357,10 +3380,10 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Assistant" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32663316" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3379,355 +3402,167 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="425">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AsistenKuliahku.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/google-services.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="201" column="27" selection-start-line="201" selection-start-column="27" selection-end-line="201" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/FirebaseMessagingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalKuliahModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="e#411#429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_dashboard.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_dashboard.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_jadwallain.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_jk.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_jadwal_ujian.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalUjian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107916">
-          <caret line="6581" column="0" selection-start-line="6581" selection-start-column="0" selection-end-line="6581" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-23/android/app/Instrumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17714">
-          <caret line="1112" column="0" selection-start-line="1112" selection-start-column="0" selection-end-line="1112" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#76910#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#6411#6412#0" expanded="false" />
-            <element signature="e#6439#6440#0" expanded="false" />
-            <element signature="e#9114#9115#0" expanded="false" />
-            <element signature="e#9150#9151#0" expanded="false" />
-            <element signature="e#9362#9363#0" expanded="false" />
-            <element signature="e#9395#9396#0" expanded="false" />
-            <element signature="e#9922#9923#0" expanded="false" />
-            <element signature="e#9956#9957#0" expanded="false" />
-            <element signature="e#10174#10175#0" expanded="false" />
-            <element signature="e#10218#10219#0" expanded="false" />
-            <element signature="e#18260#18261#0" expanded="false" />
-            <element signature="e#18297#18298#0" expanded="false" />
-            <element signature="e#18471#18472#0" expanded="false" />
-            <element signature="e#18509#18510#0" expanded="false" />
-            <element signature="e#18730#18731#0" expanded="false" />
-            <element signature="e#18767#18768#0" expanded="false" />
-            <element signature="e#18902#18903#0" expanded="false" />
-            <element signature="e#18938#18939#0" expanded="false" />
-            <element signature="e#19108#19109#0" expanded="false" />
-            <element signature="e#19152#19153#0" expanded="false" />
-            <element signature="e#38172#38173#0" expanded="false" />
-            <element signature="e#38202#38203#0" expanded="false" />
-            <element signature="e#47433#47434#0" expanded="false" />
-            <element signature="e#47467#47468#0" expanded="false" />
-            <element signature="e#47751#47752#0" expanded="false" />
-            <element signature="e#47787#47788#0" expanded="false" />
-            <element signature="e#48782#48783#0" expanded="false" />
-            <element signature="e#48815#48816#0" expanded="false" />
-            <element signature="e#50092#50093#0" expanded="false" />
-            <element signature="e#50131#50132#0" expanded="false" />
-            <element signature="e#50459#50460#0" expanded="false" />
-            <element signature="e#50504#50505#0" expanded="false" />
-            <element signature="e#54171#54172#0" expanded="false" />
-            <element signature="e#54213#54214#0" expanded="false" />
-            <element signature="e#54333#54334#0" expanded="false" />
-            <element signature="e#54375#54376#0" expanded="false" />
-            <element signature="e#73998#73999#0" expanded="false" />
-            <element signature="e#74033#74034#0" expanded="false" />
-            <element signature="e#74919#74920#0" expanded="false" />
-            <element signature="e#74959#74960#0" expanded="false" />
-            <element signature="e#75599#75600#0" expanded="false" />
-            <element signature="e#75639#75640#0" expanded="false" />
-            <element signature="e#75823#75824#0" expanded="false" />
-            <element signature="e#75863#75864#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalKuliahRV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="e#2214#2215#0" expanded="true" />
-            <element signature="e#2257#2258#0" expanded="true" />
-            <element signature="e#3649#3650#0" expanded="true" />
-            <element signature="e#3688#3689#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/ReadInstallation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/SessionManager.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_catatan.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_catatan.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frm_catatan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/FirebaseInstanceIDService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_catatan.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SQLite_Controller/SQLiteHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1189">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SQLite_Controller/ControllerDAO/cRepo.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_jadwal_ujian_form.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/OperationRealm/JadwalKuliahOperation.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.realm/android-adapters/2.0.0/17df208d2cdd3b52a9aa1011d9fa5ddf8bd8388c/android-adapters-2.0.0-sources.jar!/io/realm/RealmRecyclerViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmDaftar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2021">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+        <state relative-caret-position="2397">
+          <caret line="171" column="29" selection-start-line="171" selection-start-column="29" selection-end-line="171" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwalkuliah.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/TugasModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+        <state relative-caret-position="680">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalKuliahTab.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frm_jadwalkuliah.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2370#3024#0" expanded="false" />
-            <element signature="e#3023#3024#0" expanded="false" />
-            <element signature="e#5609#5610#0" expanded="false" />
-            <element signature="e#5642#5643#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1258">
+          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/PopupitemMenuJL">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/CustomWidget/TextViewLatoFontRegular.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        <state relative-caret-position="131">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frm_tugas.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/itemjk.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -3735,18 +3570,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_jadwal_lain.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_share.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_gray.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add_white_24px.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_add_location_white_24px.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_close_green_16px.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -3754,172 +3602,306 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_check_green_16px.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/popupmenu_jl.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_more_gray_24px.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_jl.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_check_red_16px.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/popupmenu_jl.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/row_jk.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/popupmenu_jk.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_jk.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="94" column="25" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwal_pengganti.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/InterfaceFragment/FragmentCommunication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalKuliahRV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-404">
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterList/CustomListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+          <folding>
+            <element signature="e#1212#1213#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#2771#2944#0" expanded="true" />
+            <element signature="e#2943#2944#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/AdapterRecycleView/AdapterJadwalLainRV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        <state relative-caret-position="335">
+          <caret line="131" column="37" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1981#2413#0" expanded="true" />
-            <element signature="e#2412#2413#0" expanded="true" />
-            <element signature="e#2458#2630#0" expanded="true" />
-            <element signature="e#2629#2630#0" expanded="true" />
-            <element signature="e#2684#2685#0" expanded="true" />
-            <element signature="e#2727#2728#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-            <element signature="e#3974#3975#0" expanded="true" />
+            <element signature="e#2451#2890#0" expanded="true" />
+            <element signature="e#2889#2890#0" expanded="true" />
+            <element signature="e#2935#3150#0" expanded="true" />
+            <element signature="e#3149#3150#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_menujk.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalKuliahTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1296">
+          <caret line="169" column="55" selection-start-line="169" selection-start-column="55" selection-end-line="169" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_lain.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/Jadwal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/SessionManager/AppController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_jadwallain.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="335">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
           <folding>
-            <element signature="e#981#1000#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_jadwal_ujian.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalKuliahModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_Tugas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalUjian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_jadwal_ujian">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalUjianModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="782">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding>
-            <element signature="e#299#339#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_catatan">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ModelClass/JadwalLainModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state relative-caret-position="374">
+          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalKuliah.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_form_ujian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuCatatan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmTugas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="e#299#339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/menu_catatan.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/menuJadwalLain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        <state relative-caret-position="624">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2097#2399#0" expanded="true" />
+            <element signature="e#2398#2399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_jadwalkuliah.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="204" column="34" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frm_catatan.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/frmJadwalKuliah.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="185">
+          <caret line="131" column="76" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="76" />
+          <folding>
+            <element signature="e#1824#2727#0" expanded="true" />
+            <element signature="e#2282#2573#0" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2726#2727#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_frm_catatan.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/citrafa/asistenkuliahku/ActivityClass/Fragment/fragment_frmJadwalLain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_jadwal_ujian_form.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="349">
+          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1723#1874#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
+            <element signature="e#1914#2065#0" expanded="true" />
+            <element signature="e#2064#2065#0" expanded="true" />
+            <element signature="e#2108#2302#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#4352#6228#0" expanded="true" />
+            <element signature="e#5133#6113#0" expanded="true" />
+            <element signature="e#6112#6113#0" expanded="true" />
+            <element signature="e#6227#6228#0" expanded="true" />
+            <element signature="e#6598#8473#0" expanded="true" />
+            <element signature="e#7378#8358#0" expanded="true" />
+            <element signature="e#8357#8358#0" expanded="true" />
+            <element signature="e#8472#8473#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

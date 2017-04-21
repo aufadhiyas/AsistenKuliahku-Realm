@@ -1,6 +1,7 @@
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,12 +22,20 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rowhariJK"
             android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/menuOptionJK"
+                android:background="@null"
+                app:srcCompat="@drawable/ic_more_gray_24px" />
 
             <TextView
                 android:id="@+id/rowJamjk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:textSize="16sp"
+                android:layout_toLeftOf="@id/menuOptionJK"
                 android:text="Jam"
                 android:layout_weight="1"
                 android:scaleType="centerCrop"/>
@@ -41,6 +50,8 @@
                 android:scaleType="centerCrop"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+
             </RelativeLayout>
 
         <LinearLayout
@@ -49,14 +60,10 @@
             android:id="@+id/garis2"
             android:layout_below="@+id/layoutpartnerjk"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:text="Dosen"
-                android:id="@+id/rowDosen"/>
+
         </LinearLayout>
         <RelativeLayout
+
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/garis2"
@@ -64,14 +71,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kelas"
-                android:id="@+id/rowKelasJK"/>
+                android:maxLines="1"
+                android:text="Dosen"
+                android:id="@+id/rowDosen"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="Ruangan"
+                android:layout_below="@id/rowDosen"
+                android:maxLines="1"
+                android:text="Kelas dan Ruangan"
                 android:id="@+id/rowRuanganjk"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rowRuanganjk"
+                android:layout_alignParentRight="true"
+                android:id="@+id/rowstatusTugasJK"/>
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rowRuanganjk"
+                android:layout_toLeftOf="@id/rowstatusTugasJK"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/iconTugasRowJK"/>
         </RelativeLayout>
     </RelativeLayout>

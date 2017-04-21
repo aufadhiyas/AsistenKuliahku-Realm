@@ -1,6 +1,7 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by SENSODYNE on 28/03/2017.
@@ -12,7 +13,7 @@ public class UserModel extends RealmObject{
 
 
 
-
+    @PrimaryKey
     private String id;
     private String uid;
     private String nama;

@@ -60,14 +60,14 @@ public class fragment_form_ujian extends Fragment{
         int ids = id(10000);
         String Jenis = spJenis.getSelectedItem().toString();
         String Makul = txtMakul.getText().toString().trim();
-        String Waktu = txtWaktu.getText().toString();
+        //Date Waktu = txtWaktu.getText().toString();
         String Deskripsi = txtDeskripsi.getText().toString();
         String Ruangan = txtRuangan.getText().toString().trim();
-        String Author="User";
+        String Author = "User";
         String created_at = getCurrentTimeStamp();
         String updated_at = getCurrentTimeStamp();
         int Status = 1;
-        jum = new JadwalUjianModel(ids,Jenis,Makul,Waktu,Deskripsi,Ruangan,Status,Author,created_at,updated_at);
+        //jum = new JadwalUjianModel(ids,Jenis,Makul,Waktu,Deskripsi,Ruangan,Status,Author,created_at,updated_at);
         JUO.tambahJadwalUjian(jum);
     }
     public int id(int status){
@@ -86,4 +86,5 @@ public class fragment_form_ujian extends Fragment{
         String strDate = sdfDate.format(now);
         return strDate;
     }
+
 }

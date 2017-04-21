@@ -8,20 +8,25 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     android:orientation="vertical">
-    <TextView
+    <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
         android:layout_width="match_parent"
+        android:textSize="20dp"
         android:layout_height="wrap_content"
         android:text="Nama Mata Kuliah"
         android:id="@+id/lblMakulTugas"/>
-    <TextView
+    <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16dp"
         android:text="Waktu"
         android:id="@+id/lblWaktuMakulTugas"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lines="3"
+        android:maxLines="3"
         android:hint="Deskripsi Tugas"
         android:id="@+id/txtDeskripsiTugas"/>
     <LinearLayout
@@ -42,15 +47,24 @@
         android:id="@+id/lblFileTugas"
         android:text="Nama File"/>
     </LinearLayout>
-
-    <Switch
-        android:id="@+id/switchWaktuKumpulTugas"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textOff="Pengumpulan Saat Masuk Kelas"
-        android:textOn="Pengumpulan Lain Waktu"
-        android:layout_weight="1"
-        android:text="Waktu Pengumpulan"/>
+        android:orientation="horizontal">
+        <Switch
+            android:id="@+id/switchWaktuKumpulTugas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="0" />
+        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"
+            android:id="@+id/lblSwitchTugas"/>
+    </LinearLayout>
+
 
     <EditText
         android:layout_width="match_parent"

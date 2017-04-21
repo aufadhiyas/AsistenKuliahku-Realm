@@ -1,5 +1,6 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -24,6 +25,7 @@ public class JadwalKuliahModel extends RealmObject{
     private String Author;
     private String Type_jk;
     private int noonline_j;
+    RealmList<TugasModel> Tugas;
 
     public JadwalKuliahModel() {
     }
@@ -45,6 +47,14 @@ public class JadwalKuliahModel extends RealmObject{
         this.Author = author;
         this.Type_jk = type_jk;
         this.noonline_j = noonline_j;
+    }
+
+    public RealmList<TugasModel> getTugas() {
+        return Tugas;
+    }
+
+    public void setTugas(RealmList<TugasModel> tugas) {
+        Tugas = tugas;
     }
 
     public int getNo_jk() {

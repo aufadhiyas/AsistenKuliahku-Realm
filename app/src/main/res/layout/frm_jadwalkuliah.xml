@@ -72,8 +72,7 @@
                    android:windowSoftInputMode="stateAlwaysHidden"
                    android:focusable="false"
                    android:cursorVisible="false"
-                   android:clickable="false"
-                   android:focusableInTouchMode="false"
+                   android:editable="false"
                    android:minWidth="80dp"
                    android:textSize="14sp" />
 

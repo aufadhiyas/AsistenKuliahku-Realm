@@ -1,5 +1,7 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -13,7 +15,7 @@ public class JadwalUjianModel extends RealmObject{
     private int no_ju;
 
     private String nama_makul;
-    private String waktu;
+    private Date waktu;
     private String jenis;
     private String deskripsi;
     private String ruangan;
@@ -25,7 +27,7 @@ public class JadwalUjianModel extends RealmObject{
     public JadwalUjianModel() {
     }
 
-    public JadwalUjianModel(int no_ju, String Jenis, String nama_makul, String waktu, String deskripsi, String ruangan, int status_ju, String author, String created_at, String updated_at) {
+    public JadwalUjianModel(int no_ju, String Jenis, String nama_makul, Date waktu, String deskripsi, String ruangan, int status_ju, String author, String created_at, String updated_at) {
         this.no_ju = no_ju;
         this.jenis = Jenis;
         this.nama_makul = nama_makul;
@@ -62,11 +64,11 @@ public class JadwalUjianModel extends RealmObject{
         this.nama_makul = nama_makul;
     }
 
-    public String getWaktu() {
+    public Date getWaktu() {
         return waktu;
     }
 
-    public void setWaktu(String waktu) {
+    public void setWaktu(Date waktu) {
         this.waktu = waktu;
     }
 

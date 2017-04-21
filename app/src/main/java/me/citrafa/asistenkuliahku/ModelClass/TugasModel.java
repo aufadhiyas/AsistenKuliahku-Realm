@@ -10,7 +10,7 @@ import io.realm.annotations.PrimaryKey;
 public class TugasModel extends RealmObject{
     @PrimaryKey
     private String no_t;
-    private String no_jk;
+
     private String deskripsi_t;
     private String attlink_t;
     private String waktu_t;
@@ -24,9 +24,8 @@ public class TugasModel extends RealmObject{
     public TugasModel() {
     }
 
-    public TugasModel(String no_t, String no_jk, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, String status_t, String created_at, String updated_at, String author, String noonline_t) {
+    public TugasModel(String no_t, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, String status_t, String created_at, String updated_at, String author, String noonline_t) {
         this.no_t = no_t;
-        this.no_jk = no_jk;
         this.deskripsi_t = deskripsi_t;
         this.attlink_t = attlink_t;
         this.waktu_t = waktu_t;
@@ -44,14 +43,6 @@ public class TugasModel extends RealmObject{
 
     public void setNo_t(String no_t) {
         this.no_t = no_t;
-    }
-
-    public String getNo_jk() {
-        return no_jk;
-    }
-
-    public void setNo_jk(String no_jk) {
-        this.no_jk = no_jk;
     }
 
     public String getDeskripsi_t() {

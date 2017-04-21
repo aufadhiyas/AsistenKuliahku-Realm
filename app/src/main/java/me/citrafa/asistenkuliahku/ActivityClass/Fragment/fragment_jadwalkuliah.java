@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
+import io.realm.Sort;
 import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahRV;
 import me.citrafa.asistenkuliahku.Jadwal;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
@@ -100,7 +101,7 @@ public class fragment_jadwalkuliah extends Fragment{
         realm.getDefaultInstance();
         View rootView = inflater.inflate(R.layout.fragment_jadwal_kuliah, container, false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerjk);
-        data = realm.where(JadwalKuliahModel.class).findAll();
+        data = realm.where(JadwalKuliahModel.class).findAll().sort("nohari", Sort.ASCENDING);
         for (int i = 0; i<data.size(); i++){
             inputData(data.get(i));
         }
@@ -154,6 +155,7 @@ public class fragment_jadwalkuliah extends Fragment{
         for (int i = 0; i<this.dataJadwal.size(); i++){
             if(this.dataJadwal.size()!=0) {
                 if (this.dataJadwal.get(i).getTittle().equals(jadwalKuliahModel.getHari_jk())) {
+                    //realm.where(JadwalKuliahModel.class).findAllSorted("nohari", Sort.ASCENDING);
                     Jadwal jd = dataJadwal.get(i);
                     removeData(jadwalKuliahModel.getHari_jk());
                     jd.addData(jadwalKuliahModel);
