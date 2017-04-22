@@ -1,22 +1,29 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import java.util.Date;
+
+import io.realm.RealmObject;
+
 /**
  * Created by SENSODYNE on 08/04/2017.
  */
 
-public class CatatanModel {
+public class CatatanModel extends RealmObject{
 
     private String no_c;
     private String uid;
     private String nama_c;
     private String deskripsi_c;
     private String attlink_c;
-    private String waktu_c;
+    private Date waktu_c;
     private String created_at;
     private String updated_at;
     private String noonline_c;
 
-    public CatatanModel(String no_c, String uid, String nama_c, String deskripsi_c, String attlink_c, String waktu_c, String created_at, String updated_at, String noonline_c) {
+    public CatatanModel() {
+    }
+
+    public CatatanModel(String no_c, String uid, String nama_c, String deskripsi_c, String attlink_c, Date waktu_c, String created_at, String updated_at, String noonline_c) {
         this.no_c = no_c;
         this.uid = uid;
         this.nama_c = nama_c;
@@ -68,11 +75,11 @@ public class CatatanModel {
         this.attlink_c = attlink_c;
     }
 
-    public String getWaktu_c() {
+    public Date getWaktu_c() {
         return waktu_c;
     }
 
-    public void setWaktu_c(String waktu_c) {
+    public void setWaktu_c(Date waktu_c) {
         this.waktu_c = waktu_c;
     }
 

@@ -179,16 +179,7 @@ public class fragment_jadwalkuliah extends Fragment{
         }
     }
 
-    public void setupRecycler() {
-        data = realm.where(JadwalKuliahModel.class).findAll();
-        adapter = new AdapterJadwalKuliahRV(dataJadwal,mContex);
-        final LinearLayoutManager layout = new LinearLayoutManager(getActivity());
-        layout.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layout);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setHasFixedSize(true);
 
-    }
     private void initSwipe(){
         ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 

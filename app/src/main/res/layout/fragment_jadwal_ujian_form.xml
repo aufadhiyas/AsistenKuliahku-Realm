@@ -63,11 +63,24 @@
                 android:id="@+id/txtRuanganJU"
                 android:hint="Ruangan" />
         </android.support.design.widget.TextInputLayout>
-        <Button
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="Simpan"
-            android:id="@+id/btnSimpanJu"/>
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btnSelesaiJu"
+                android:text="Kembali"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btnSelesaiJu"
+                android:layout_marginRight="5dp"
+                android:text="Simpan"
+                android:id="@+id/btnSimpanJu"/>
+        </RelativeLayout>
+
     </LinearLayout>
 </RelativeLayout>

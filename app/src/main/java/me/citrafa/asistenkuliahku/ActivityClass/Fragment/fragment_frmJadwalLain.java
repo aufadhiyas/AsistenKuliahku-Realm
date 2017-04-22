@@ -132,7 +132,6 @@ public class fragment_frmJadwalLain extends Fragment {
                         //.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
                         //DateS = dayOfMonth + "-" + (monthOfYear + 1) + "-" + year;
 
-
                         final Calendar c = Calendar.getInstance();
                         mHour = c.get(Calendar.HOUR_OF_DAY);
                         mMinute = c.get(Calendar.MINUTE);
@@ -144,18 +143,18 @@ public class fragment_frmJadwalLain extends Fragment {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-                                        String formatedDate = sdf.format(new Date(dayOfMonth,monthOfYear,year,hourOfDay,minute));
+
+                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
+                                        String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
-                                            Date date = sdf.parse(formatedDate);
+                                            Date dateS = sdf.parse(formatedDate);
                                             SimpleDateFormat Dates = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
-                                            String Jadi = Dates.format(date);
-                                            DateS = date;
+                                            String Jadi = Dates.format(dateS);
+                                            DateS = dateS;
                                             txtwaktuS.setText(Jadi);
                                         } catch (ParseException e) {
 
                                         }
-
                                     }
                                 }, mHour, mMinute, true);
                         timePickerDialog.show();
