@@ -13,4 +13,8 @@
     tools:context="me.citrafa.asistenkuliahku.ActivityClass.Dashboard"
     tools:showIn="@layout/app_bar_dashboard">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
 </RelativeLayout>

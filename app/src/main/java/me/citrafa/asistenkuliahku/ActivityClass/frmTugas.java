@@ -6,18 +6,22 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import io.realm.Realm;
-import io.realm.RealmList;
+import io.realm.RealmResults;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import me.citrafa.asistenkuliahku.ModelClass.TugasModel;
+import me.citrafa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 import me.citrafa.asistenkuliahku.R;
 
 public class frmTugas extends AppCompatActivity {
-    JadwalKuliahModel jadwalKuliahModel;
+    JadwalKuliahModel jadwalKuliahModels;
     TugasModel tugasModel;
+    RealmResults<JadwalKuliahModel> jadwalKuliahModel;
     Realm realm;
+    JadwalKuliahOperation JKO;
     private EditText txt1,txt2,txt3;
     private TextView lbl1,lbl2, lblSwitch;
     private Button btn1,btn2;
@@ -31,9 +35,32 @@ public class frmTugas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frm_tugas);
-        int i = 0;
 
+        initview();
+        JKO = new JadwalKuliahOperation();
+
+        if(JKO.getNextId() ==1){
+            //JadwalKuliah Kosong
+            setContentView(R.layout.content_jadwalkulaih_isempty);
+
+        }else{
+            //JadwalKuliah Ada
+            setContentView(R.layout.frm_tugas);
+        }
+
+
+//        jadwalKuliahModel = realm.where(JadwalKuliahModel.class)
+//                .equalTo("no_jk",i)
+//                .findFirst();
+//        tugasModel = realm.createObject(TugasModel.class);
+
+
+      //  jadwalKuliahModel.getTugas().add(tugasModel);
+
+
+    }
+
+    private void initview(){
         txt1 = (EditText) findViewById(R.id.txtDeskripsiTugas);
         txt2 = (EditText) findViewById(R.id.txtWaktuKumpulTugas);
         lbl1 = (TextView) findViewById(R.id.lblMakulTugas);
@@ -41,17 +68,8 @@ public class frmTugas extends AppCompatActivity {
         lblSwitch = (TextView)findViewById(R.id.lblSwitchTugas);
         btn1 = (Button) findViewById(R.id.btnBrowseFileTugas);
         btn2 = (Button) findViewById(R.id.btnSimpanTugas);
-
-
-        realm.getDefaultInstance();
-        jadwalKuliahModel = realm.where(JadwalKuliahModel.class)
-                .equalTo("no_jk",i)
-                .findFirst();
-        tugasModel = realm.createObject(TugasModel.class);
-
-
-        jadwalKuliahModel.getTugas().add(tugasModel);
-
+    }
+    private void CheckJadwalkuliah(){
 
     }
 }

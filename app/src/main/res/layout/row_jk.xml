@@ -88,13 +88,17 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rowRuanganjk"
                 android:layout_alignParentRight="true"
+                android:text="Ada Tugas"
                 android:id="@+id/rowstatusTugasJK"/>
+
             <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iconTugasRowJK"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rowRuanganjk"
-                android:layout_toLeftOf="@id/rowstatusTugasJK"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/iconTugasRowJK"/>
+
+                android:layout_toLeftOf="@id/rowstatusTugasJK"
+                app:srcCompat="@drawable/ic_check_green_16px" />
         </RelativeLayout>
     </RelativeLayout>

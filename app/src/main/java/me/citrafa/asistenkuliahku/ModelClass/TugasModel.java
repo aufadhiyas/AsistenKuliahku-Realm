@@ -1,5 +1,7 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -15,16 +17,16 @@ public class TugasModel extends RealmObject{
     private String attlink_t;
     private String waktu_t;
     private String dosen_t;
-    private String status_t;
-    private String created_at;
-    private String updated_at;
+    private int status_t;
+    private Date created_at;
+    private Date updated_at;
     private String author;
     private String noonline_t;
 
     public TugasModel() {
     }
 
-    public TugasModel(String no_t, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, String status_t, String created_at, String updated_at, String author, String noonline_t) {
+    public TugasModel(String no_t, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, int status_t, Date created_at, Date updated_at, String author, String noonline_t) {
         this.no_t = no_t;
         this.deskripsi_t = deskripsi_t;
         this.attlink_t = attlink_t;
@@ -77,27 +79,27 @@ public class TugasModel extends RealmObject{
         this.dosen_t = dosen_t;
     }
 
-    public String getStatus_t() {
+    public int getStatus_t() {
         return status_t;
     }
 
-    public void setStatus_t(String status_t) {
+    public void setStatus_t(int status_t) {
         this.status_t = status_t;
     }
 
-    public String getCreated_at() {
+    public Date getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(String created_at) {
+    public void setCreated_at(Date created_at) {
         this.created_at = created_at;
     }
 
-    public String getUpdated_at() {
+    public Date getUpdated_at() {
         return updated_at;
     }
 
-    public void setUpdated_at(String updated_at) {
+    public void setUpdated_at(Date updated_at) {
         this.updated_at = updated_at;
     }
 

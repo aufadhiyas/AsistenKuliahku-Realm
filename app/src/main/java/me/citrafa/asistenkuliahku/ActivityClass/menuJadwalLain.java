@@ -62,10 +62,10 @@ public class menuJadwalLain extends AppCompatActivity {
     }
 
 
-
-    private void changeFragment(){
-
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        fab.show();
+        adapter.notifyDataSetChanged();
     }
 }

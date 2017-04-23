@@ -3,28 +3,37 @@
     package="me.citrafa.asistenkuliahku">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
-        android:name="me.citrafa.asistenkuliahku.SessionManager.AppController"
+        android:name=".SessionManager.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/iconapp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmLogin"
-            android:label="Login"/>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmDaftar"
-            android:label="Daftar Akun"/>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalKuliah"
-            android:label="Menu Jadwal Kuliah"/>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalUjian"
-            android:label="Jadwal Ujianku"/>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalLain"
-            android:label="Jadwal Lainku"/>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.menuCatatan"
-            android:label="Catatanku"/>
         <activity
-            android:name="me.citrafa.asistenkuliahku.ActivityClass.Dashboard"
+            android:name=".ActivityClass.frmLogin"
+            android:label="Login" />
+        <activity
+            android:name=".ActivityClass.frmDaftar"
+            android:label="Daftar Akun" />
+        <activity
+            android:name=".ActivityClass.menuJadwalKuliah"
+            android:label="Menu Jadwal Kuliah" />
+        <activity
+            android:name=".ActivityClass.menuJadwalUjian"
+            android:label="Jadwal Ujianku" />
+        <activity
+            android:name=".ActivityClass.menuJadwalLain"
+            android:label="Jadwal Lainku" />
+        <activity
+            android:name=".ActivityClass.menuCatatan"
+            android:label="Catatanku" />
+        <activity
+            android:name=".ActivityClass.Dashboard"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -33,30 +42,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmJadwalKuliah"
-            android:label="Jadwal Kuliahku"/>
-
-        <activity android:name="me.citrafa.asistenkuliahku.ActivityClass.frmTugas"
-            android:label="Tugas Kuliahku"
-            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="me.citrafa.asistenkuliahku.ActivityClass.menuJadwalKuliahTab"
-            android:label="Kuliah Ku"/>
-        <activity android:name="me.citrafa.asistenkuliahku.frmJadwalPengganti"
-            android:label="Jadwal Pengganti"></activity>
-        <service
-            android:name=".SessionManager.FirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name=".SessionManager.FirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-            </intent-filter>
-        </service>
-    </application>
+            android:name=".ActivityClass.frmJadwalKuliah"
+            android:label="Jadwal Kuliahku" />
+        <activity
+            android:name=".ActivityClass.frmTugas"
+            android:label="Tugas Kuliahku"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityClass.menuJadwalKuliahTab"
+            android:label="Kuliah Ku" />
+        <activity
+            android:name=".frmJadwalPengganti"
+            android:label="Jadwal Pengganti" />
 
+        <service android:name=".SessionManager.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".SessionManager.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <receiver android:name=".Service.NotificationPublisher"
+            android:enabled="true"
+            android:exported="false"/>
+
+    </application>
 
 </manifest>

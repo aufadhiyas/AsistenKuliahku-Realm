@@ -16,6 +16,21 @@ public class JadwalKuliahOperation {
     Realm realm;
     JadwalKuliahModel jk;
 
+    public int getJadwalKuliahIsEmpty() {
+        final int i = 0;
+        final int ada = 1;
+        realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        RealmResults<JadwalKuliahModel> JKM = realm.where(JadwalKuliahModel.class).findAll();
+        realm.commitTransaction();
+        if (JKM != null) {
+            return ada;
+        }else{
+            return i;
+        }
+
+    }
+
     public void tambahJadwalKuliah(final JadwalKuliahModel obj){
         realm = Realm.getDefaultInstance();
 
@@ -55,6 +70,36 @@ public class JadwalKuliahOperation {
         lastID = number.intValue();
         return lastID;
 
+    }
+    public static void deleteItemAsync(final Realm realm, final int id) {
+        realm.executeTransactionAsync(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                JadwalKuliahModel jk = realm.where(JadwalKuliahModel.class).equalTo("no_jk", id).findFirst();
+                // Otherwise it has been deleted already.
+                if (jk != null) {
+                    if (!realm.isInTransaction())
+                    {
+                        realm.beginTransaction();
+                    }
+
+                        jk.deleteFromRealm();
+
+                    realm.commitTransaction();
+                }
+            }
+            }, new Realm.Transaction.OnSuccess() {
+            public void onSuccess() {
+                Log.d(TAG, "Berhasil Hapus Data Di Realm ID : " + id);
+                Log.d(TAG, "Path : " + realm.getPath());
+            }
+            }, new Realm.Transaction.OnError() {
+            @Override
+            public void onError(Throwable error) {
+                Log.d(TAG, "gagal " + error);
+            }
+            }
+        );
     }
 
 }

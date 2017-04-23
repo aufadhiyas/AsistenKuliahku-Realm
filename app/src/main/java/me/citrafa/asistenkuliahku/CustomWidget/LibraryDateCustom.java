@@ -42,6 +42,20 @@ public class LibraryDateCustom {
         String strDate = sdfDate.format(now);
         return strDate;
     }
+    public String getHaridanTanggalUntukListSingle(Date date){
+        String Jadi;
+        String Hari = getHariDariWaktu(date);
+        String Tanggal = getWaktuTanggalBiasa(date);
+        String Jam;
+        Calendar calendar = Calendar.getInstance();
+        DateFormat timeFormatter = new SimpleDateFormat("hh:mm");
+        Jam = timeFormatter.format(date);
+        if (Hari.equals("Hari ini")){
+            Jadi = Hari+" - "+Jam;
+
+        }
+        return Hari;
+    }
 
     public String getHariDariWaktu(Date dates){
         SimpleDateFormat sdf = new SimpleDateFormat("EEE");
@@ -56,9 +70,9 @@ public class LibraryDateCustom {
         yesterday.add(Calendar.DATE, -1);
         tomorrow.add(Calendar.DATE, 1);
         String formatedDate = sdf.format(dates);
-        DateFormat timeFormatter = new SimpleDateFormat("hh:mma");
+        DateFormat timeFormatter = new SimpleDateFormat("hh:mm");
         if (calendar.get(Calendar.YEAR) == today.get(Calendar.YEAR) && calendar.get(Calendar.DAY_OF_YEAR) == today.get(Calendar.DAY_OF_YEAR)) {
-            return "Hari Ini";
+            return "Hari ini";
         }else if (calendar.get(Calendar.YEAR) == yesterday.get(Calendar.YEAR) && calendar.get(Calendar.DAY_OF_YEAR) == yesterday.get(Calendar.DAY_OF_YEAR)) {
             return "Kemarin";
         }else if (calendar.get(Calendar.YEAR) == tomorrow.get(Calendar.YEAR) && calendar.get(Calendar.DAY_OF_YEAR) == tomorrow.get(Calendar.DAY_OF_YEAR)) {

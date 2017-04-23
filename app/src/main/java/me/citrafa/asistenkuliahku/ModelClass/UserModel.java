@@ -1,5 +1,7 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -25,15 +27,15 @@ public class UserModel extends RealmObject{
     private String kelas;
     private String lokasi;
     private String tanggal_lahir;
-    private String created_at;
-    private String updated_at;
-    private String sync_at;
+    private Date created_at;
+    private Date updated_at;
+    private Date sync_at;
     private String no_online;
 
     public UserModel() {
     }
 
-    public UserModel(String id, String uid, String nama, String email, String password, String kode_verifikasi, String status_verifikasi, String universitas, String jurusan, String kelas, String lokasi, String tanggal_lahir, String created_at, String updated_at, String sync_at, String no_online) {
+    public UserModel(String id, String uid, String nama, String email, String password, String kode_verifikasi, String status_verifikasi, String universitas, String jurusan, String kelas, String lokasi, String tanggal_lahir, Date created_at, Date updated_at, Date sync_at, String no_online) {
         this.id = id;
         this.uid = uid;
         this.nama = nama;
@@ -158,27 +160,27 @@ public class UserModel extends RealmObject{
         this.tanggal_lahir = tanggal_lahir;
     }
 
-    public String getCreated_at() {
+    public Date getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(String created_at) {
+    public void setCreated_at(Date created_at) {
         this.created_at = created_at;
     }
 
-    public String getUpdated_at() {
+    public Date getUpdated_at() {
         return updated_at;
     }
 
-    public void setUpdated_at(String updated_at) {
+    public void setUpdated_at(Date updated_at) {
         this.updated_at = updated_at;
     }
 
-    public String getSync_at() {
+    public Date getSync_at() {
         return sync_at;
     }
 
-    public void setSync_at(String sync_at) {
+    public void setSync_at(Date sync_at) {
         this.sync_at = sync_at;
     }
 

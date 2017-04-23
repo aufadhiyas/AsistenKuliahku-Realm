@@ -109,6 +109,7 @@ public class fragment_jadwalkuliah extends Fragment{
         final LinearLayoutManager layout = new LinearLayoutManager(getActivity());
         layout.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layout);
+
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
         Log.d(TAG, "TAG : OnCreateView Fragment");

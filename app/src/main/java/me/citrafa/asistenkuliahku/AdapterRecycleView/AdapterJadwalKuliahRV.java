@@ -87,7 +87,7 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
         CustomListAdapter customListAdapter = new CustomListAdapter(jk.getJk(),context);
         ViewGroup.LayoutParams params = holder.listView.getLayoutParams();
         final float scale = context.getResources().getDisplayMetrics().density;
-        int z = (80*(jk.getJk().size()));
+        int z = (100*(jk.getJk().size()));
         int pixels = (int) (z * scale + 0.5f);
         params.height = pixels;
         holder.listView.setLayoutParams(params);

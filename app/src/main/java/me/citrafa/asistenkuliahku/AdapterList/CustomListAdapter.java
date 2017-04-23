@@ -17,8 +17,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import io.realm.Realm;
 import me.citrafa.asistenkuliahku.ActivityClass.frmTugas;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
+import me.citrafa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 import me.citrafa.asistenkuliahku.R;
 
 /**
@@ -30,10 +32,14 @@ public class CustomListAdapter extends BaseAdapter{
     private ArrayList <JadwalKuliahModel> data;
     private Context mContex;
     private int ids;
+    Realm realm;
+    JadwalKuliahOperation JAO;
     
     public CustomListAdapter(ArrayList<JadwalKuliahModel> data, Context context){
         this.data = data;
         this.mContex = context;
+        JAO = new JadwalKuliahOperation();
+        realm = Realm.getDefaultInstance();
     }
     
     
@@ -116,6 +122,7 @@ public class CustomListAdapter extends BaseAdapter{
                 case R.id.MenuJKUbah:
                     return true;
                 case R.id.MenuJLHapus:
+                    JAO.deleteItemAsync(realm, id);
                     return true;
             }
             return false;

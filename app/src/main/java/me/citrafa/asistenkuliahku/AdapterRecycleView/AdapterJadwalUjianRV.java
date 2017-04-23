@@ -35,8 +35,8 @@ public class AdapterJadwalUjianRV extends RealmRecyclerViewAdapter<JadwalUjianMo
     Realm realm;
     private RealmResults<JadwalUjianModel> jadwalUjianModels;
 
-    public AdapterJadwalUjianRV(@Nullable OrderedRealmCollection<JadwalUjianModel> data, boolean autoUpdate,RealmResults<JadwalUjianModel>JUM) {
-        super(data, autoUpdate);
+    public AdapterJadwalUjianRV(@Nullable OrderedRealmCollection<JadwalUjianModel> data,RealmResults<JadwalUjianModel>JUM) {
+        super(data, true);
         setHasStableIds(true);
         realm = Realm.getDefaultInstance();
         this.jadwalUjianModels = JUM;

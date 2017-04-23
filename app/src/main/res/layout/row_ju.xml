@@ -4,17 +4,20 @@
     android:layout_width="match_parent"
     android:id="@+id/cardviewJU"
     android:padding="10dp"
+    android:layout_marginBottom="10dp"
     android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="wrap_content">
 
 
         <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             android:id="@+id/rowJUWaktu"
-            android:text="Waktu Kuliah"/>
+            android:text="Waktu Ujian"/>
 
         <ImageButton
             android:id="@+id/btnMenuJadwalUjian"
