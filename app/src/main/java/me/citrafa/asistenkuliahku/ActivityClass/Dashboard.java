@@ -1,5 +1,6 @@
 package me.citrafa.asistenkuliahku.ActivityClass;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,19 +14,29 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import me.citrafa.asistenkuliahku.R;
 import me.citrafa.asistenkuliahku.SessionManager.SessionManager;
+import me.citrafa.asistenkuliahku.SettingsActivity;
 
 public class Dashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private SessionManager session;
+    private static final int REQUEST_PERMISSIONS = 20;
+    public ImageView imgProfile;
+    public TextView txtnama,txtEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        txtnama = (TextView)findViewById(R.id.lblNamaDashboard);
+        txtEmail = (TextView)findViewById(R.id.lblEmailDashboard);
+        imgProfile = (ImageView)findViewById(R.id.imgProfileDashboard);
+
         setSupportActionBar(toolbar);
         session = new SessionManager(getApplicationContext());
         //if (!session.isLoggedIn()){
@@ -91,13 +102,18 @@ public class Dashboard extends AppCompatActivity
 
         if (id == R.id.btnMenuJadwalKuliah) {
             startActivity(new Intent(Dashboard.this, menuJadwalKuliahTab.class));
+        } else if (id == R.id.imgProfileDashboard){
+            startActivity(new Intent(Dashboard.this, MenuPersonalInfo.class));
         } else if (id == R.id.btnMenuJadwalLain) {
             startActivity(new Intent(Dashboard.this, menuJadwalLain.class));
         } else if (id == R.id.btnMenuUjian) {
             startActivity(new Intent(Dashboard.this, menuJadwalUjian.class));
         } else if (id == R.id.btnmenuCatatan) {
             startActivity(new Intent(Dashboard.this, menuCatatan.class));
-        } else if (id == R.id.btnMenuTentang) {
+        }else if (id==R.id.btnMenuSetting){
+            startActivity(new Intent(Dashboard.this, SettingsActivity.class));
+        }
+        else if (id == R.id.btnMenuTentang) {
 
         } else if (id == R.id.btnMenuLogout) {
             logoutUser();

@@ -2,6 +2,7 @@ package me.citrafa.asistenkuliahku.ActivityClass;
 
 import android.app.TimePickerDialog;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -32,6 +33,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
     private int mHour, mMinute;
     private JadwalKuliahModel jk;
     private String currentDateTime, hari;
+    private Date waktus,waktuf;
     private Realm realm;
     JadwalKuliahOperation opJK;
     int no;
@@ -58,16 +60,48 @@ public class frmJadwalKuliah extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Calendar mcurrentTime = Calendar.getInstance();
-                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-                int minute = mcurrentTime.get(Calendar.MINUTE);
+
+                final int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                final int minute = mcurrentTime.get(Calendar.MINUTE);
+                final int mYear = mcurrentTime.get(Calendar.YEAR);
+                final int mMonth = mcurrentTime.get(Calendar.MONTH);
+                final int mDay = mcurrentTime.get(Calendar.DAY_OF_MONTH);
                 TimePickerDialog mTimePicker;
                 mTimePicker = new TimePickerDialog(frmJadwalKuliah.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
-                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        Jam.setText(selectedHour + ":" + selectedMinute);
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {//Ontime Set Punya Waktu Mulai
+                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
+                        final String Jadis = sdf.format(new Date(mYear,mMonth,mDay,selectedHour,selectedMinute));
+                        TimePickerDialog mTimePicker;
+                        mTimePicker = new TimePickerDialog(frmJadwalKuliah.this, new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker timePicker, int selectedHourf, int selectedMinutef) {//Ontime Set Punya Waktu Selesai
+                                SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
+                                String Jadif = sdf.format(new Date(mYear,mMonth,mDay,selectedHourf,selectedMinutef));
+                                try {
+                                    waktus = sdf.parse(Jadis);
+                                    waktuf = sdf.parse(Jadif);
+                                    if (waktuf.before(waktus)){
+                                        Toast.makeText(frmJadwalKuliah.this, "Jam selesai kuliah kamu tidak valid", Toast.LENGTH_SHORT).show();
+                                        simpan.setClickable(false);
+                                    }else{
+                                        simpan.setClickable(true);
+                                    }
+
+                                    SimpleDateFormat jam = new SimpleDateFormat("HH:mm");
+                                    String prints = jam.format(waktus);
+                                    String printf = jam.format(waktuf);
+                                    Jam.setText(prints+" - "+printf);
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }, hour, minute, true);//Yes 24 hour time
+                        mTimePicker.setTitle("Jam Selesai Kuliah");
+                        mTimePicker.show();
                     }
                 }, hour, minute, true);//Yes 24 hour time
-                mTimePicker.setTitle("Select Time");
+                mTimePicker.setTitle("Jam Mulai Kuliah");
                 mTimePicker.show();
 
             }
@@ -76,7 +110,8 @@ public class frmJadwalKuliah extends AppCompatActivity {
             public void onClick(View v){
                 final int no = opJK.getNextId();
                 hari = sp.getSelectedItem().toString();
-                final String jam = Jam.getText().toString();
+                final Date jams = waktus;
+                final Date jamf = waktuf;
                 final String Makul= makul.getText().toString().trim();
                 final String Ruangan = Ruang.getText().toString().trim();
                 final String Dosen = dosen.getText().toString().trim();
@@ -92,7 +127,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
                 //Toast.makeText(frmJadwalKuliah.this, "SIMPAN : "+hari+", " +Makul, Toast.LENGTH_SHORT).show();
 
                 //memasukkan variable ke constructor
-                jk = new JadwalKuliahModel(no, uid, hari, nohari, jam, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, status, Author,Type,No_Online);
+                jk = new JadwalKuliahModel(no, uid, hari, nohari, jams, jamf, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, status, Author,Type,No_Online);
 
                 kosongField();
                 Toast.makeText(frmJadwalKuliah.this, "Jadwal Kuliahmu Tersimpan !", Toast.LENGTH_SHORT).show();

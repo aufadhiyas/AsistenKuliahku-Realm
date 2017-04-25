@@ -2,6 +2,7 @@ package me.citrafa.asistenkuliahku.SessionManager;
 
 import android.app.Application;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -10,26 +11,38 @@ import com.facebook.stetho.Stetho;
 import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import io.realm.Realm;
+import io.realm.RealmChangeListener;
 import io.realm.RealmConfiguration;
+import me.citrafa.asistenkuliahku.ActivityClass.frmDaftar;
 
 /**
  * Created by SENSODYNE on 09/04/2017.
  */
 
 public class AppController extends Application {
+
+    private Realm realm;
+    private RealmChangeListener realmListener;
     @Override
     public void onCreate() {
         super.onCreate();
         mInstance = this;
         Realm.init(this);
-
+        realm = Realm.getDefaultInstance();
 
         RealmConfiguration config = new RealmConfiguration.Builder()
                 .name("databases.realm")
                 .schemaVersion(1)
                 .deleteRealmIfMigrationNeeded()
                 .build();
-        Realm.setDefaultConfiguration(config);
+        realmListener = new RealmChangeListener() {
+            @Override
+            public void onChange(Object element) {
+                Log.d(TAG, "DATA ADA YANG DI UBAH");
+            }
+        };
+        realm.addChangeListener(realmListener);
+        realm.setDefaultConfiguration(config);
         Stetho.initialize(
                 Stetho.newInitializerBuilder(this)
                         .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
@@ -38,8 +51,6 @@ public class AppController extends Application {
 
 
     }
-
-
 
     public static final String TAG = AppController.class.getSimpleName();
 

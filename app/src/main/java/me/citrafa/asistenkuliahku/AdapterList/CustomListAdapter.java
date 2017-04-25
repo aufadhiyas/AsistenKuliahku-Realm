@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -82,7 +83,9 @@ public class CustomListAdapter extends BaseAdapter{
 
         txtHari.setText(jk.getHari_jk());
         txtMakul.setText(jk.getMakul_jk());
-        txtJam.setText(jk.getWaktu_jk());
+        SimpleDateFormat jam = new SimpleDateFormat("HH:mm");
+        String waktu = jam.format(jk.getWaktu_jk());
+        txtJam.setText(waktu);
         txtDosen.setText(jk.getDosen_jk());
         txtRuangan.setText(jk.getKelas_jk()+" / "+jk.getRuangan_jk());
         relativeLayout.setTag(jk);
@@ -110,20 +113,25 @@ public class CustomListAdapter extends BaseAdapter{
         public MyMenuItemClickListener(int position, int id){
             this.position = position;
             this.id = id;
+            JadwalKuliahOperation J = new JadwalKuliahOperation();
         }
         @Override
         public boolean onMenuItemClick(MenuItem item) {
             switch (item.getItemId()){
                 case R.id.MenuJKTugas:
-                    return true;
+                    Intent tambahTugas = new Intent(mContex, frmTugas.class);
+                    tambahTugas.putExtra("id",id);
+                    mContex.startActivity(tambahTugas);
+                    break;
                 case R.id.MenuJKPengganti:
                     Toast.makeText(mContex, "ID NYA :"+id, Toast.LENGTH_SHORT).show();
-                    return true;
+                    break;
                 case R.id.MenuJKUbah:
-                    return true;
-                case R.id.MenuJLHapus:
-                    JAO.deleteItemAsync(realm, id);
-                    return true;
+                    break;
+                case R.id.MenuJKHapus:
+                    JAO.deleteItemAsync(realm,id);
+                    Toast.makeText(mContex, "ID NYA :"+id, Toast.LENGTH_SHORT).show();
+                    break;
             }
             return false;
         }

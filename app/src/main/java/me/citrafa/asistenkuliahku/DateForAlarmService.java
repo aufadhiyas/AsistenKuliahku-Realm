@@ -14,6 +14,7 @@ import io.realm.RealmResults;
 import io.realm.Sort;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalLainModel;
+import me.citrafa.asistenkuliahku.ModelClass.JadwalUjianModel;
 
 /**
  * Created by SENSODYNE on 23/04/2017.
@@ -27,14 +28,15 @@ public class DateForAlarmService extends Service {
 
     }
     public void getDateEarly(){
+        int id = 1;
         final Date now = null;
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(now);
         Calendar today = Calendar.getInstance();
 
         realm = Realm.getDefaultInstance();
-        RealmResults<JadwalLainModel> resultJadwalLain = realm.where(JadwalLainModel.class).equalTo("waktus_jl",now).findAllSorted("waktus_jl", Sort.ASCENDING);
-
+        JadwalLainModel resultJadwalLain = realm.where(JadwalLainModel.class).equalTo("waktus_jl",now).equalTo("status",id).findFirst();
+        //JadwalUjianModel resultUjianModel = realm.where(JadwalUjianModel.class).equalTo("waktu",now)
 
     }
 

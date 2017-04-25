@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/btnCatatanAttach"
+                android:text="AKSJHDLKJAHSDOIASHDPOIASPHDO"
                 android:id="@+id/lblCatatanFileName"/>
 
         </LinearLayout>

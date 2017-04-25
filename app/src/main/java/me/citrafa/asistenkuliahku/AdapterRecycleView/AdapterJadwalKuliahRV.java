@@ -75,7 +75,7 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.itemjk, parent, false);
+                .inflate(R.layout.itemjks, parent, false);
         return new MyViewHolder(itemView);
 
     }
@@ -87,7 +87,7 @@ public class AdapterJadwalKuliahRV extends RecyclerView.Adapter<AdapterJadwalKul
         CustomListAdapter customListAdapter = new CustomListAdapter(jk.getJk(),context);
         ViewGroup.LayoutParams params = holder.listView.getLayoutParams();
         final float scale = context.getResources().getDisplayMetrics().density;
-        int z = (100*(jk.getJk().size()));
+        int z = (80*(jk.getJk().size()));
         int pixels = (int) (z * scale + 0.5f);
         params.height = pixels;
         holder.listView.setLayoutParams(params);

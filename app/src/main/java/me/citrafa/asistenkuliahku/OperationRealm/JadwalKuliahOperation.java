@@ -4,6 +4,7 @@ import android.util.Log;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import java.util.Collection;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 
 /**
@@ -71,21 +72,13 @@ public class JadwalKuliahOperation {
         return lastID;
 
     }
-    public static void deleteItemAsync(final Realm realm, final int id) {
+    public void deleteItemAsync(final Realm realm, final int id) {
         realm.executeTransactionAsync(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
                 JadwalKuliahModel jk = realm.where(JadwalKuliahModel.class).equalTo("no_jk", id).findFirst();
-                // Otherwise it has been deleted already.
-                if (jk != null) {
-                    if (!realm.isInTransaction())
-                    {
-                        realm.beginTransaction();
-                    }
-
-                        jk.deleteFromRealm();
-
-                    realm.commitTransaction();
+                if (jk !=null){
+                    jk.deleteFromRealm();
                 }
             }
             }, new Realm.Transaction.OnSuccess() {
@@ -100,6 +93,23 @@ public class JadwalKuliahOperation {
             }
             }
         );
+    }
+    public static void deleteMultiItem(Realm realm, Collection<Integer> ids){
+        final Integer[] idsToDelete = new Integer[ids.size()];
+        ids.toArray(idsToDelete);
+        realm.executeTransactionAsync(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                for (Integer id : idsToDelete){
+                    JadwalKuliahModel jadwalKuliahModel = realm.where(JadwalKuliahModel.class).equalTo("no_jk",id).findFirst();
+                    if(jadwalKuliahModel !=null){
+                        jadwalKuliahModel.deleteFromRealm();
+                    }
+                }
+            }
+        });
+
+
     }
 
 }

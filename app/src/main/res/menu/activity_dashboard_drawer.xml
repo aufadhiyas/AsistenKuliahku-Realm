@@ -19,11 +19,15 @@
     <item android:title="Aplikasi">
         <menu>
             <item
+                android:id="@+id/btnMenuSetting"
+                android:title="Setting" />
+            <item
                 android:id="@+id/btnMenuTentang"
                 android:title="Tentang" />
             <item
                 android:id="@+id/btnMenuLogout"
                 android:title="Logout" />
+
         </menu>
     </item>
 

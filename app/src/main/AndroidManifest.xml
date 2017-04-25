@@ -3,9 +3,8 @@
     package="me.citrafa.asistenkuliahku">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".SessionManager.AppController"
@@ -66,10 +65,16 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <receiver android:name=".Service.NotificationPublisher"
-            android:enabled="true"
-            android:exported="false"/>
 
+        <receiver
+            android:name=".Service.NotificationPublisher"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".ActivityClass.MenuPersonalInfo"></activity>
     </application>
 
 </manifest>

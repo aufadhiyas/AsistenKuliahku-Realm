@@ -1,14 +1,25 @@
 package me.citrafa.asistenkuliahku.ActivityClass.Fragment;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Fragment;
 import android.app.TimePickerDialog;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
+import android.nfc.Tag;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.OpenableColumns;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +29,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,30 +38,42 @@ import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
+import droidninja.filepicker.FilePickerBuilder;
+import droidninja.filepicker.FilePickerConst;
 import io.realm.Realm;
+import me.citrafa.asistenkuliahku.ActivityClass.frmDaftar;
 import me.citrafa.asistenkuliahku.CustomWidget.LibraryDateCustom;
 import me.citrafa.asistenkuliahku.ModelClass.CatatanModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalLainModel;
 import me.citrafa.asistenkuliahku.OperationRealm.CatatanOperation;
 import me.citrafa.asistenkuliahku.R;
 
+import static android.support.v4.content.PermissionChecker.checkSelfPermission;
+
 /**
  * Created by SENSODYNE on 17/04/2017.
  */
 
 public class fragment_frm_catatan extends Fragment {
+    private  static final String TAG = fragment_frm_catatan.class.getSimpleName();
     EditText txtNamaCatatan, txtDeskripsi, txtWaktu;
     Button btnAttach, btnSimpan;
-    TextView lblFile;
     Realm realm;
+    TextView lblFile;
     CatatanModel cm;
     CatatanOperation co;
     Date Dates;
     File source, destination;
+    ContentResolver contentResolver;
     int PICKFILE_RESULT_CODE;
+    ArrayList<String> filePaths = null;
+    private static final int MY_READ_EXTERNAL_STORAGE=0;
 
     private int mYear, mMonth, mDay, mHour, mMinute, id;
 
@@ -61,24 +85,30 @@ public class fragment_frm_catatan extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         EditText txtNamaCatatan = (EditText) view.findViewById(R.id.txtCatatanNama);
-        Button btnAttach = (Button) view.findViewById(R.id.btnCatatanAttach);
+        final Button btnAttach = (Button) view.findViewById(R.id.btnCatatanAttach);
         final EditText txtWaktu = (EditText) view.findViewById(R.id.txtWaktuCatatan);
         Button btnSimpan = (Button) view.findViewById(R.id.btnCatatanSimpan);
         EditText txtDeskripsi = (EditText) view.findViewById(R.id.txtDeskripsiCatatan);
-        final TextView lblFile = (TextView) view.findViewById(R.id.lblCatatanFileName);
+        lblFile = (TextView) view.findViewById(R.id.lblCatatanFileName);
         final LibraryDateCustom LDC = new LibraryDateCustom();
+
+
+
         btnAttach.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Intent chooseFile = new Intent(Intent.ACTION_GET_CONTENT);
-                chooseFile.addCategory(Intent.CATEGORY_OPENABLE);
-                chooseFile.setType("*/*");
+                boolean statusPermission = false;
+                statusPermission = isStoragePermissionGranted();
+                if (statusPermission !=false){
+                    FilePickerBuilder.getInstance().setMaxCount(5)
+                            .setSelectedFiles(filePaths)
+                            .setActivityTheme(R.style.AppTheme)
+                            .pickPhoto(getActivity());
 
-                startActivityForResult(
-                        Intent.createChooser(chooseFile, "Choose a file"),
-                        PICKFILE_RESULT_CODE
-                );
-               // lblFile.setText(choo);
+                }else{
+                    btnAttach.setClickable(false);
+                }
             }
         });
         txtWaktu.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +128,8 @@ public class fragment_frm_catatan extends Fragment {
     }
 
 
-    public void SimpanData() {
+
+//    public void SimpanData() {
 //        int ids = id(10000);
 //        String nama = txtNamaCatatan.getText().toString().trim();
 //        Date waktuS = Dates;
@@ -113,6 +144,24 @@ public class fragment_frm_catatan extends Fragment {
 //        jml = new JadwalLainModel(ids,nama,waktuS,waktuF,tempat,deskripsi,status,Author,created_at,updated_at,noOnline);
 //        JUO.tambahJadwalLain(jml);
 
+  //  }
+    public  boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(getActivity(),Manifest.permission.READ_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v(TAG,"Permission is granted");
+                return true;
+            } else {
+
+                Log.v(TAG,"Permission is revoked");
+                ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG,"Permission is granted");
+            return true;
+        }
     }
 
     public int id(int status) {
@@ -134,49 +183,43 @@ public class fragment_frm_catatan extends Fragment {
     }
 
 
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICKFILE_RESULT_CODE && resultCode == Activity.RESULT_OK) {
-            Uri content_describer = data.getData();
-            String src = content_describer.getPath();
-            source = new File(src);
-            Log.d("src is ", source.toString());
-            String filename = content_describer.getLastPathSegment();
+        ArrayList<String> photoPaths = null;
+        ArrayList<String> docPaths = null;
+        switch (requestCode) {
+            case FilePickerConst.REQUEST_CODE_PHOTO:
+                if (resultCode == Activity.RESULT_OK && data != null) {
 
-            Log.d("FileName is ", filename);
-            destination = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/File/" + filename);
-            Log.d("Destination is ", destination.toString());
-            //SetToFolder.setEnabled(true);
+                    photoPaths.addAll(data.getStringArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
+                }
+                break;
+            case FilePickerConst.REQUEST_CODE_DOC:
+                if (resultCode == Activity.RESULT_OK && data != null) {
+
+                    docPaths.addAll(data.getStringArrayListExtra(FilePickerConst.KEY_SELECTED_DOCS));
+                }
+                break;
+
         }
+        String jadi = photoPaths.get(0);
+
+        Log.d(TAG,"JADI ");
+
     }
 
+    private void addThemToView(ArrayList<String> doc , ArrayList<String> pic) {
+        if (doc !=null){
+            String[] stringArray = doc.toArray(new String[1]);
+            String jadi = stringArray[0];
+            Log.d(TAG ,jadi);
+        }else{
+            int listSize = pic.size();
 
-
-    private void copy(File source, File destination) throws IOException {
-
-        FileChannel in = new FileInputStream(source).getChannel();
-        FileChannel out = new FileOutputStream(destination).getChannel();
-
-        try {
-            in.transferTo(0, in.size(), out);
-        } catch (Exception e) {
-            Log.d("Exception", e.toString());
-        } finally {
-            if (in != null)
-                in.close();
-            if (out != null)
-                out.close();
-        }
-    }
-
-    private void DirectoryExist(File destination) {
-
-        if (!destination.isDirectory()) {
-            if (destination.mkdirs()) {
-                Log.d("Carpeta creada", "....");
-            } else {
-                Log.d("Carpeta no creada", "....");
+            for (int i=0; i<listSize; i++) {
+                Log.d(TAG, "JADI" + pic.get(i));
             }
         }
     }
 }
+

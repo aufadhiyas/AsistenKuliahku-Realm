@@ -73,7 +73,7 @@
                    android:focusable="false"
                    android:cursorVisible="false"
                    android:editable="false"
-                   android:minWidth="80dp"
+                   android:minWidth="100dp"
                    android:textSize="14sp" />
 
            </android.support.design.widget.TextInputLayout>

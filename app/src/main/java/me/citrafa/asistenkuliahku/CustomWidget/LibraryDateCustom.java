@@ -127,7 +127,7 @@ public class LibraryDateCustom {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
                                         String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);
@@ -175,7 +175,7 @@ public class LibraryDateCustom {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
                                         String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);
@@ -226,7 +226,7 @@ public class LibraryDateCustom {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy HH:mm");
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
                                         String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);

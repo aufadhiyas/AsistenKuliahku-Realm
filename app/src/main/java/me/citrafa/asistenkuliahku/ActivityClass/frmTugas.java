@@ -1,13 +1,17 @@
 package me.citrafa.asistenkuliahku.ActivityClass;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import java.text.SimpleDateFormat;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -17,10 +21,12 @@ import me.citrafa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 import me.citrafa.asistenkuliahku.R;
 
 public class frmTugas extends AppCompatActivity {
+    private  static final String TAG = frmDaftar.class.getSimpleName();
     JadwalKuliahModel jadwalKuliahModels;
     TugasModel tugasModel;
-    RealmResults<JadwalKuliahModel> jadwalKuliahModel;
+    JadwalKuliahModel jadwalKuliahModel;
     Realm realm;
+    int id;
     JadwalKuliahOperation JKO;
     private EditText txt1,txt2,txt3;
     private TextView lbl1,lbl2, lblSwitch;
@@ -35,41 +41,33 @@ public class frmTugas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        initview();
-        JKO = new JadwalKuliahOperation();
-
-        if(JKO.getNextId() ==1){
+        JadwalKuliahOperation JKO = new JadwalKuliahOperation();
+        if (JKO.getNextId() == 1) {
             //JadwalKuliah Kosong
             setContentView(R.layout.content_jadwalkulaih_isempty);
 
-        }else{
+        } else {
             //JadwalKuliah Ada
             setContentView(R.layout.frm_tugas);
+            realm = Realm.getDefaultInstance();
+            txt1 = (EditText) findViewById(R.id.txtDeskripsiTugas);
+            txt2 = (EditText) findViewById(R.id.txtWaktuKumpulTugas);
+            lbl1 = (me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium) findViewById(R.id.lblMakulTugas);
+            lbl2 = (me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular) findViewById(R.id.lblWaktuMakulTugas);
+            lblSwitch = (TextView) findViewById(R.id.lblSwitchTugas);
+            btn1 = (Button) findViewById(R.id.btnBrowseFileTugas);
+            btn2 = (Button) findViewById(R.id.btnSimpanTugas);
+
+            Intent intent = getIntent();
+            int id = intent.getIntExtra("id", 0);
+            jadwalKuliahModel = realm.where(JadwalKuliahModel.class).equalTo("no_jk", id).findFirst();
+            String nama = jadwalKuliahModel.getMakul_jk();
+            SimpleDateFormat jam = new SimpleDateFormat("HH:mm");
+            String waktu = jam.format(jadwalKuliahModel.getWaktu_jk());
+            lbl1.setText("" + nama);
+            lbl2.setText("Jam : " + waktu);
         }
-
-
-//        jadwalKuliahModel = realm.where(JadwalKuliahModel.class)
-//                .equalTo("no_jk",i)
-//                .findFirst();
-//        tugasModel = realm.createObject(TugasModel.class);
-
-
-      //  jadwalKuliahModel.getTugas().add(tugasModel);
-
-
     }
 
-    private void initview(){
-        txt1 = (EditText) findViewById(R.id.txtDeskripsiTugas);
-        txt2 = (EditText) findViewById(R.id.txtWaktuKumpulTugas);
-        lbl1 = (TextView) findViewById(R.id.lblMakulTugas);
-        lbl2 = (TextView) findViewById(R.id.lblWaktuMakulTugas);
-        lblSwitch = (TextView)findViewById(R.id.lblSwitchTugas);
-        btn1 = (Button) findViewById(R.id.btnBrowseFileTugas);
-        btn2 = (Button) findViewById(R.id.btnSimpanTugas);
-    }
-    private void CheckJadwalkuliah(){
 
-    }
 }

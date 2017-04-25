@@ -1,5 +1,8 @@
 package me.citrafa.asistenkuliahku.ModelClass;
 
+import java.util.Date;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -9,6 +12,7 @@ import io.realm.annotations.PrimaryKey;
  */
 
 public class JadwalKuliahModel extends RealmObject{
+    private static AtomicInteger id = new AtomicInteger();
 
 
     @PrimaryKey
@@ -16,7 +20,8 @@ public class JadwalKuliahModel extends RealmObject{
     private String uid_jk;
     private String hari_jk;
     private int nohari;
-    private String waktu_jk;
+    private Date waktu_jk;
+    private Date waktu_jkf;
     private String makul_jk;
     private String ruangan_jk;
     private String dosen_jk;
@@ -30,13 +35,13 @@ public class JadwalKuliahModel extends RealmObject{
     public JadwalKuliahModel() {
     }
 
-
-    public JadwalKuliahModel(int no_jk, String uid_jk, String hari_jk,int nohari, String waktu_jk, String makul_jk, String ruangan_jk, String dosen_jk, String kelas_jk, String created_at, String updated_at, Boolean status_jk, String author, String type_jk, int noonline_j) {
+    public JadwalKuliahModel(int no_jk, String uid_jk, String hari_jk, int nohari, Date waktu_jk, Date waktu_jkf, String makul_jk, String ruangan_jk, String dosen_jk, String kelas_jk, String created_at, String updated_at, Boolean status_jk, String author, String type_jk, int noonline_j) {
         this.no_jk = no_jk;
         this.uid_jk = uid_jk;
         this.hari_jk = hari_jk;
         this.nohari = nohari;
         this.waktu_jk = waktu_jk;
+        this.waktu_jkf = waktu_jkf;
         this.makul_jk = makul_jk;
         this.ruangan_jk = ruangan_jk;
         this.dosen_jk = dosen_jk;
@@ -44,17 +49,9 @@ public class JadwalKuliahModel extends RealmObject{
         this.created_at = created_at;
         this.updated_at = updated_at;
         this.status_jk = status_jk;
-        this.Author = author;
-        this.Type_jk = type_jk;
+        Author = author;
+        Type_jk = type_jk;
         this.noonline_j = noonline_j;
-    }
-
-    public RealmList<TugasModel> getTugas() {
-        return Tugas;
-    }
-
-    public void setTugas(RealmList<TugasModel> tugas) {
-        Tugas = tugas;
     }
 
     public int getNo_jk() {
@@ -81,12 +78,28 @@ public class JadwalKuliahModel extends RealmObject{
         this.hari_jk = hari_jk;
     }
 
-    public String getWaktu_jk() {
+    public int getNohari() {
+        return nohari;
+    }
+
+    public void setNohari(int nohari) {
+        this.nohari = nohari;
+    }
+
+    public Date getWaktu_jk() {
         return waktu_jk;
     }
 
-    public void setWaktu_jk(String waktu_jk) {
+    public void setWaktu_jk(Date waktu_jk) {
         this.waktu_jk = waktu_jk;
+    }
+
+    public Date getWaktu_jkf() {
+        return waktu_jkf;
+    }
+
+    public void setWaktu_jkf(Date waktu_jkf) {
+        this.waktu_jkf = waktu_jkf;
     }
 
     public String getMakul_jk() {
@@ -169,11 +182,11 @@ public class JadwalKuliahModel extends RealmObject{
         this.noonline_j = noonline_j;
     }
 
-    public int getNohari() {
-        return nohari;
+    public RealmList<TugasModel> getTugas() {
+        return Tugas;
     }
 
-    public void setNohari(int nohari) {
-        this.nohari = nohari;
+    public void setTugas(RealmList<TugasModel> tugas) {
+        Tugas = tugas;
     }
 }

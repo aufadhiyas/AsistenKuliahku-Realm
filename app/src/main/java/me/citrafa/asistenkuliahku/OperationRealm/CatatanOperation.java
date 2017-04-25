@@ -17,7 +17,7 @@ public class CatatanOperation {
     Realm realm;
     CatatanModel cm;
 
-    public void tambahJadwalKuliah(final CatatanModel obj){
+    public void tambahCatatan(final CatatanModel obj){
         realm = Realm.getDefaultInstance();
 
         realm.executeTransactionAsync(new Realm.Transaction() {

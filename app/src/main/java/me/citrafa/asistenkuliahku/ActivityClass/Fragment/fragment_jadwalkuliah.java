@@ -22,7 +22,9 @@ import java.util.ArrayList;
 
 import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
+import io.realm.RealmResults;
 import io.realm.Sort;
+import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahNew;
 import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahRV;
 import me.citrafa.asistenkuliahku.Jadwal;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
@@ -34,9 +36,9 @@ import me.citrafa.asistenkuliahku.R;
  */
 
 public class fragment_jadwalkuliah extends Fragment{
-    private RecyclerView recyclerView;
+    private static RecyclerView recyclerView;
     private Realm realm;
-    private AdapterJadwalKuliahRV adapter;
+    private AdapterJadwalKuliahNew adapter;
     private Context mContex;
     private Paint p = new Paint();
     private OrderedRealmCollection<JadwalKuliahModel> data;
@@ -101,16 +103,26 @@ public class fragment_jadwalkuliah extends Fragment{
         realm.getDefaultInstance();
         View rootView = inflater.inflate(R.layout.fragment_jadwal_kuliah, container, false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerjk);
-        data = realm.where(JadwalKuliahModel.class).findAll().sort("nohari", Sort.ASCENDING);
-        for (int i = 0; i<data.size(); i++){
-            inputData(data.get(i));
-        }
-        adapter = new AdapterJadwalKuliahRV(dataJadwal,mContex);
+        data = realm.where(JadwalKuliahModel.class).findAll();
+        RealmResults<JadwalKuliahModel> jkm = realm.where(JadwalKuliahModel.class).findAll().sort("nohari", Sort.ASCENDING);
+        adapter = new AdapterJadwalKuliahNew(data,jkm);
         final LinearLayoutManager layout = new LinearLayoutManager(getActivity());
         layout.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layout);
-
         recyclerView.setAdapter(adapter);
+
+//        if (adapter == null){
+//            for (int i = 0; i<data.size(); i++){
+//                inputData(data.get(i));
+//            }
+//            adapter = new AdapterJadwalKuliahRV(dataJadwal,mContex);
+//            recyclerView.setAdapter(adapter);
+//        }else {
+//            recyclerView.setAdapter(adapter);
+//        }
+
+
+        //recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
         Log.d(TAG, "TAG : OnCreateView Fragment");
         return rootView;
@@ -127,8 +139,8 @@ public class fragment_jadwalkuliah extends Fragment{
     public void onAttach(Context context) {
         super.onAttach(context);
         mContex = context;
-        dataJadwal = new ArrayList<>();
-        Log.d(TAG, "TAG : OnAttach Fragment");
+//        dataJadwal = new ArrayList<>();
+        Log.d(TAG, "tag : OnAttach Fragment");
     }
 
     @Override
@@ -152,86 +164,87 @@ public class fragment_jadwalkuliah extends Fragment{
         void onFragmentInteraction(Uri uri);
     }
 
-    private int inputData(JadwalKuliahModel jadwalKuliahModel){
-        for (int i = 0; i<this.dataJadwal.size(); i++){
-            if(this.dataJadwal.size()!=0) {
-                if (this.dataJadwal.get(i).getTittle().equals(jadwalKuliahModel.getHari_jk())) {
-                    //realm.where(JadwalKuliahModel.class).findAllSorted("nohari", Sort.ASCENDING);
-                    Jadwal jd = dataJadwal.get(i);
-                    removeData(jadwalKuliahModel.getHari_jk());
-                    jd.addData(jadwalKuliahModel);
-                    this.dataJadwal.add(jd);
-                    return 1;
-                }
-            }
-        }
-        Jadwal jk = new Jadwal();
-        jk.setTittle(jadwalKuliahModel.getHari_jk());
-        jk.addData(jadwalKuliahModel);
-        this.dataJadwal.add(jk);
-        return 1;
-    }
+//    private int inputData(JadwalKuliahModel jadwalKuliahModel){
+//        for (int i = 0; i<this.dataJadwal.size(); i++){
+//            if(this.dataJadwal.size()!=0) {
+//                if (this.dataJadwal.get(i).getTittle().equals(jadwalKuliahModel.getHari_jk())) {
+//                    //realm.where(JadwalKuliahModel.class).findAllSorted("nohari", Sort.ASCENDING);
+//                    Jadwal jd = dataJadwal.get(i);
+//                    removeData(jadwalKuliahModel.getHari_jk());
+//                    jd.addData(jadwalKuliahModel);
+//                    this.dataJadwal.add(jd);
+//                    return 1;
+//                }
+//            }
+//        }
+//        Jadwal jk = new Jadwal();
+//        jk.setTittle(jadwalKuliahModel.getHari_jk());
+//        jk.addData(jadwalKuliahModel);
+//        this.dataJadwal.add(jk);
+//        Log.d(TAG,"log input data");
+//        return 1;
+//    }
+//
+//    private void removeData(String hari){
+//        for(int i = 0;i<this.dataJadwal.size();i++){
+//            if(this.dataJadwal.get(i).getTittle().equals(hari)){
+//                this.dataJadwal.remove(i);
+//            }
+//        }
+//    }
 
-    private void removeData(String hari){
-        for(int i = 0;i<this.dataJadwal.size();i++){
-            if(this.dataJadwal.get(i).getTittle().equals(hari)){
-                this.dataJadwal.remove(i);
-            }
-        }
-    }
 
-
-    private void initSwipe(){
-        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-
-            @Override
-            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-                int position = viewHolder.getAdapterPosition();
-
-                if (direction == ItemTouchHelper.LEFT){
-                    //swipe ke kiri
-                } else {
-                    //
-                }
-            }
-
-            @Override
-            public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-
-                Bitmap icon;
-                if(actionState == ItemTouchHelper.ACTION_STATE_SWIPE){
-
-                    View itemView = viewHolder.itemView;
-                    float height = (float) itemView.getBottom() - (float) itemView.getTop();
-                    float width = height / 3;
-
-                    if(dX > 0){
-                        p.setColor(Color.parseColor("#388E3C"));
-                        RectF background = new RectF((float) itemView.getLeft(), (float) itemView.getTop(), dX,(float) itemView.getBottom());
-                        c.drawRect(background,p);
-                        icon = BitmapFactory.decodeResource(getResources(), R.drawable.rename_box);
-                        RectF icon_dest = new RectF((float) itemView.getLeft() + width ,(float) itemView.getTop() + width,(float) itemView.getLeft()+ 2*width,(float)itemView.getBottom() - width);
-                        c.drawBitmap(icon,null,icon_dest,p);
-                    } else {
-                        p.setColor(Color.parseColor("#D32F2F"));
-                        RectF background = new RectF((float) itemView.getRight() + dX, (float) itemView.getTop(),(float) itemView.getRight(), (float) itemView.getBottom());
-                        c.drawRect(background,p);
-                        icon = BitmapFactory.decodeResource(getResources(), R.drawable.delete);
-                        RectF icon_dest = new RectF((float) itemView.getRight() - 2*width ,(float) itemView.getTop() + width,(float) itemView.getRight() - width,(float)itemView.getBottom() - width);
-                        c.drawBitmap(icon,null,icon_dest,p);
-                    }
-                }
-                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
-            }
-        };
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
-        itemTouchHelper.attachToRecyclerView(recyclerView);
-    }
+//    private void initSwipe(){
+//        ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+//
+//            @Override
+//            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+//                return false;
+//            }
+//
+//            @Override
+//            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+//                int position = viewHolder.getAdapterPosition();
+//
+//                if (direction == ItemTouchHelper.LEFT){
+//                    //swipe ke kiri
+//                } else {
+//                    //
+//                }
+//            }
+//
+//            @Override
+//            public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+//
+//                Bitmap icon;
+//                if(actionState == ItemTouchHelper.ACTION_STATE_SWIPE){
+//
+//                    View itemView = viewHolder.itemView;
+//                    float height = (float) itemView.getBottom() - (float) itemView.getTop();
+//                    float width = height / 3;
+//
+//                    if(dX > 0){
+//                        p.setColor(Color.parseColor("#388E3C"));
+//                        RectF background = new RectF((float) itemView.getLeft(), (float) itemView.getTop(), dX,(float) itemView.getBottom());
+//                        c.drawRect(background,p);
+//                        icon = BitmapFactory.decodeResource(getResources(), R.drawable.rename_box);
+//                        RectF icon_dest = new RectF((float) itemView.getLeft() + width ,(float) itemView.getTop() + width,(float) itemView.getLeft()+ 2*width,(float)itemView.getBottom() - width);
+//                        c.drawBitmap(icon,null,icon_dest,p);
+//                    } else {
+//                        p.setColor(Color.parseColor("#D32F2F"));
+//                        RectF background = new RectF((float) itemView.getRight() + dX, (float) itemView.getTop(),(float) itemView.getRight(), (float) itemView.getBottom());
+//                        c.drawRect(background,p);
+//                        icon = BitmapFactory.decodeResource(getResources(), R.drawable.delete);
+//                        RectF icon_dest = new RectF((float) itemView.getRight() - 2*width ,(float) itemView.getTop() + width,(float) itemView.getRight() - width,(float)itemView.getBottom() - width);
+//                        c.drawBitmap(icon,null,icon_dest,p);
+//                    }
+//                }
+//                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+//            }
+//        };
+//        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+//        itemTouchHelper.attachToRecyclerView(recyclerView);
+//    }
 
 
 }
