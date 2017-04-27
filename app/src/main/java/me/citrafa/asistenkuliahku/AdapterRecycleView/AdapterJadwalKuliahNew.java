@@ -85,7 +85,8 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
         holder.txtMakul.setText(jk.getMakul_jk());
         holder.txtDosen.setText(jk.getDosen_jk());
         holder.txtRuangan.setText(jk.getRuangan_jk());
-        ids = jk.getNo_jk();
+        final int module = jk.getNo_jk();
+
         if (jk.Tugas == null){
             holder.statusTugas.setText("Tidak Ada Tugas");
         }else {
@@ -95,7 +96,7 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
         holder.imgButtonJK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPopupMenu(holder.imgButtonJK,position,ids);
+                showPopupMenu(holder.imgButtonJK,position,module);
             }
         });
 

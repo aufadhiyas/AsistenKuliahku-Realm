@@ -1,7 +1,15 @@
 package me.citrafa.asistenkuliahku.ActivityClass;
 
+import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
@@ -25,6 +33,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import me.citrafa.asistenkuliahku.R;
+import me.citrafa.asistenkuliahku.Service.GPSTracker;
 import me.citrafa.asistenkuliahku.SessionManager.AppController;
 import me.citrafa.asistenkuliahku.SessionManager.SessionManager;
 import me.citrafa.asistenkuliahku.Webservice.Webservice_Controller;
@@ -37,11 +46,17 @@ public class frmLogin extends AppCompatActivity {
     private EditText txtEmail, txtPassword;
     private ProgressDialog pDialog;
     private TextView lupa;
+    private static final int REQUEST_PERMISSIONS = 20;
+    String provider;
+    static double lat, lng;
+    LocationManager locationManager;
+    int MY_PERMISSION = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.frmlogin);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = (Button) findViewById(R.id.btnDaftar);
@@ -51,6 +66,35 @@ public class frmLogin extends AppCompatActivity {
         lupa.setMovementMethod(LinkMovementMethod.getInstance());
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
+
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        provider = locationManager.getBestProvider(new Criteria(), false);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+
+            ActivityCompat.requestPermissions(frmLogin.this, new String[]{
+                    Manifest.permission.INTERNET,
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_NETWORK_STATE,
+                    Manifest.permission.SYSTEM_ALERT_WINDOW,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+
+
+            }, MY_PERMISSION);
+        }
+        GPSTracker gps = new GPSTracker(this);
+        if(gps.canGetLocation()){
+
+        }else {
+            gps.showSettingsAlert();
+        }
+
+        Location location = locationManager.getLastKnownLocation(provider);
+        if (location == null)
+            Log.e("TAG","No Location");
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
 
         session = new SessionManager(getApplicationContext());
@@ -64,15 +108,18 @@ public class frmLogin extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = txtEmail.getText().toString().trim();
-                String pass = txtPassword.getText().toString().trim();
-                Boolean status= true;
-                if(!email.isEmpty() && !pass.isEmpty()){
-
-                    checkLogin(email,pass,status);
-                }else{
-                    Toast.makeText(getApplicationContext(), "Masukkan Email Dan Password Anda", Toast.LENGTH_LONG).show();
-                }
+                Intent intent = new Intent(frmLogin.this,
+                        Dashboard.class);
+                startActivity(intent);
+//                String email = txtEmail.getText().toString().trim();
+//                String pass = txtPassword.getText().toString().trim();
+//                Boolean status= true;
+//                if(!email.isEmpty() && !pass.isEmpty()){
+//
+//                    checkLogin(email,pass,status);
+//                }else{
+//                    Toast.makeText(getApplicationContext(), "Masukkan Email Dan Password Anda", Toast.LENGTH_LONG).show();
+//                }
             }
         });
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +132,12 @@ public class frmLogin extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
     private void checkLogin(final String email, final String password, final Boolean statusLogin) {
         // Tag used to cancel the request
         String tag_string_req = "req_login";

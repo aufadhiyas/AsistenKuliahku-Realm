@@ -15,6 +15,7 @@ import java.util.Date;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;
+import me.citrafa.asistenkuliahku.ModelClass.DateStorageModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalLainModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalUjianModel;
@@ -27,48 +28,21 @@ public class DateForAlarmService{
     Context context;
     Date date1;
     Realm realm;
+    DateStorageModel dsm;
     public DateForAlarmService(){
 
     }
 
 
-    private Date yesterday(){
-        final Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, -1);
-        cal.set(Calendar.HOUR_OF_DAY,0);
-        cal.set(Calendar.MINUTE,0);
-        cal.set(Calendar.SECOND, 0);
-        return cal.getTime();
-    }
-    private Date tomorrow(){
-        final Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, +1);
-        cal.add(Calendar.DATE, -1);
-        cal.set(Calendar.HOUR_OF_DAY,0);
-        cal.set(Calendar.MINUTE,0);
-        cal.set(Calendar.SECOND, 0);
-        return cal.getTime();
-    }
+
 
     public void getDateEarly(Context contex,TextView txt1,TextView txt2){
         int status = 1;
+        Calendar calendar = Calendar.getInstance();
+
 
         realm = Realm.getDefaultInstance();
-
-//        JadwalLainModel resultJadwalLain = realm.where(JadwalLainModel.class)
-//                .between("waktus_jl",yesterday(),tomorrow())
-//                .findAllSorted("waktus_jl",Sort.ASCENDING).first();
-//        if (resultJadwalLain.isLoaded()){
-//            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss dd-MM-yy");
-//            txt1.setText(resultJadwalLain.getNama_jl());
-//            txt2.setText(sdf.format(resultJadwalLain.getWaktuf_jl()));
-
-//        }else {
-//            Toast.makeText(contex, "Hati Ini Libur", Toast.LENGTH_SHORT).show();
-//        }
-
-        //JadwalUjianModel resultUjianModel = realm.where(JadwalUjianModel.class).equalTo("waktu",now).equalTo("status",status).findFirst();
-
+        //dsm = realm.where(DateStorageModel.class).greaterThan("",).findFirst();
 
     }
 

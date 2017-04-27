@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:text="Status"
+                android:id="@+id/rowStatusTugas"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/rowStatusTugas"
+            android:maxLines="1"
+            android:text="Nama Mata Kuliahasdasda"
+            android:id="@+id/rowTugasMakul"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowTugasMakul"
+            android:text="Sabtu 17/08/1992 17:08"
+            android:id="@+id/rowTugasWaktu"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowTugasMakul"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/rowTugasWaktu"
+            android:text="Linknya disini Gan"
+            android:id="@+id/rowTugasLink"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowTugasWaktu"
+            android:maxLines="2"
+            android:text="Deskrtpsi"
+            android:id="@+id/rowTugasDeskripsi" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

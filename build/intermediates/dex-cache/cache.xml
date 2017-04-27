@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_d06acade30132063add1233b35b0fa8f824b2b81\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\SENSODYNE\.android\build-cache\71fcb23d72940a463a44b989972c9f8f1ce44e73\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -396,6 +405,15 @@
         revision="25.0.2"
         sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_f3278d63fc329db3bfd40fce682e9f7e619ed8af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_f8c4c35b66b0258e154a145e7385cec86335c39b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -821,6 +839,15 @@
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_00bc523104c71d822d6bd55db8e21287dccdc3cc\classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_6e53618be5d2013beef87f656bba13143b7c84e2\classes.dex" />
+    </item>
+    <item
         is-multidex="false"
         jar="C:\Users\SENSODYNE\.android\build-cache\b6b391ee396ff23202b7a7a913443084ed23cf34\output\jars\classes.jar"
         jumboMode="false"
@@ -966,6 +993,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\SENSODYNE\.android\build-cache\1baf4b856b3ccc75ac465bfc394500dd8e09a86d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fcd45222a20f2c9905b98ed4b9fdc208b11146e0">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3174fc01648fbc985692a0fa875e9d33a87538ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -1096,7 +1132,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="8593e6ec23b69ab2b7cb069bfb489310162af314">
+        sha1="98206579b9eb8c2283d9b72c718cfbd085c209e9">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_11c5464844fb9907cd561f6f1f4ea8a3bbe15509\classes.dex" />
     </item>
     <item
@@ -1116,6 +1152,15 @@
         revision="25.0.2"
         sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
         <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bcdca5120118a93b628996063bcb8ccb5bfd621d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\SENSODYNE\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.4.2\d99260c62d97beae99ed1f779a35a9bf48c094a6\logging-interceptor-3.4.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d99260c62d97beae99ed1f779a35a9bf48c094a6">
+        <dex dex="D:\1.SKRIPSWEET\Projek\AsistenKuliahku\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.4.2_450b670a1b903b9860f9c03ffd99e2eadecae85c\classes.dex" />
     </item>
     <item
         is-multidex="true"
