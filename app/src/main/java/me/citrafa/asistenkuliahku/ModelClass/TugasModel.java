@@ -11,12 +11,11 @@ import io.realm.annotations.PrimaryKey;
 
 public class TugasModel extends RealmObject{
     @PrimaryKey
-    private String no_t;
+    private int no_t;
 
     private String deskripsi_t;
     private String attlink_t;
-    private String waktu_t;
-    private String dosen_t;
+    private Date waktu_t;
     private int status_t;
     private Date created_at;
     private Date updated_at;
@@ -26,12 +25,11 @@ public class TugasModel extends RealmObject{
     public TugasModel() {
     }
 
-    public TugasModel(String no_t, String deskripsi_t, String attlink_t, String waktu_t, String dosen_t, int status_t, Date created_at, Date updated_at, String author, String noonline_t) {
+    public TugasModel(int no_t, String deskripsi_t, String attlink_t, Date waktu_t, int status_t, Date created_at, Date updated_at, String author, String noonline_t) {
         this.no_t = no_t;
         this.deskripsi_t = deskripsi_t;
         this.attlink_t = attlink_t;
         this.waktu_t = waktu_t;
-        this.dosen_t = dosen_t;
         this.status_t = status_t;
         this.created_at = created_at;
         this.updated_at = updated_at;
@@ -39,11 +37,11 @@ public class TugasModel extends RealmObject{
         this.noonline_t = noonline_t;
     }
 
-    public String getNo_t() {
+    public int getNo_t() {
         return no_t;
     }
 
-    public void setNo_t(String no_t) {
+    public void setNo_t(int no_t) {
         this.no_t = no_t;
     }
 
@@ -63,21 +61,14 @@ public class TugasModel extends RealmObject{
         this.attlink_t = attlink_t;
     }
 
-    public String getWaktu_t() {
+    public Date getWaktu_t() {
         return waktu_t;
     }
 
-    public void setWaktu_t(String waktu_t) {
+    public void setWaktu_t(Date waktu_t) {
         this.waktu_t = waktu_t;
     }
 
-    public String getDosen_t() {
-        return dosen_t;
-    }
-
-    public void setDosen_t(String dosen_t) {
-        this.dosen_t = dosen_t;
-    }
 
     public int getStatus_t() {
         return status_t;

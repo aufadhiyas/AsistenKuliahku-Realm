@@ -1,11 +1,13 @@
 package me.citrafa.asistenkuliahku.ActivityClass.Fragment;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;;
 import android.content.Context;
 import android.net.Uri;
@@ -24,6 +26,9 @@ import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;
+import me.citrafa.asistenkuliahku.ActivityClass.Dashboard;
+import me.citrafa.asistenkuliahku.ActivityClass.frmDaftar;
+import me.citrafa.asistenkuliahku.ActivityClass.frmJadwalKuliah;
 import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahNew;
 import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterJadwalKuliahRV;
 import me.citrafa.asistenkuliahku.Jadwal;
@@ -40,6 +45,7 @@ public class fragment_jadwalkuliah extends Fragment{
     private Realm realm;
     private AdapterJadwalKuliahNew adapter;
     private Context mContex;
+    private FloatingActionButton fab;
     private Paint p = new Paint();
     private OrderedRealmCollection<JadwalKuliahModel> data;
     private ArrayList<Jadwal> dataJadwal;
@@ -110,6 +116,33 @@ public class fragment_jadwalkuliah extends Fragment{
         layout.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layout);
         recyclerView.setAdapter(adapter);
+        fab = (FloatingActionButton)rootView.findViewById(R.id.fabAddJadwalKuliah);
+        fab.show();
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),
+                        frmJadwalKuliah.class);
+                startActivity(intent);
+            }
+        });
+//        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//                @Override
+//                public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+//                    if (dy > 0 || dy<0 && fab.isShown()){
+//                        fab.hide();
+//                    }
+//                }
+//
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//                if (newState == RecyclerView.SCROLL_STATE_IDLE){
+//                    fab.show();
+//                }
+//                super.onScrollStateChanged(recyclerView, newState);
+//            }
+//        });
+
 
 //        if (adapter == null){
 //            for (int i = 0; i<data.size(); i++){
@@ -122,8 +155,8 @@ public class fragment_jadwalkuliah extends Fragment{
 //        }
 
 
-        //recyclerView.setAdapter(adapter);
-        recyclerView.setHasFixedSize(true);
+                //recyclerView.setAdapter(adapter);
+                recyclerView.setHasFixedSize(true);
         Log.d(TAG, "TAG : OnCreateView Fragment");
         return rootView;
     }

@@ -30,7 +30,7 @@ public class JadwalKuliahModel extends RealmObject{
     private String Author;
     private String Type_jk;
     private int noonline_j;
-    RealmList<TugasModel> Tugas;
+    public RealmList<TugasModel> Tugas;
 
     public JadwalKuliahModel() {
     }

@@ -1,6 +1,5 @@
 package me.citrafa.asistenkuliahku.ActivityClass;
 
-import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -17,10 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import me.citrafa.asistenkuliahku.ActivityClass.Fragment.fragment_Tugas;
-import me.citrafa.asistenkuliahku.ActivityClass.Fragment.fragment_jadwal_pengganti;
 import me.citrafa.asistenkuliahku.ActivityClass.Fragment.fragment_jadwalkuliah;
 import me.citrafa.asistenkuliahku.R;
-import me.citrafa.asistenkuliahku.frmJadwalPengganti;
 
 public class menuJadwalKuliahTab extends AppCompatActivity {
 
@@ -39,6 +36,7 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private int mPosition;
+    FloatingActionButton fab;
 
 
 
@@ -58,22 +56,8 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mViewPager.getCurrentItem() ==0){
-                    Intent i = new Intent(getApplicationContext(),frmJadwalKuliah.class);
-                    startActivity(i);
-                }else if (mViewPager.getCurrentItem()==1){
-                    Intent i1 = new Intent(getApplicationContext(),frmJadwalPengganti.class);
-                    startActivity(i1);
-                }else{
-                    Intent i2 = new Intent(getApplicationContext(),frmTugas.class);
-                    startActivity(i2);
-                }
-            }
-        });
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.hide();
 
 
     }
@@ -134,9 +118,6 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
             if (getArguments().getInt(ARG_SECTION_NUMBER) == 1){
                 View rootView = inflater.inflate(R.layout.fragment_jadwal_kuliah, container, false);
                 return rootView;
-            }else if (getArguments().getInt(ARG_SECTION_NUMBER)==2){
-                View rootView = inflater.inflate(R.layout.fragment_jadwal_pengganti,container,false);
-                return rootView;
             }else{
                 View rootView = inflater.inflate(R.layout.fragment_tugas,container,false);
                 return rootView;
@@ -167,11 +148,8 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
 
                     return fragment;
                 case 1:
-                    fragment_jadwal_pengganti fragment1= new fragment_jadwal_pengganti();
-
-                    return fragment1;
-                case 2:
                     fragment_Tugas fragment2 = new fragment_Tugas();
+
                     return fragment2;
             }
             return PlaceholderFragment.newInstance(position + 1);
@@ -180,7 +158,7 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
@@ -189,8 +167,6 @@ public class menuJadwalKuliahTab extends AppCompatActivity {
                 case 0:
                     return "Jadwal Kuliah";
                 case 1:
-                    return "Jadwal Pengganti";
-                case 2:
                     return "Tugas";
             }
             return null;

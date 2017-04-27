@@ -20,7 +20,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import me.citrafa.asistenkuliahku.ModelClass.DateStorageModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalLainModel;
+import me.citrafa.asistenkuliahku.OperationRealm.DateStorageOperation;
 import me.citrafa.asistenkuliahku.OperationRealm.JadwalLainOperation;
 import me.citrafa.asistenkuliahku.R;
 
@@ -28,8 +30,11 @@ import static java.lang.String.valueOf;
 
 public class fragment_frmJadwalLain extends Fragment {
     private EditText txtNama,txtwaktuS,txtwaktuF,txttempat,txtdeskripsi;
+    private static String modelName = "JadwalLainModel";
     private Button btnSimpan;
     private int id;
+    private DateStorageModel dso;
+    private DateStorageOperation DSO;
     private JadwalLainOperation JUO;
     private JadwalLainModel jml;
     int no_jl;
@@ -45,6 +50,7 @@ public class fragment_frmJadwalLain extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         JUO = new JadwalLainOperation();
+        DSO = new DateStorageOperation();
         //no_jl=getArguments().getInt("ID");
         initView(view);
 
@@ -60,9 +66,6 @@ public class fragment_frmJadwalLain extends Fragment {
                 DateTimePickerF();
             }
         });
-
-
-
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +85,7 @@ public class fragment_frmJadwalLain extends Fragment {
 
     public void SimpanData() {
         int ids = id(10000);
+        final int dateID = DSO.getNextId();
         String nama = txtNama.getText().toString().trim();
         Date waktuS = DateS;
         Date waktuF = DateF;
@@ -93,6 +97,8 @@ public class fragment_frmJadwalLain extends Fragment {
         String Author="User";
         String noOnline="test";
         jml = new JadwalLainModel(ids,nama,waktuS,waktuF,tempat,deskripsi,status,Author,created_at,updated_at,noOnline);
+        dso = new DateStorageModel(dateID,ids,modelName,waktuS,waktuF);
+        DSO.insertDatetoStorage(dso);
         JUO.tambahJadwalLain(jml);
 
     }

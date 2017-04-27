@@ -21,7 +21,9 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import io.realm.Realm;
+import me.citrafa.asistenkuliahku.ModelClass.DateStorageModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
+import me.citrafa.asistenkuliahku.OperationRealm.DateStorageOperation;
 import me.citrafa.asistenkuliahku.R;
 import me.citrafa.asistenkuliahku.OperationRealm.JadwalKuliahOperation;
 
@@ -36,6 +38,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
     private Date waktus,waktuf;
     private Realm realm;
     JadwalKuliahOperation opJK;
+
     int no;
 
 
@@ -53,6 +56,7 @@ public class frmJadwalKuliah extends AppCompatActivity {
         simpan = (Button) findViewById(R.id.btnSimpan);
         batal = (Button) findViewById(R.id.btnBatal);
         opJK = new JadwalKuliahOperation();
+
 
 
         Jam.setOnClickListener(new View.OnClickListener() {
@@ -128,7 +132,6 @@ public class frmJadwalKuliah extends AppCompatActivity {
 
                 //memasukkan variable ke constructor
                 jk = new JadwalKuliahModel(no, uid, hari, nohari, jams, jamf, Makul, Ruangan, Dosen, Kelas, created_at, updated_at, status, Author,Type,No_Online);
-
                 kosongField();
                 Toast.makeText(frmJadwalKuliah.this, "Jadwal Kuliahmu Tersimpan !", Toast.LENGTH_SHORT).show();
                 if (hari.equals("Pilih Hari")){

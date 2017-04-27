@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -97,7 +98,7 @@ public class LibraryDateCustom {
 
     }
 
-    public void DateTimePickerSingle(final Context context , final TextView txt1){
+    public void DateTimePickerSingle(final Context context , final EditText txt1){
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);

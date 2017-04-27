@@ -40,6 +40,7 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
     RealmResults<JadwalKuliahModel> jkm;
     private int ids;
     JadwalKuliahOperation JAO;
+    String Tugas;
 
 
     public AdapterJadwalKuliahNew(OrderedRealmCollection<JadwalKuliahModel> data, RealmResults<JadwalKuliahModel>jkm) {
@@ -85,7 +86,12 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
         holder.txtDosen.setText(jk.getDosen_jk());
         holder.txtRuangan.setText(jk.getRuangan_jk());
         ids = jk.getNo_jk();
-        holder.statusTugas.setText("");
+        if (jk.Tugas == null){
+            holder.statusTugas.setText("Tidak Ada Tugas");
+        }else {
+            holder.statusTugas.setText("Ada Tugas");
+        }
+
         holder.imgButtonJK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
