@@ -28,7 +28,10 @@ public class menuCatatan extends AppCompatActivity {
 
     }
     private void changeFragment(){
-        getFragmentManager().beginTransaction().replace(R.id.activity_menu_catatan, new fragment_frm_catatan()).addToBackStack(null).commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.activity_menu_catatan, new fragment_frm_catatan()).addToBackStack(null)
+                .commit();
     }
 
     @Override

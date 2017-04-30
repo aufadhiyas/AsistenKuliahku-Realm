@@ -1,8 +1,10 @@
 package me.citrafa.asistenkuliahku.AdapterRecycleView;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -23,6 +27,7 @@ import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
 import io.realm.RealmRecyclerViewAdapter;
 import io.realm.RealmResults;
+import me.citrafa.asistenkuliahku.ActivityClass.frmJadwalKuliah;
 import me.citrafa.asistenkuliahku.ActivityClass.frmTugas;
 import me.citrafa.asistenkuliahku.AdapterList.CustomListAdapter;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
@@ -41,6 +46,7 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
     private int ids;
     JadwalKuliahOperation JAO;
     String Tugas;
+    MaterialDialog mdl;
 
 
     public AdapterJadwalKuliahNew(OrderedRealmCollection<JadwalKuliahModel> data, RealmResults<JadwalKuliahModel>jkm) {
@@ -87,7 +93,7 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
         holder.txtRuangan.setText(jk.getRuangan_jk());
         final int module = jk.getNo_jk();
 
-        if (jk.Tugas == null){
+        if (jk.Tugas.isEmpty()){
             holder.statusTugas.setText("Tidak Ada Tugas");
         }else {
             holder.statusTugas.setText("Ada Tugas");
@@ -96,7 +102,7 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
         holder.imgButtonJK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showPopupMenu(holder.imgButtonJK,position,module);
+                showPopupMenu(holder.imgButtonJK,position,module,jk.getMakul_jk());
             }
         });
 
@@ -124,20 +130,22 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
 
         }
     }
-    private void showPopupMenu(View view, int position, int id){
+    private void showPopupMenu(View view, int position, int id, String Nama){
         PopupMenu popup = new PopupMenu(view.getContext(), view);
         MenuInflater inflater = popup.getMenuInflater();
         inflater.inflate(R.menu.popupmenu_jk, popup.getMenu());
-        popup.setOnMenuItemClickListener(new AdapterJadwalKuliahNew.MyMenuItemClickListener(position,id));
+        popup.setOnMenuItemClickListener(new AdapterJadwalKuliahNew.MyMenuItemClickListener(position,id,Nama));
         popup.show();
     }
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener{
 
         private int position;
         private int id;
-        public MyMenuItemClickListener(int position, int id){
+        private String nama;
+        public MyMenuItemClickListener(int position, int id, String nama){
             this.position = position;
             this.id = id;
+            this.nama = nama;
         }
         @Override
         public boolean onMenuItemClick(MenuItem item) {
@@ -147,14 +155,24 @@ public class AdapterJadwalKuliahNew extends RealmRecyclerViewAdapter<JadwalKulia
                     tambahTugas.putExtra("id",id);
                     mContext.startActivity(tambahTugas);
                     break;
-                case R.id.MenuJKPengganti:
-                    Toast.makeText(mContext, "ID NYA :"+id, Toast.LENGTH_SHORT).show();
-                    break;
                 case R.id.MenuJKUbah:
+                    Intent edit = new Intent(mContext,frmJadwalKuliah.class);
+                    edit.putExtra("id",id);
+                    mContext.startActivity(edit);
                     break;
                 case R.id.MenuJKHapus:
-                    JAO.deleteItemAsync(realm,id);
-                    Toast.makeText(mContext, "ID NYA :"+id, Toast.LENGTH_SHORT).show();
+
+                    new AlertDialog.Builder(mContext)
+                            .setTitle("Hapus jadwal kuliah?")
+                            .setMessage("Apa kamu yakin ingin menghapus jadwal kuliah : "+nama)
+                            .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    JAO.deleteItemAsync(realm,id);
+                                }
+                            })
+                            .setNegativeButton("Batal",null)
+                            .show();
                     break;
             }
             return false;

@@ -8,16 +8,16 @@ import android.util.AttributeSet;
  * Created by SENSODYNE on 18/04/2017.
  */
 
-public class TextViewLatoFontMedium extends android.support.v7.widget.AppCompatTextView{
-    public TextViewLatoFontMedium(Context context) {
+public class TVLatoFontMedium extends android.support.v7.widget.AppCompatTextView{
+    public TVLatoFontMedium(Context context) {
         super(context);
     }
 
-    public TextViewLatoFontMedium(Context context, AttributeSet attrs) {
+    public TVLatoFontMedium(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public TextViewLatoFontMedium(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TVLatoFontMedium(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
     private void init() {

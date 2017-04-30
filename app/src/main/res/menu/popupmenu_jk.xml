@@ -6,10 +6,6 @@
         android:title="Tambah Tugas" />
 
     <item
-        android:id="@+id/MenuJKPengganti"
-        android:orderInCategory="101"
-        android:title="Tambah Kuliah Pengganti"/>
-    <item
         android:id="@+id/MenuJKUbah"
         android:orderInCategory="102"
         android:title="Ubah" />

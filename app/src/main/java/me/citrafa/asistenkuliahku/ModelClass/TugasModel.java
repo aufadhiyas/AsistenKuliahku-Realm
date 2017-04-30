@@ -6,6 +6,7 @@ import java.util.Date;
 
 import io.realm.RealmObject;
 import io.realm.RealmResults;
+import io.realm.annotations.LinkingObjects;
 import io.realm.annotations.PrimaryKey;
 
 /**
@@ -24,7 +25,8 @@ public class TugasModel extends RealmObject{
     private Date updated_at;
     private String author;
     private String noonline_t;
-    final RealmResults<JadwalKuliahModel> jk=null;
+//    @LinkingObjects("JadwalKuliahModel")
+//    final RealmResults<JadwalKuliahModel> jk=null;
 
     public TugasModel() {
     }

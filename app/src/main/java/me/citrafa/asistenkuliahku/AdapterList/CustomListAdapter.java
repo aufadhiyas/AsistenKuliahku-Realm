@@ -123,9 +123,7 @@ public class CustomListAdapter extends BaseAdapter{
                     tambahTugas.putExtra("id",id);
                     mContex.startActivity(tambahTugas);
                     break;
-                case R.id.MenuJKPengganti:
-                    Toast.makeText(mContex, "ID NYA :"+id, Toast.LENGTH_SHORT).show();
-                    break;
+
                 case R.id.MenuJKUbah:
                     break;
                 case R.id.MenuJKHapus:

@@ -3,7 +3,7 @@ package me.citrafa.asistenkuliahku.ActivityClass.Fragment;
 import android.Manifest;
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.app.TimePickerDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -31,6 +31,9 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.nbsp.materialfilepicker.MaterialFilePicker;
+import com.nbsp.materialfilepicker.ui.FilePickerActivity;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -44,8 +47,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import droidninja.filepicker.FilePickerBuilder;
-import droidninja.filepicker.FilePickerConst;
+
 import io.realm.Realm;
 import me.citrafa.asistenkuliahku.ActivityClass.frmDaftar;
 import me.citrafa.asistenkuliahku.CustomWidget.LibraryDateCustom;
@@ -56,23 +58,26 @@ import me.citrafa.asistenkuliahku.R;
 
 import static android.support.v4.content.PermissionChecker.checkSelfPermission;
 
+
 /**
  * Created by SENSODYNE on 17/04/2017.
  */
 
 public class fragment_frm_catatan extends Fragment {
+    public static final int FILE_PICKER_REQUEST_CODE = 1;
     private  static final String TAG = fragment_frm_catatan.class.getSimpleName();
     EditText txtNamaCatatan, txtDeskripsi, txtWaktu;
     Button btnAttach, btnSimpan;
     Realm realm;
     TextView lblFile;
-    CatatanModel cm;
     CatatanOperation co;
     Date Dates;
     File source, destination;
     ContentResolver contentResolver;
     int PICKFILE_RESULT_CODE;
-    ArrayList<String> filePaths = null;
+    String filePaths;
+    CatatanModel cm;
+
     private static final int MY_READ_EXTERNAL_STORAGE=0;
 
     private int mYear, mMonth, mDay, mHour, mMinute, id;
@@ -84,13 +89,14 @@ public class fragment_frm_catatan extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        EditText txtNamaCatatan = (EditText) view.findViewById(R.id.txtCatatanNama);
-        final Button btnAttach = (Button) view.findViewById(R.id.btnCatatanAttach);
-        final EditText txtWaktu = (EditText) view.findViewById(R.id.txtWaktuCatatan);
-        Button btnSimpan = (Button) view.findViewById(R.id.btnCatatanSimpan);
-        EditText txtDeskripsi = (EditText) view.findViewById(R.id.txtDeskripsiCatatan);
+        txtNamaCatatan = (EditText) view.findViewById(R.id.txtCatatanNama);
+        btnAttach = (Button) view.findViewById(R.id.btnCatatanAttach);
+        txtWaktu = (EditText) view.findViewById(R.id.txtWaktuCatatan);
+        btnSimpan = (Button) view.findViewById(R.id.btnCatatanSimpan);
+        txtDeskripsi = (EditText) view.findViewById(R.id.txtDeskripsiCatatan);
         lblFile = (TextView) view.findViewById(R.id.lblCatatanFileName);
         final LibraryDateCustom LDC = new LibraryDateCustom();
+        co = new CatatanOperation();
 
 
 
@@ -101,12 +107,10 @@ public class fragment_frm_catatan extends Fragment {
                 boolean statusPermission = false;
                 statusPermission = isStoragePermissionGranted();
                 if (statusPermission !=false){
-                    FilePickerBuilder.getInstance().setMaxCount(5)
-                            .setSelectedFiles(filePaths)
-                            .setActivityTheme(R.style.AppTheme)
-                            .pickPhoto(getActivity());
+                    openFilePicker();
 
                 }else{
+                    Toast.makeText(getActivity(), "MyCollege Assistant tidak mendapat perizinan untuk membaca file kamu", Toast.LENGTH_SHORT).show();
                     btnAttach.setClickable(false);
                 }
             }
@@ -129,22 +133,19 @@ public class fragment_frm_catatan extends Fragment {
 
 
 
-//    public void SimpanData() {
-//        int ids = id(10000);
-//        String nama = txtNamaCatatan.getText().toString().trim();
-//        Date waktuS = Dates;
-//
-//
-//        String deskripsi = txtdeskripsi.getText().toString();
-//        int status = 1;
-//        String created_at=getCurrentTimeStamp();
-//        String updated_at=getCurrentTimeStamp();
-//        String Author="User";
-//        String noOnline="test";
-//        jml = new JadwalLainModel(ids,nama,waktuS,waktuF,tempat,deskripsi,status,Author,created_at,updated_at,noOnline);
-//        JUO.tambahJadwalLain(jml);
-
-  //  }
+    public void SimpanData() {
+        int ids = id(10000);
+        String nama = txtNamaCatatan.getText().toString().trim();
+        Date waktuS = Dates;
+        String paths = filePaths;
+        String deskripsi = txtDeskripsi.getText().toString();
+        String created_at=getCurrentTimeStamp();
+        String updated_at=getCurrentTimeStamp();
+        String Author="User";
+        String noOnline="test";
+        cm = new CatatanModel(ids,nama,deskripsi,waktuS,paths,Author,created_at,updated_at,noOnline);
+        co.tambahCatatan(cm);
+    }
     public  boolean isStoragePermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(getActivity(),Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -183,43 +184,25 @@ public class fragment_frm_catatan extends Fragment {
     }
 
 
-
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        ArrayList<String> photoPaths = null;
-        ArrayList<String> docPaths = null;
-        switch (requestCode) {
-            case FilePickerConst.REQUEST_CODE_PHOTO:
-                if (resultCode == Activity.RESULT_OK && data != null) {
-
-                    photoPaths.addAll(data.getStringArrayListExtra(FilePickerConst.KEY_SELECTED_MEDIA));
-                }
-                break;
-            case FilePickerConst.REQUEST_CODE_DOC:
-                if (resultCode == Activity.RESULT_OK && data != null) {
-
-                    docPaths.addAll(data.getStringArrayListExtra(FilePickerConst.KEY_SELECTED_DOCS));
-                }
-                break;
-
-        }
-        String jadi = photoPaths.get(0);
-
-        Log.d(TAG,"JADI ");
-
+    private void openFilePicker() {
+        new MaterialFilePicker()
+                .withSupportFragment(fragment_frm_catatan.this)
+                .withRequestCode(FILE_PICKER_REQUEST_CODE)
+                .withHiddenFiles(true)
+                .start();
     }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == FILE_PICKER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            String path = data.getStringExtra(FilePickerActivity.RESULT_FILE_PATH);
+            if (path != null) {
+                lblFile.setText(path);
+                filePaths = path;
 
-    private void addThemToView(ArrayList<String> doc , ArrayList<String> pic) {
-        if (doc !=null){
-            String[] stringArray = doc.toArray(new String[1]);
-            String jadi = stringArray[0];
-            Log.d(TAG ,jadi);
-        }else{
-            int listSize = pic.size();
-
-            for (int i=0; i<listSize; i++) {
-                Log.d(TAG, "JADI" + pic.get(i));
             }
         }
     }
+
 }
 

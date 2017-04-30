@@ -32,6 +32,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import me.citrafa.asistenkuliahku.MyService;
 import me.citrafa.asistenkuliahku.R;
 import me.citrafa.asistenkuliahku.Service.GPSTracker;
 import me.citrafa.asistenkuliahku.SessionManager.AppController;
@@ -56,6 +57,8 @@ public class frmLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = new Intent(this, MyService.class);
+        startService(intent);
 
         setContentView(R.layout.frmlogin);
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -91,17 +94,12 @@ public class frmLogin extends AppCompatActivity {
             gps.showSettingsAlert();
         }
 
-        Location location = locationManager.getLastKnownLocation(provider);
-        if (location == null)
-            Log.e("TAG","No Location");
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
 
         session = new SessionManager(getApplicationContext());
 
         if(session.isLoggedIn()){
-            Intent intent = new Intent(frmLogin.this, Dashboard.class);
-            startActivity(intent);
+            Intent intents = new Intent(frmLogin.this, Dashboard.class);
+            startActivity(intents);
             finish();
         }
 

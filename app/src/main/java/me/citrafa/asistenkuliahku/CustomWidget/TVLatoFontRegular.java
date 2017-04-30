@@ -8,19 +8,19 @@ import android.util.AttributeSet;
  * Created by SENSODYNE on 18/04/2017.
  */
 
-public class TextViewLatoFontRegular extends android.support.v7.widget.AppCompatTextView{
+public class TVLatoFontRegular extends android.support.v7.widget.AppCompatTextView{
 
-    public TextViewLatoFontRegular(Context context) {
+    public TVLatoFontRegular(Context context) {
         super(context);
         init();
     }
 
-    public TextViewLatoFontRegular(Context context, AttributeSet attrs) {
+    public TVLatoFontRegular(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public TextViewLatoFontRegular(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TVLatoFontRegular(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }

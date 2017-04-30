@@ -13,6 +13,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -20,11 +22,13 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:id="@+id/txtCatatanNama"
         android:hint="Nama Catatan"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
             <Button
                 android:layout_width="wrap_content"
@@ -36,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/btnCatatanAttach"
-                android:text="AKSJHDLKJAHSDOIASHDPOIASPHDO"
+                android:text=""
                 android:id="@+id/lblCatatanFileName"/>
 
         </LinearLayout>
@@ -44,6 +48,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:id="@+id/txtWaktuCatatan"
         android:hint="Waktu"/>
     <EditText
@@ -51,8 +56,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtDeskripsiCatatan"
         android:elegantTextHeight="true"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/btnCatatanAttach"
-        android:lines="5"
+        android:lines="3"
         android:hint="Deskripsi"/>
 
         <Button

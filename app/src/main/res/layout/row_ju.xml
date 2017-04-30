@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
 
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -26,19 +26,19 @@
             android:layout_alignParentEnd="true"
             android:background="@null"
             app:srcCompat="@drawable/ic_more_gray_24px" />
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontMedium
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/rowJUWaktu"
             android:id="@+id/rowJUJenisUjian"
             android:text="PRETEST"/>
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontMedium
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/rowJUJenisUjian"
             android:id="@+id/rowJUMakul"
             android:text="Mata Kuliah"/>
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -46,7 +46,7 @@
             android:layout_toRightOf="@id/rowJUJenisUjian"
             android:id="@+id/rowJURuangan"
             android:text="Ruangan"/>
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/rowJUDeskripsi"

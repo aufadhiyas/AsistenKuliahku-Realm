@@ -4,14 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import java.text.ParseException;
@@ -19,7 +17,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import io.realm.Realm;
-import io.realm.RealmResults;
 import me.citrafa.asistenkuliahku.CustomWidget.LibraryDateCustom;
 import me.citrafa.asistenkuliahku.ModelClass.DateStorageModel;
 import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
@@ -74,8 +71,8 @@ public class frmTugas extends AppCompatActivity {
     private void TambahTugasFromJKAuto(int no){
         txt1 = (EditText) findViewById(R.id.txtDeskripsiTugas);
         txt2 = (EditText) findViewById(R.id.txtWaktuKumpulTugas);
-        lbl1 = (me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium) findViewById(R.id.lblMakulTugas);
-        lbl2 = (me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular) findViewById(R.id.lblWaktuMakulTugas);
+        lbl1 = (me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontMedium) findViewById(R.id.lblMakulTugas);
+        lbl2 = (me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontRegular) findViewById(R.id.lblWaktuMakulTugas);
         lbl3 = (TextView) findViewById(R.id.lblFileTugas);
         lblSwitch = (TextView) findViewById(R.id.lblSwitchTugas);
         switchWaktuKumpulTugas = (Switch)findViewById(R.id.switchWaktuKumpulTugas);

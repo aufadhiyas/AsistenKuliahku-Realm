@@ -15,13 +15,13 @@
             android:visibility="gone"
             android:text="Pilih Mata Kuliah"/>
 
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontMedium
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontMedium
             android:layout_width="match_parent"
             android:textSize="20dp"
             android:layout_height="wrap_content"
             android:text="Nama Mata Kuliah"
             android:id="@+id/lblMakulTugas"/>
-        <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+        <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontRegular
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_weight="0" />
-            <me.citrafa.asistenkuliahku.CustomWidget.TextViewLatoFontRegular
+            <me.citrafa.asistenkuliahku.CustomWidget.TVLatoFontRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

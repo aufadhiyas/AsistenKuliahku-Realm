@@ -3,52 +3,47 @@ package me.citrafa.asistenkuliahku.ModelClass;
 import java.util.Date;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by SENSODYNE on 08/04/2017.
  */
 
-public class CatatanModel extends RealmObject{
+public class CatatanModel extends RealmObject {
 
-    private String no_c;
-    private String uid;
+    @PrimaryKey
+    private int no_c;
     private String nama_c;
     private String deskripsi_c;
-    private String attlink_c;
     private Date waktu_c;
+    private String attlink_c;
+    private String noonline_c;
+    private String Author;
     private String created_at;
     private String updated_at;
-    private String noonline_c;
+
 
     public CatatanModel() {
     }
 
-    public CatatanModel(String no_c, String uid, String nama_c, String deskripsi_c, String attlink_c, Date waktu_c, String created_at, String updated_at, String noonline_c) {
+    public CatatanModel(int no_c, String nama_c, String deskripsi_c, Date waktu_c, String attlink_c, String noonline_c, String author, String created_at, String updated_at) {
         this.no_c = no_c;
-        this.uid = uid;
         this.nama_c = nama_c;
         this.deskripsi_c = deskripsi_c;
-        this.attlink_c = attlink_c;
         this.waktu_c = waktu_c;
+        this.attlink_c = attlink_c;
+        this.noonline_c = noonline_c;
+        Author = author;
         this.created_at = created_at;
         this.updated_at = updated_at;
-        this.noonline_c = noonline_c;
     }
 
-    public String getNo_c() {
+    public int getNo_c() {
         return no_c;
     }
 
-    public void setNo_c(String no_c) {
+    public void setNo_c(int no_c) {
         this.no_c = no_c;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
     }
 
     public String getNama_c() {
@@ -67,6 +62,14 @@ public class CatatanModel extends RealmObject{
         this.deskripsi_c = deskripsi_c;
     }
 
+    public Date getWaktu_c() {
+        return waktu_c;
+    }
+
+    public void setWaktu_c(Date waktu_c) {
+        this.waktu_c = waktu_c;
+    }
+
     public String getAttlink_c() {
         return attlink_c;
     }
@@ -75,12 +78,20 @@ public class CatatanModel extends RealmObject{
         this.attlink_c = attlink_c;
     }
 
-    public Date getWaktu_c() {
-        return waktu_c;
+    public String getNoonline_c() {
+        return noonline_c;
     }
 
-    public void setWaktu_c(Date waktu_c) {
-        this.waktu_c = waktu_c;
+    public void setNoonline_c(String noonline_c) {
+        this.noonline_c = noonline_c;
+    }
+
+    public String getAuthor() {
+        return Author;
+    }
+
+    public void setAuthor(String author) {
+        Author = author;
     }
 
     public String getCreated_at() {
@@ -97,13 +108,5 @@ public class CatatanModel extends RealmObject{
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
-    }
-
-    public String getNoonline_c() {
-        return noonline_c;
-    }
-
-    public void setNoonline_c(String noonline_c) {
-        this.noonline_c = noonline_c;
     }
 }

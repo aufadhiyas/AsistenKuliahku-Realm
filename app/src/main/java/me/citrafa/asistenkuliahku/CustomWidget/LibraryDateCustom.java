@@ -26,6 +26,7 @@ public class LibraryDateCustom {
     Date FINALDATE;
     private int mYear, mMonth, mDay, mHour, mMinute;
     Date dates,dateStart,dateFinish;
+    Date dateJKMulai, dateJKSelesai;
 
 
 
@@ -43,6 +44,8 @@ public class LibraryDateCustom {
         String strDate = sdfDate.format(now);
         return strDate;
     }
+
+
     public String getHaridanTanggalUntukListSingle(Date date){
         String Jadi;
         String Hari = getHariDariWaktu(date);
@@ -128,7 +131,7 @@ public class LibraryDateCustom {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                                         String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);
@@ -176,13 +179,14 @@ public class LibraryDateCustom {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                                         String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);
                                             SimpleDateFormat Dates = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
                                             String Jadi = Dates.format(date);
                                             dates = date;
+
                                             setDateStart(date);
                                             txt1.setText(getHariDariWaktu(dates)+", "+getWaktuTanggalBiasa(dates));
                                         } catch (ParseException e) {
@@ -227,7 +231,7 @@ public class LibraryDateCustom {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay,
                                                           int minute) {
-                                        SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm");
+                                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                                         String formatedDate = sdf.format(new Date(year,monthOfYear,dayOfMonth,hourOfDay,minute));
                                         try {
                                             Date date = sdf.parse(formatedDate);
@@ -270,5 +274,21 @@ public class LibraryDateCustom {
 
     public void setDateFinish(Date dateFinish) {
         this.dateFinish = dateFinish;
+    }
+
+    public Date getDateJKMulai() {
+        return dateJKMulai;
+    }
+
+    public void setDateJKMulai(Date dateJKMulai) {
+        this.dateJKMulai = dateJKMulai;
+    }
+
+    public Date getDateJKSelesai() {
+        return dateJKSelesai;
+    }
+
+    public void setDateJKSelesai(Date dateJKSelesai) {
+        this.dateJKSelesai = dateJKSelesai;
     }
 }
