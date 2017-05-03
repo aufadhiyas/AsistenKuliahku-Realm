@@ -36,12 +36,13 @@ public class frmDaftar extends AppCompatActivity {
     Button btnDaftar, btnKembali;
     EditText email, pass, nama;
     AlertDialog alertDialog;
-    private static final String TAG = frmDaftar.class.getSimpleName();
+    private static final String TAG = "";
     SessionManager session;
 
     private String EmailView;
     private ProgressDialog pDialog;
     private FirebaseAuth auth;
+    DialogVerifikasi dialogVerifikasi;
 
     private static final String Key_nama = "nama";
     private static final String Key_email = "email";
@@ -58,7 +59,7 @@ public class frmDaftar extends AppCompatActivity {
         email = (EditText) findViewById(R.id.txtEmailDaftar);
         pass = (EditText) findViewById(R.id.txtPasswordDaftar);
         nama = (EditText) findViewById(R.id.txtNamaDaftar);
-
+        dialogVerifikasi = new DialogVerifikasi();
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
         session = new SessionManager(getApplicationContext());
@@ -73,8 +74,7 @@ public class frmDaftar extends AppCompatActivity {
                         String namas = nama.getText().toString().trim();
                         if (!namas.isEmpty() && !emails.isEmpty() && !passwords.isEmpty()) {
 
-                            String uuid = md5(emails+""+getCurrentTimeStamp());
-                            registerUser(uuid,namas,emails,passwords);
+                            registerUser(namas,emails,passwords);
 
                         } else {
                             Toast.makeText(getApplicationContext(),
@@ -110,7 +110,7 @@ public class frmDaftar extends AppCompatActivity {
        // alertDialog.setView(v);
         //alertDialog.setTitle("Verifikasi Email");
     }
-    private void registerUser(final String uid, final String namas, final String emails,
+    private void registerUser( final String namas, final String emails,
                               final String passwords) {
         // Tag used to cancel the request
         String tag_string_req = "req_register";
@@ -132,7 +132,6 @@ public class frmDaftar extends AppCompatActivity {
                     if (!error) {
                         // User successfully stored in MySQL
                         // Now store the user in sqlite
-                        String uid = jObj.getString("unique_id");
 
                         String name = jObj.getString("name");
                         String email = jObj.getString("email");
@@ -144,16 +143,12 @@ public class frmDaftar extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
 
                         // Launch login activity
-                        Intent intent = new Intent(
-                                frmDaftar.this,
-                                frmLogin.class);
-                        startActivity(intent);
-                        finish();
+                        dialogVerifikasi.showDialogVerifikasi(frmDaftar.this,email);
                     } else {
 
                         // Error occurred in registration. Get the error
                         // message
-                        String errorMsg = jObj.getString("error_msg");
+                        String errorMsg = jObj.getString("message");
                         Toast.makeText(getApplicationContext(),
                                 errorMsg, Toast.LENGTH_LONG).show();
                     }
@@ -168,7 +163,7 @@ public class frmDaftar extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Registration Error: " + error.getMessage());
                 Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
+                        "Tidak Ada Koneksi Internet", Toast.LENGTH_LONG).show();
                 hideDialog();
             }
         }) {
@@ -177,7 +172,6 @@ public class frmDaftar extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting params to register url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("unique_id", uid);
                 params.put("nama", namas);
                 params.put("email", emails);
                 params.put("password", passwords);
@@ -217,6 +211,11 @@ public class frmDaftar extends AppCompatActivity {
         }
         return "";
     }
+
+    public void VerifikasiDialog(String Email){
+
+    }
+
     public static String getCurrentTimeStamp() {
         SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//dd/MM/yyyy
         Date now = new Date();

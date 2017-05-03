@@ -57,9 +57,6 @@ public class frmLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = new Intent(this, MyService.class);
-        startService(intent);
-
         setContentView(R.layout.frmlogin);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = (Button) findViewById(R.id.btnDaftar);
@@ -165,6 +162,7 @@ public class frmLogin extends AppCompatActivity {
                             Intent intent = new Intent(frmLogin.this, frmVerifikasi.class);
                             String Email = null;
                             intent.putExtra(email, Email);
+
                         }else{
                             session.setLogin(true);
                             Intent intent = new Intent(frmLogin.this,

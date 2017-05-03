@@ -6,14 +6,19 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Binder;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.provider.Settings;
 import android.support.annotation.IntDef;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
+import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +26,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import io.realm.Realm;
 import me.citrafa.asistenkuliahku.ModelClass.DateStorageModel;
@@ -29,18 +35,24 @@ import me.citrafa.asistenkuliahku.Service.MyBroadcastReceiver;
 
 public class MyService extends Service {
 
-    private final IBinder iBinder = new LocalBinder();
+    public final IBinder iBinder = new MyBinder();
+    LocalBroadcastManager broadcastManager;
 
     private HandlerThread mHandlerThread;
     private Handler mHandler;
+    private final String TimerCode= "MyTimers";
+    private final String SendTimerAction="SENDTIMER";
+    private Chronometer mChronometer;
+
 
     Date date1;
     Realm realm;
     DateStorageModel dsm;
     getCurrentDateTime gtm;
-    private static String TAG = "";
-    long millisJamJK;
+    private static String TAG = "LOG";
+    long millisJamJK = 0;
     String NamaMakul = "NAMA MAKUL";
+    CountDownTimer cdt;
 
 
 
@@ -56,14 +68,16 @@ public class MyService extends Service {
         getJadwalKuliahEarly();
         mHandler = new Handler(mHandlerThread.getLooper());
         Log.d(TAG, "TAG : SERVICE STARTED");
-
+        broadcastManager = LocalBroadcastManager.getInstance(this);
+        mChronometer = new Chronometer(this);
+        mChronometer.setBase(SystemClock.elapsedRealtime());
+        mChronometer.start();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        return super.onStartCommand(intent, flags, startId);
 
-
+        return START_STICKY;
     }
 
     @Override
@@ -71,10 +85,29 @@ public class MyService extends Service {
         return iBinder;
     }
 
-    public class LocalBinder extends Binder{
-        MyService getService(){
-            return MyService.this;
-        }
+    @Override
+    public boolean onUnbind(Intent intent) {
+        return true;
+    }
+
+    @Override
+    public void onRebind(Intent intent) {
+        super.onRebind(intent);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    public String getTimestamp() {
+        long elapsedMillis = SystemClock.elapsedRealtime()
+                - mChronometer.getBase();
+        int hours = (int) (elapsedMillis / 3600000);
+        int minutes = (int) (elapsedMillis - hours * 3600000) / 60000;
+        int seconds = (int) (elapsedMillis - hours * 3600000 - minutes * 60000) / 1000;
+        int millis = (int) (elapsedMillis - hours * 3600000 - minutes * 60000 - seconds * 1000);
+        return hours + ":" + minutes + ":" + seconds + ":" + millis;
     }
 
     public void getJadwalKuliahEarly(){
@@ -95,12 +128,12 @@ public class MyService extends Service {
             JadwalKuliahModel jkm = realm.where(JadwalKuliahModel.class).equalTo("nohari",noHari).greaterThan("waktu_jk",dateMowForJK).findFirst();
             Log.d(TAG,"waktu : CEK ");
             if (jkm != null) {
-                SimpleDateFormat formatjam = new SimpleDateFormat("HH:mm");
+                SimpleDateFormat formatjam = new SimpleDateFormat("HH:mm:ss:SSS");
                 Date now = new Date();
                 String Nows = formatjam.format(now);
                 final String JK = formatjam.format(jkm.getWaktu_jk());
-                final long jadi = formatjam.parse(JK).getTime() - formatjam.parse(Nows).getTime();
-
+                final long jadi = (formatjam.parse(JK).getTime() - formatjam.parse(Nows).getTime());
+                millisJamJK = jadi;
                 scheduleNotification(getNotification(jkm.getMakul_jk()),jadi);
 
             }else{
@@ -112,7 +145,11 @@ public class MyService extends Service {
         }
     }
 
-    public void TampilKeDashboard(long milis,String Content){
+    public String CountDownTime(){
+
+        String k = "THIS IS FROM SERVICE";
+        Log.d(TAG,"Service Eksekusi");
+        return k;
 
     }
 
@@ -123,15 +160,18 @@ public class MyService extends Service {
         notificationIntent.putExtra(MyBroadcastReceiver.NOTIFICATION, notification);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        long futureInMillis = SystemClock.elapsedRealtime() + menit;
+        long futureInMillis = menit;
         AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis,pendingIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, futureInMillis,pendingIntent);
     }
 
     private Notification getNotification(String content) {
+        Uri uri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("JUDUL NOTIFIKASI");
         builder.setContentText(content);
+        builder.setAutoCancel(true);
+        builder.setSound(uri);
         builder.setSmallIcon(R.drawable.ic_audiotrack_light);
         return builder.build();
     }
@@ -206,6 +246,11 @@ public class MyService extends Service {
 
         public String getEEE() {
             return EEE;
+        }
+    }
+    public class MyBinder extends Binder{
+        public MyService getService(){
+            return MyService.this;
         }
     }
 

@@ -57,20 +57,11 @@
         <activity
             android:name=".ActivityClass.menuJadwalKuliahTab"
             android:label="Kuliah Ku" />
+        <service android:name=".Service.BoundService"/>
         <activity
             android:name=".frmJadwalPengganti"
             android:label="Jadwal Pengganti" />
 
-        <service android:name=".SessionManager.FirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <service android:name=".SessionManager.FirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
         <receiver android:name=".Service.MyBroadcastReceiver" />
 
         <activity

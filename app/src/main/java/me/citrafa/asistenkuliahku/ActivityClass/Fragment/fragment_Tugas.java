@@ -4,10 +4,21 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import io.realm.OrderedRealmCollection;
+import io.realm.Realm;
+import io.realm.RealmList;
+import io.realm.RealmResults;
+import io.realm.Sort;
+import me.citrafa.asistenkuliahku.AdapterRecycleView.AdapterTugasRV;
+import me.citrafa.asistenkuliahku.ModelClass.JadwalKuliahModel;
+import me.citrafa.asistenkuliahku.ModelClass.TugasModel;
+import me.citrafa.asistenkuliahku.OperationRealm.RealmController;
 import me.citrafa.asistenkuliahku.R;
 
 
@@ -29,6 +40,13 @@ public class fragment_Tugas extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Realm realm;
+    RecyclerView recyclerView;
+    JadwalKuliahModel jadwalKuliahModel;
+    OrderedRealmCollection<TugasModel> data;
+    AdapterTugasRV adapter;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -67,7 +85,19 @@ public class fragment_Tugas extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tugas, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tugas, container, false);
+        this.realm = RealmController.with(getActivity()).getRealm();
+        realm.getDefaultInstance();
+        data = realm.where(TugasModel.class).findAll();
+        RealmResults<TugasModel> jkm = realm.where(TugasModel.class).findAll();
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerTugas);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new AdapterTugasRV(data, jkm);
+        recyclerView.setAdapter(adapter);
+
+        return rootView;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
